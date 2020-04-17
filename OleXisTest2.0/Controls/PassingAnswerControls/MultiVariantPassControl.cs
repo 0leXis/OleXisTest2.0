@@ -29,7 +29,7 @@ namespace OleXisTest
                     index = rnd.Next(0, multiQuestionAnswer.Variants.Count);
                 while (added_indexes.Contains(index));
                 added_indexes.Add(index);
-                VariantMulti.Add(OleXisTest.Controls.GetCheckBox(multiQuestionAnswer.Variants[i], OleXisTest.Controls.GetStringWidth(multiQuestionAnswer.Variants[i], graphics), index * OleXisTest.Controls.PASSING_RADIOBUTTON_INDENT_Y, this));
+                VariantMulti.Add(OleXisTest.Controls.GetCheckBox(multiQuestionAnswer.Variants[i], OleXisTest.Controls.GetStringWidth(multiQuestionAnswer.Variants[i], graphics) + 20, index * OleXisTest.Controls.PASSING_RADIOBUTTON_INDENT_Y, this));
                 if (isPreviewState)
                 {
                     VariantMulti.Last().AutoCheck = false;

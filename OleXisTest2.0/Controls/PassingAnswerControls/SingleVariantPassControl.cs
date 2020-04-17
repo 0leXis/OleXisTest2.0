@@ -29,7 +29,7 @@ namespace OleXisTest
                     index = rnd.Next(0, singleQuestionAnswer.Variants.Count);
                 while (added_indexes.Contains(index));
                 added_indexes.Add(index);
-                VariantSingle.Add(OleXisTest.Controls.GetRadioButton(singleQuestionAnswer.Variants[i], OleXisTest.Controls.GetStringWidth(singleQuestionAnswer.Variants[i], graphics), index * OleXisTest.Controls.PASSING_RADIOBUTTON_INDENT_Y, this));
+                VariantSingle.Add(OleXisTest.Controls.GetRadioButton(singleQuestionAnswer.Variants[i], OleXisTest.Controls.GetStringWidth(singleQuestionAnswer.Variants[i], graphics) + 20, index * OleXisTest.Controls.PASSING_RADIOBUTTON_INDENT_Y, this));
                 if (isPreviewState)
                 {
                     VariantSingle.Last().AutoCheck = false;
