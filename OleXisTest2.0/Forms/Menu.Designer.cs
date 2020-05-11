@@ -67,9 +67,11 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Подключиться к серверу";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnAccount
             // 
+            this.btnAccount.Enabled = false;
             this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAccount.Location = new System.Drawing.Point(12, 117);
             this.btnAccount.Name = "btnAccount";
@@ -80,6 +82,7 @@
             // 
             // btnDB
             // 
+            this.btnDB.Enabled = false;
             this.btnDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDB.Location = new System.Drawing.Point(12, 152);
             this.btnDB.Name = "btnDB";
@@ -114,6 +117,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.ResumeLayout(false);
 
         }

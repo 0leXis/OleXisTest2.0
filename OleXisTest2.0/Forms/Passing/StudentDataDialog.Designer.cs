@@ -95,6 +95,7 @@
             this.buttonOk.TabIndex = 21;
             this.buttonOk.Text = "ОК";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // StudentDataDialog
             // 

@@ -14,6 +14,7 @@ namespace OleXisTest
         byte[] sound;
         public SimpleQuestionInfoView(SimpleQuestionInfo info)
         {
+            this.sound = info.Sound;
             InitializeComponent();
             if(sound != null)
             {

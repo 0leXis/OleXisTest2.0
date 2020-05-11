@@ -21,11 +21,11 @@ namespace OleXisTest
                 this.answers = new List<IAnswerListItem>(answers);
             labelFIO.Text += FIO;
             labelClass.Text += Class;
-            var mark = (double)this.answers.Sum((x) => { return x.IsRight ? x.Question_score : 0; }) / this.answers.Sum((x) => { return x.Question_score; }) * 10;
+            var mark = Math.Round((double)this.answers.Sum((x) => { return x.IsRight ? x.Question_score : 0; }) / this.answers.Sum((x) => { return x.Question_score; }) * 10);
             labelOcenka.Text += mark.ToString();
             if (mark < 4)
                 labelOcenka.ForeColor = Color.Red;
-            labelProcPrav.Text += ((double)this.answers.Sum((x) => { return x.IsRight ? 1 : 0; }) / this.answers.Count * 100).ToString();
+            labelProcPrav.Text += string.Format("{0:0.00}", ((double)this.answers.Sum((x) => { return x.IsRight ? 1 : 0; }) / this.answers.Count * 100));
             labelTime.Text += time;
         }
 

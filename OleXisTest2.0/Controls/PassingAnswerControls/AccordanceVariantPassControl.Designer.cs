@@ -51,7 +51,7 @@
             this.listBoxAcc1.ItemHeight = 20;
             this.listBoxAcc1.Location = new System.Drawing.Point(7, 43);
             this.listBoxAcc1.Name = "listBoxAcc1";
-            this.listBoxAcc1.Size = new System.Drawing.Size(272, 144);
+            this.listBoxAcc1.Size = new System.Drawing.Size(272, 124);
             this.listBoxAcc1.TabIndex = 2;
             // 
             // listBoxAcc2
@@ -62,7 +62,7 @@
             this.listBoxAcc2.ItemHeight = 20;
             this.listBoxAcc2.Location = new System.Drawing.Point(285, 43);
             this.listBoxAcc2.Name = "listBoxAcc2";
-            this.listBoxAcc2.Size = new System.Drawing.Size(270, 144);
+            this.listBoxAcc2.Size = new System.Drawing.Size(270, 124);
             this.listBoxAcc2.TabIndex = 2;
             // 
             // AccordanceVariantPassControl
@@ -72,7 +72,7 @@
             this.Controls.Add(this.listBoxAcc2);
             this.Controls.Add(this.listBoxAcc1);
             this.Name = "AccordanceVariantPassControl";
-            this.Size = new System.Drawing.Size(558, 195);
+            this.Size = new System.Drawing.Size(558, 181);
             this.ResumeLayout(false);
             this.PerformLayout();
 

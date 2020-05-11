@@ -6,14 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace OleXisTest
 {
     public partial class Menu : Form
     {
-        private Editor editorForm;
-
-        public Menu()
+        private NetConnection connection;
+        public Menu() 
         {
             InitializeComponent();
         }
@@ -21,7 +23,7 @@ namespace OleXisTest
         private void btnEditor_Click(object sender, EventArgs e)
         {
             Hide();
-            editorForm = new Editor();
+            var editorForm = new Editor();
             editorForm.ShowDialog();
             Show();
         }
@@ -34,19 +36,38 @@ namespace OleXisTest
         private void btnRun_Click(object sender, EventArgs e)
         {
             //TODO: if connected to server, do server test choose
-            using(var studentData = new StudentDataDialog())
+            using (var studentData = new StudentDataDialog())
             {
-                if(studentData.ShowDialog() == DialogResult.OK)
+                if (studentData.ShowDialog() == DialogResult.OK)
                 {
                     string fileName;
-                    using(var passing = new TestPassing(studentData.FIO, studentData.Class, FileProcessor.LoadTestFile(out fileName)))
+                    var test = FileProcessor.LoadTestFile(out fileName);
+                    if(test != null)
                     {
-                        Hide();
-                        passing.ShowDialog();
-                        Show();
+                        using (var passing = new TestPassing(studentData.FIO, studentData.Class, test))
+                        {
+                            Hide();
+                            passing.ShowDialog();
+                            Show();
+                        }
                     }
                 }
             }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            using(var connectionForm = new ConnectToServer())
+            {
+                if (connectionForm.ShowDialog() == DialogResult.OK)
+                    connection = connectionForm.Connection;
+            }
+        }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (connection != null)
+                connection.Disconnect();
         }
     }
 }

@@ -29,6 +29,7 @@ namespace OleXisTest
 
         private string _class;
         private string _fio;
+        private bool _isOk = false;
         public StudentDataDialog()
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace OleXisTest
 
         private void StudentDataDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (!_isOk)
+                return;
             if (textBoxClass.Text == "" || textBoxFIO.Text == "")
             {
                 MessageBox.Show("Поля \"ФИО\" и \"Класс\\Группа\" должны быть заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -43,6 +46,11 @@ namespace OleXisTest
             }
             _class = textBoxClass.Text;
             _fio = textBoxFIO.Text;
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            _isOk = true;
         }
     }
 }

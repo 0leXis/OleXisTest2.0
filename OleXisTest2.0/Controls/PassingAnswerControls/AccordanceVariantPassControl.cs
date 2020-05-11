@@ -37,10 +37,12 @@ namespace OleXisTest
             }
             if (!isPreviewState)
             {
+                listBoxAcc1.AllowDrop = true;
                 listBoxAcc1.DragEnter += listBox_DragEnter;
                 listBoxAcc1.DragDrop += listBox_DragDrop;
                 listBoxAcc1.MouseMove += listBox_MouseMove;
 
+                listBoxAcc2.AllowDrop = true;
                 listBoxAcc2.DragEnter += listBox_DragEnter;
                 listBoxAcc2.DragDrop += listBox_DragDrop;
                 listBoxAcc2.MouseMove += listBox_MouseMove;
@@ -90,28 +92,28 @@ namespace OleXisTest
 
         private void listBox_DragDrop(object sender, DragEventArgs e)
         {
-            var listbox = sender as ListBox;
+            var listBox = sender as ListBox;
             //индекс, куда перемещаем
-            int newIndex = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
+            int newIndex = listBox.IndexFromPoint(listBox.PointToClient(new Point(e.X, e.Y)));
             //если вставка происходит в начало списка
             if (newIndex == -1)
             {
                 //получаем перетаскиваемый элемент
-                object itemToMove = listbox.Items[indexToMove];
+                object itemToMove = listBox.Items[indexToMove];
                 //удаляем элемент
-                listbox.Items.RemoveAt(indexToMove);
+                listBox.Items.RemoveAt(indexToMove);
                 //добавляем в конец списка
-                listbox.Items.Add(itemToMove);
+                listBox.Items.Add(itemToMove);
             }
             //вставляем где-то в середину списка
             else if (indexToMove != newIndex)
             {
                 //получаем перетаскиваемый элемент
-                object itemToMove = listbox.Items[indexToMove];
+                object itemToMove = listBox.Items[indexToMove];
                 //удаляем элемент
-                listbox.Items.RemoveAt(indexToMove);
+                listBox.Items.RemoveAt(indexToMove);
                 //вставляем в конкретную позицию
-                listbox.Items.Insert(newIndex, itemToMove);
+                listBox.Items.Insert(newIndex, itemToMove);
             }
         }
 
@@ -122,13 +124,13 @@ namespace OleXisTest
 
         private void listBox_MouseMove(object sender, MouseEventArgs e)
         {
-            var listbox = sender as ListBox;
+            var listBox = sender as ListBox;
             //если нажата левая кнопка мыши, начинаем Drag&Drop
             if (e.Button == MouseButtons.Left)
             {
                 //индекс элемента, который мы перемещаем
-                indexToMove = listbox.IndexFromPoint(e.X, e.Y);
-                listbox.DoDragDrop(indexToMove, DragDropEffects.Move);
+                indexToMove = listBox.IndexFromPoint(e.X, e.Y);
+                listBox.DoDragDrop(indexToMove, DragDropEffects.Move);
             }
         }
     }

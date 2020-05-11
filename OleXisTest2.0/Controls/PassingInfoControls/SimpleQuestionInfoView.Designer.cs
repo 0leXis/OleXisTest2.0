@@ -39,7 +39,6 @@
             // 
             // buttonPlaySound
             // 
-            this.buttonPlaySound.Enabled = false;
             this.buttonPlaySound.Location = new System.Drawing.Point(3, 119);
             this.buttonPlaySound.Name = "buttonPlaySound";
             this.buttonPlaySound.Size = new System.Drawing.Size(287, 30);
@@ -47,6 +46,7 @@
             this.buttonPlaySound.Text = "Проиграть вложенный аудио-файл";
             this.buttonPlaySound.UseVisualStyleBackColor = true;
             this.buttonPlaySound.Visible = false;
+            this.buttonPlaySound.Click += new System.EventHandler(this.buttonPlaySound_Click);
             // 
             // panel2
             // 

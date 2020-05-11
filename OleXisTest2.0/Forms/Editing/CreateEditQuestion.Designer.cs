@@ -156,6 +156,7 @@
             this.button2.TabIndex = 39;
             this.button2.Text = "Переключиться на расширенное представление";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // CreateEditQuestion
             // 

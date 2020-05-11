@@ -35,8 +35,11 @@
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
     </Reference>
-    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ConnectToServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectToServer.Designer.cs">
+      <DependentUpon>ConnectToServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebUtils\NetConnection.cs" />
+    <Compile Include="WebUtils\NetDataSender.cs" />
+    <Compile Include="WebUtils\SequrityUtils.cs" />
     <Compile Include="Tests\Answers\AccordanceQuestionAnswer.cs" />
     <Compile Include="Tests\Answers\AlternativeQuestionAnswer.cs" />
     <Compile Include="Forms\Passing\AnswerListDialog.cs">
@@ -230,6 +242,12 @@
     <Compile Include="Forms\Passing\TestResults.Designer.cs">
       <DependentUpon>TestResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="WebUtils\TokenUpdator.cs" />
+    <Compile Include="WebUtils\WebStructures.cs" />
+    <EmbeddedResource Include="Forms\ConnectToServer.resx">
+      <DependentUpon>ConnectToServer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Passing\AnswerListDialog.resx">
       <DependentUpon>AnswerListDialog.cs</DependentUpon>
     </EmbeddedResource>
