@@ -55,7 +55,7 @@ namespace OleXisTest
             return encrypted.Concat(aes.IV).ToArray();
         }
 
-        static public string Decrypt(byte[] encryptedData, byte[] key)
+        static public string DecryptString(byte[] encryptedData, byte[] key)
         {
             byte[] bytesIv = new byte[16];
             byte[] mess = new byte[encryptedData.Length - 16];
@@ -80,12 +80,88 @@ namespace OleXisTest
                 {
                     using (StreamReader sr = new StreamReader(cs))
                     {
-                        //Результат записываем в переменную text в вие исходной строки
                         text = sr.ReadToEnd();
                     }
                 }
             }
             return text;
+        }
+
+        public static byte[] Encrypt(byte[] data, byte[] key)
+        {
+            //Объявляем объект класса AES
+            Aes aes = Aes.Create();
+            //Генерируем соль
+            aes.GenerateIV();
+            //Присваиваем ключ. aeskey - переменная (массив байт), сгенерированная методом GenerateKey() класса AES
+            aes.Key = key;
+            byte[] encrypted;
+            ICryptoTransform crypt = aes.CreateEncryptor(aes.Key, aes.IV);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, crypt, CryptoStreamMode.Write))
+                {
+                    using (BinaryWriter sw = new BinaryWriter(cs))
+                    {
+                        sw.Write(data);
+                    }
+                }
+                //Записываем в переменную encrypted зашиврованный поток байтов
+                encrypted = ms.ToArray();
+            }
+            //Возвращаем поток байт + крепим соль
+            return encrypted.Concat(aes.IV).ToArray();
+        }
+
+        static public byte[] DecryptBytes(byte[] encryptedData, byte[] key)
+        {
+            byte[] bytesIv = new byte[16];
+            byte[] mess = new byte[encryptedData.Length - 16];
+            for (int i = encryptedData.Length - 16, j = 0; i < encryptedData.Length; i++, j++)
+                bytesIv[j] = encryptedData[i];
+            //Списываем оставшуюся часть сообщения
+            for (int i = 0; i < encryptedData.Length - 16; i++)
+                mess[i] = encryptedData[i];
+            //Объект класса Aes
+            Aes aes = Aes.Create();
+            //Задаем тот же ключ, что и для шифрования
+            aes.Key = key;
+            //Задаем соль
+            aes.IV = bytesIv;
+            //Строковая переменная для результата
+            byte[] decrypted = null;
+            byte[] data = mess;
+            ICryptoTransform crypt = aes.CreateDecryptor(aes.Key, aes.IV);
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                using (CryptoStream cs = new CryptoStream(ms, crypt, CryptoStreamMode.Read))
+                {
+                    using (BinaryReader sr = new BinaryReader(cs))
+                    {
+                        decrypted = ReadAllBytes(sr.BaseStream);
+                    }
+                }
+            }
+            return decrypted;
+        }
+
+        static public string GetHash(string value)
+        {
+            var sha = SHA256Managed.Create();
+            var stringHash = new StringBuilder();
+            var arrayHash = sha.ComputeHash(Encoding.UTF8.GetBytes(value));
+            foreach (byte b in arrayHash)
+                stringHash.Append(b.ToString("x2"));
+            return stringHash.ToString();
+        }
+
+        static private byte[] ReadAllBytes(Stream stream)
+        {
+            using (var ms = new MemoryStream())
+            {
+                stream.CopyTo(ms);
+                return ms.ToArray();
+            }
         }
     }
 }

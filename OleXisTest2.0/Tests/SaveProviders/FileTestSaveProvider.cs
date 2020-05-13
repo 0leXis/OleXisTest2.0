@@ -8,7 +8,7 @@ using System.IO;
 
 namespace OleXisTest
 {
-    class FileTestSaveProvider : ITestSaveProvider
+    class FileTestSaveProvider
     {
         public string FileName { 
             get
@@ -19,51 +19,52 @@ namespace OleXisTest
 
         private const string tmpDir = "tmp";
         private string _fileName = null;
-        public bool Save(ITest test)
+        public bool Save(ITest test, string testPath = null)
         {
-            using(var saveDialog = new SaveFileDialog())
-            {
-                if(saveDialog.ShowDialog() == DialogResult.OK)
+            if (testPath == null)
+                using (var saveDialog = new SaveFileDialog())
                 {
-                    _fileName = saveDialog.FileName;
-                    FileProcessor.ClearTmpDir(tmpDir);
-
-                    for (var i = 0; i < test.Questions.Count; i++)
-                    {
-                        var serialized_question = test.Questions[i].Serialize();
-                        using (FileStream file = new FileStream(tmpDir + @"\" + i + ".dat", FileMode.OpenOrCreate))
-                        {
-                            serialized_question.WriteTo(file);
-                        }
-                    }
-
-                    var formatter = new BinaryFormatter();
-                    using (FileStream file = new FileStream(tmpDir + @"\main.dat", FileMode.OpenOrCreate))
-                    {
-                        formatter.Serialize(file, test);
-                    }
-
-                    FileProcessor.CompressFile(tmpDir, tmpDir + @"\testtmp.test");
-                    if (test.Params.Password != "")
-                    {
-                        if (File.Exists(saveDialog.FileName))
-                            File.Delete(saveDialog.FileName);
-                        FileProcessor.EncryptDecryptFile(tmpDir + @"\testtmp.test", test.Params.Password, true, saveDialog.FileName);
-                    }
+                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                        _fileName = saveDialog.FileName;
                     else
-                    {
-                        if (File.Exists(saveDialog.FileName))
-                            File.Delete(saveDialog.FileName);
-                        File.Copy(tmpDir + @"\testtmp.test", saveDialog.FileName);
-                    }
+                        return false;
+                }
+            else
+                _fileName = testPath;
+            FileProcessor.ClearTmpDir(tmpDir);
 
-                    FileProcessor.ClearTmpDir(tmpDir);
-
-                    return true;
+            for (var i = 0; i < test.Questions.Count; i++)
+            {
+                var serialized_question = test.Questions[i].Serialize();
+                using (FileStream file = new FileStream(tmpDir + @"\" + i + ".dat", FileMode.OpenOrCreate))
+                {
+                    serialized_question.WriteTo(file);
                 }
             }
 
-            return false;
+            var formatter = new BinaryFormatter();
+            using (FileStream file = new FileStream(tmpDir + @"\main.dat", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(file, test);
+            }
+
+            FileProcessor.CompressFile(tmpDir, tmpDir + @"\testtmp.test");
+            if (test.Params.Password != "")
+            {
+                if (File.Exists(_fileName))
+                    File.Delete(_fileName);
+                FileProcessor.EncryptDecryptFile(tmpDir + @"\testtmp.test", test.Params.Password, true, _fileName);
+            }
+            else
+            {
+                if (File.Exists(_fileName))
+                    File.Delete(_fileName);
+                File.Copy(tmpDir + @"\testtmp.test", _fileName);
+            }
+
+            FileProcessor.ClearTmpDir(tmpDir);
+
+            return true;
         }
 
         public ITest Load(string password = null)
@@ -72,13 +73,13 @@ namespace OleXisTest
             {
                 if (openDialog.ShowDialog() == DialogResult.OK)
                 {
-                    return Load(openDialog.FileName, password);
+                    return LoadForEdit(openDialog.FileName, password);
                 }
             }
             return null;
         }
 
-        public ITest Load(string fileName, string password = null)
+        public ITest LoadForEdit(string fileName, string password = null)
         {
             _fileName = fileName;
 
@@ -115,6 +116,11 @@ namespace OleXisTest
             FileProcessor.ClearTmpDir(tmpDir);
 
             return test;
+        }
+
+        public ITest LoadForPass(string fileName, string password = null)
+        {
+            return LoadForEdit(fileName, password);
         }
     }
 }

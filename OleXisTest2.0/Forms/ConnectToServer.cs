@@ -19,8 +19,26 @@ namespace OleXisTest
             }
         }
 
-        private NetConnection _connection;
+        public AccountInfo LoginInfo
+        {
+            get
+            {
+                return _loginInfo;
+            }
+        }
+
+        public string Login
+        {
+            get
+            {
+                return _login;
+            }
+        }
+
+        private NetConnection _connection = null;
+        private AccountInfo _loginInfo = null;
         private bool isRegState = false;
+        private string _login;
         public ConnectToServer()
         {
             InitializeComponent();
@@ -34,6 +52,7 @@ namespace OleXisTest
         private void buttonConnect_Click(object sender, EventArgs e)
         {
             _connection = new NetConnection("192.168.100.232", "27020");
+            _login = textBoxLogin.Text;
             if (isRegState)
                 _connection.Register(new RegisterData(textBoxLogin.Text, textBoxPassword.Text, textBoxFirstname.Text, textBoxSurname.Text, textBoxGroup.Text), onRegister);
             else
@@ -48,7 +67,7 @@ namespace OleXisTest
             }
             else
             {
-                MessageBox.Show(info.Firstname + " " + info.Lastname + " " + info.Role + " " + info.Group);
+                _loginInfo = info;
                 this.DialogResult = DialogResult.OK;
             }
         }

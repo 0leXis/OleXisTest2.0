@@ -46,7 +46,7 @@
             this.textBoxFirstname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelGroup = new System.Windows.Forms.Label();
             this.textBoxGroup = new System.Windows.Forms.TextBox();
             this.panelRegistration = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -151,6 +151,7 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(102, 110);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 29);
             this.textBoxPassword.TabIndex = 11;
             // 
@@ -175,6 +176,7 @@
             // 
             this.textBoxPassConfirm.Location = new System.Drawing.Point(189, 0);
             this.textBoxPassConfirm.Name = "textBoxPassConfirm";
+            this.textBoxPassConfirm.PasswordChar = '*';
             this.textBoxPassConfirm.Size = new System.Drawing.Size(193, 29);
             this.textBoxPassConfirm.TabIndex = 14;
             // 
@@ -222,15 +224,15 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Имя:";
             // 
-            // label10
+            // labelGroup
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(-2, 108);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 23);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Группа/Класс:";
+            this.labelGroup.AutoSize = true;
+            this.labelGroup.Location = new System.Drawing.Point(-2, 108);
+            this.labelGroup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelGroup.Name = "labelGroup";
+            this.labelGroup.Size = new System.Drawing.Size(110, 23);
+            this.labelGroup.TabIndex = 24;
+            this.labelGroup.Text = "Группа/Класс:";
             // 
             // textBoxGroup
             // 
@@ -242,7 +244,7 @@
             // panelRegistration
             // 
             this.panelRegistration.Controls.Add(this.label5);
-            this.panelRegistration.Controls.Add(this.label10);
+            this.panelRegistration.Controls.Add(this.labelGroup);
             this.panelRegistration.Controls.Add(this.textBoxGroup);
             this.panelRegistration.Controls.Add(this.textBoxPassConfirm);
             this.panelRegistration.Controls.Add(this.textBoxSurname);
@@ -305,7 +307,7 @@
         private System.Windows.Forms.TextBox textBoxFirstname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelGroup;
         private System.Windows.Forms.TextBox textBoxGroup;
         private System.Windows.Forms.Panel panelRegistration;
     }

@@ -25,6 +25,17 @@ namespace OleXisTest
             }
         }
 
+        public static void CompressFile(string inFilesPath, Stream outFileStream)
+        {
+            using (ZipFile Zip = new ZipFile())
+            {
+                Zip.CompressionLevel = CompressionLevel.BestCompression;
+                foreach (var File in Directory.GetFiles(inFilesPath))
+                    Zip.AddFile(File);
+                Zip.Save(outFileStream);
+            }
+        }
+
         public static void DecompressFile(string inFilePath, string outFilesPath)
         {
             using (ZipFile Zip = new ZipFile(inFilePath))
@@ -108,7 +119,7 @@ namespace OleXisTest
                         {
                             try
                             {
-                                var test = loader.Load(fileName, passDialog.Password);
+                                var test = loader.LoadForEdit(fileName, passDialog.Password);
                                 if (test != null)
                                 {
                                     fileName = loader.FileName;

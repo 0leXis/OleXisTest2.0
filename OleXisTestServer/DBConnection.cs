@@ -31,7 +31,8 @@ namespace OleXisTestServer
                 command.Parameters.Add(new MySqlParameter("@param" + i, _params[i]));
             }
             commandText.Remove(commandText.Length - 1, 1);
-            commandText.Append(")");
+            if(_params.Length > 0)
+                commandText.Append(")");
             command.CommandText = commandText.ToString();
             return command;
         }

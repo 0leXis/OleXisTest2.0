@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 
 namespace OleXisTest
 {
+    public enum UserRoles { Admin, Student, Teacher }
     public class RequestInfo
     {
         public string Command { get; }
@@ -18,7 +19,7 @@ namespace OleXisTest
         public RequestInfo(string Command, byte[] Data, string UserToken)
         {
             this.Command = Command;
-            if(Data != null)
+            if (Data != null)
             {
                 this.Data = new byte[Data.Length];
                 Data.CopyTo(this.Data, 0);
@@ -106,9 +107,9 @@ namespace OleXisTest
     {
         public string Firstname { get; }
         public string Lastname { get; }
-        public string Role { get; }
+        public UserRoles Role { get; }
         public string Group { get; }
-        public AccountInfo(string Firstname, string Lastname, string Role, string Group)
+        public AccountInfo(string Firstname, string Lastname, UserRoles Role, string Group)
         {
             this.Firstname = Firstname;
             this.Lastname = Lastname;
@@ -122,6 +123,27 @@ namespace OleXisTest
         static public AccountInfo FromJson(string Json)
         {
             return JsonConvert.DeserializeObject<AccountInfo>(Json);
+        }
+    }
+
+    public class NetSerializedTestInfo
+    {
+        public byte[] Test { get; }
+        public string Name { get; }
+        public int Subject { get; }
+        public NetSerializedTestInfo(byte[] Test, string Name, int Subject)
+        {
+            this.Test = Test;
+            this.Name = Name;
+            this.Subject = Subject;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public NetSerializedTestInfo FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<NetSerializedTestInfo>(Json);
         }
     }
 }

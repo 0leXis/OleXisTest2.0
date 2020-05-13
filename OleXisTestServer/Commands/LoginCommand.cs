@@ -17,14 +17,14 @@ namespace OleXisTestServer
         {
             var client = ClientManager.GetClient(requestData.UserToken);
 
-            var loginData = LoginData.FromJson(SequrityUtils.Decrypt(requestData.Data, client.SecretDFKey));
+            var loginData = LoginData.FromJson(SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey));
             var passwordHash = SequrityUtils.GetHash(loginData.Password);
             var result = DBConnection.PrepareExecProcedureCommand("CheckLoginInfo", loginData.Login, passwordHash).ExecuteReader();
             if (result.Read())
             {
-                var info = new AccountInfo(result.GetString(1), result.GetString(2), result.GetString(3), result.IsDBNull(5) ? null : result.GetString(5));
+                var info = new AccountInfo(result.GetString(1), result.GetString(2), (UserRoles)(result.GetInt32(4) - 1), result.IsDBNull(5) ? null : result.GetString(5));
                 client.UserId = result.GetInt32(0);
-                client.Role = (UserRoles)result.GetInt32(4);
+                client.Role = (UserRoles)(result.GetInt32(4) - 1);
 
                 client.UpdateExpiredTime();
 

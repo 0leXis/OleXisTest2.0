@@ -80,8 +80,8 @@ namespace OleXisTestServer
                         responseData = new ResponseInfo(null, CommandFactory.GetCommand(requestData).Execute(out error));
                         if (error != CommandError.None)
                         {
-                            log.LogError("TODO: фабрика ошибок");
-                            responseData = new ResponseInfo("BADCOMMAND", null);
+                            log.LogError(CommandErrors.GetErrorCode(error));
+                            responseData = new ResponseInfo(CommandErrors.GetErrorCode(error), null);
                         }
                     }
                     catch(Exception e)

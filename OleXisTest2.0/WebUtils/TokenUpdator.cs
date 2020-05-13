@@ -40,7 +40,7 @@ namespace OleXisTest
         private void onRecive(string responseData)
         {
             var responseInfo = ResponseInfo.FromJson(responseData);
-            if (SequrityUtils.Decrypt(responseInfo.Data, connection.User.SecretKey) == "OK")
+            if (SequrityUtils.DecryptString(responseInfo.Data, connection.User.SecretKey) == "OK")
                 expiredTime = expiredTime.AddMinutes(3);
         }
 

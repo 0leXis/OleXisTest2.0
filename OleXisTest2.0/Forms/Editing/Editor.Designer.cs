@@ -166,15 +166,19 @@
             // 
             // загрузитьССервераToolStripMenuItem
             // 
+            this.загрузитьССервераToolStripMenuItem.Enabled = false;
             this.загрузитьССервераToolStripMenuItem.Name = "загрузитьССервераToolStripMenuItem";
             this.загрузитьССервераToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.загрузитьССервераToolStripMenuItem.Text = "Загрузить с сервера";
+            this.загрузитьССервераToolStripMenuItem.Click += new System.EventHandler(this.загрузитьССервераToolStripMenuItem_Click);
             // 
             // сохранитьНаСервереToolStripMenuItem
             // 
+            this.сохранитьНаСервереToolStripMenuItem.Enabled = false;
             this.сохранитьНаСервереToolStripMenuItem.Name = "сохранитьНаСервереToolStripMenuItem";
             this.сохранитьНаСервереToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.сохранитьНаСервереToolStripMenuItem.Text = "Сохранить на сервере";
+            this.сохранитьНаСервереToolStripMenuItem.Click += new System.EventHandler(this.сохранитьНаСервереToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 

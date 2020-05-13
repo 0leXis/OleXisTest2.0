@@ -45,14 +45,14 @@ namespace OleXisTest
                             (responseData) =>
                             {
                                 var responseInfo = ResponseInfo.FromJson(responseData);
-                                var loginInfo = AccountInfo.FromJson(SequrityUtils.Decrypt(responseInfo.Data, _User.SecretKey));
-                                if (loginInfo != null)
+                                if(responseInfo.Error != null)
+                                    onLogin(responseInfo.Error, null);
+                                else
                                 {
+                                    var loginInfo = AccountInfo.FromJson(SequrityUtils.DecryptString(responseInfo.Data, _User.SecretKey));
                                     updator.Start();
                                     onLogin(null, loginInfo);
                                 }
-                                else
-                                    onLogin(responseInfo.Error, null);
                             },
                             Address);
                     }
@@ -80,15 +80,23 @@ namespace OleXisTest
                             (responseData) =>
                             {
                                 var responseInfo = ResponseInfo.FromJson(responseData);
-                                if (SequrityUtils.Decrypt(responseInfo.Data, _User.SecretKey) == "OK")
-                                {
-                                    Disconnect();
-                                    onRegister(null);
-                                }
-                                else
+                                if (responseInfo.Error != null)
                                 {
                                     Disconnect();
                                     onRegister(responseInfo.Error);
+                                }
+                                else
+                                {
+                                    if (SequrityUtils.DecryptString(responseInfo.Data, _User.SecretKey) == "OK")
+                                    {
+                                        Disconnect();
+                                        onRegister(null);
+                                    }
+                                    else
+                                    {
+                                        Disconnect();
+                                        onRegister(responseInfo.Error);
+                                    }
                                 }
                             },
                             Address);
@@ -128,7 +136,7 @@ namespace OleXisTest
                             (string responseData2) =>
                             {
                                 responseInfo = ResponseInfo.FromJson(responseData2);
-                                if (SequrityUtils.Decrypt(responseInfo.Data, _User.SecretKey) == "CONNECTION_STARTED")
+                                if (SequrityUtils.DecryptString(responseInfo.Data, _User.SecretKey) == "CONNECTION_STARTED")
                                 {
                                     _IsConnected = true;
                                     onConnected(null);

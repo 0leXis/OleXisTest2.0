@@ -8,14 +8,13 @@ using System.Security.Cryptography;
 
 namespace OleXisTestServer
 {
-    public enum UserRoles { Admin, Student, Teacher }
     public class Client : IDisposable
     {
         public const int START_EXPIRED_TIME = 1;
         public const int LOGINED_EXPIRED_TIME = 4;
         public string UserToken { get; set; }
         public int UserId { get; set; }
-        public UserRoles Role { get; set; }
+        public UserRoles? Role { get; set; } = null;
         public CngKey GeneratedDFKey { get; set; }
         public byte[] SecretDFKey { get; set; }
         public DateTime ExpiredTime { get; set; }

@@ -17,7 +17,7 @@ namespace OleXisTestServer
         {
             var client = ClientManager.GetClient(requestData.UserToken);
 
-            var registerData = RegisterData.FromJson(SequrityUtils.Decrypt(requestData.Data, client.SecretDFKey));
+            var registerData = RegisterData.FromJson(SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey));
             var passwordHash = SequrityUtils.GetHash(registerData.Password);
 
             var DBReader = DBConnection.PrepareExecProcedureCommand("GetStudentGroup", registerData.Group).ExecuteReader();

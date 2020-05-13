@@ -53,12 +53,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudentTeacherDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentTeacherDialog.Designer.cs">
+      <DependentUpon>AddStudentTeacherDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseForm.Designer.cs">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ConnectToServer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ConnectToServer.Designer.cs">
       <DependentUpon>ConnectToServer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServerLoadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerLoadDialog.Designer.cs">
+      <DependentUpon>ServerLoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerSaveDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerSaveDialog.Designer.cs">
+      <DependentUpon>ServerSaveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\SaveProviders\ServerTestSaveProvider.cs" />
     <Compile Include="WebUtils\NetConnection.cs" />
     <Compile Include="WebUtils\NetDataSender.cs" />
     <Compile Include="WebUtils\SequrityUtils.cs" />
@@ -150,7 +181,6 @@
     <Compile Include="Interfaces\IVariantPassingControl.cs" />
     <Compile Include="Interfaces\IQuestion.cs" />
     <Compile Include="Interfaces\ITest.cs" />
-    <Compile Include="Interfaces\ITestSaveProvider.cs" />
     <Compile Include="Interfaces\IQuestionInfo.cs" />
     <Compile Include="Interfaces\IQuestionAnswer.cs" />
     <Compile Include="Interfaces\IQuestionInfoView.cs" />
@@ -245,6 +275,15 @@
     <Compile Include="User.cs" />
     <Compile Include="WebUtils\TokenUpdator.cs" />
     <Compile Include="WebUtils\WebStructures.cs" />
+    <EmbeddedResource Include="AddStudentTeacherDialog.resx">
+      <DependentUpon>AddStudentTeacherDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseForm.resx">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConnectToServer.resx">
       <DependentUpon>ConnectToServer.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Passing\TestResults.resx">
       <DependentUpon>TestResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerLoadDialog.resx">
+      <DependentUpon>ServerLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerSaveDialog.resx">
+      <DependentUpon>ServerSaveDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -56,15 +56,25 @@
   <ItemGroup>
     <Compile Include="AccessTokens.cs" />
     <Compile Include="ClientManager.cs" />
+    <Compile Include="CommandErrors.cs" />
+    <Compile Include="Commands\AddSubjectCommand.cs" />
+    <Compile Include="Commands\GetAvailableTestsCommand.cs" />
+    <Compile Include="Commands\GetMyTestsCommand.cs" />
+    <Compile Include="Commands\GetSubjectListCommand.cs" />
+    <Compile Include="Commands\LoadTestForEditCommand.cs" />
+    <Compile Include="Commands\LoadTestForPassCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\OpenConnectionCommand.cs" />
     <Compile Include="CommandFactory.cs" />
+    <Compile Include="Commands\SaveTestCommand.cs" />
     <Compile Include="Commands\SetDFCommand.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Commands\DisconnectCommand.cs" />
+    <Compile Include="FileProcessor.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Listener.cs" />
-    <Compile Include="RegisterStudentCommand.cs" />
+    <Compile Include="Commands\RegisterStudentCommand.cs" />
+    <Compile Include="Commands\RegisterTeacherCommand.cs" />
     <Compile Include="SequrityUtils.cs" />
     <Compile Include="ServerFindBroadcaster.cs" />
     <Compile Include="TextBoxLog.cs" />
@@ -78,7 +88,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="UpdateTokenCommand.cs" />
+    <Compile Include="Commands\UpdateTokenCommand.cs" />
     <Compile Include="WebStructures.cs" />
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

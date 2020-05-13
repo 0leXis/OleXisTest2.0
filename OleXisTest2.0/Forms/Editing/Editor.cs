@@ -18,9 +18,15 @@ namespace OleXisTest
         private IQuestion currentQuestionPreview;
         private string currentSection;
 
-        public Editor()
+        private NetConnection connection;
+        public Editor(NetConnection connection)
         {
             InitializeComponent();
+            this.connection = connection;
+            if (connection != null && connection.IsConnected)
+            {
+                загрузитьССервераToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void CreateTest()
@@ -164,6 +170,7 @@ namespace OleXisTest
             сохранитьТестToolStripMenuItem.Enabled = false;
             buttonCreateSection.Enabled = false;
             buttonCreateVopr.Enabled = false;
+            сохранитьНаСервереToolStripMenuItem.Enabled = false;
         }
 
         private void EnableButtons()
@@ -172,6 +179,10 @@ namespace OleXisTest
             сохранитьТестToolStripMenuItem.Enabled = true;
             buttonCreateSection.Enabled = true;
             buttonCreateVopr.Enabled = true;
+            if (connection != null && connection.IsConnected)
+            {
+                сохранитьНаСервереToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void InitTestControls()
@@ -353,6 +364,30 @@ namespace OleXisTest
         private void buttonChangeSection_Click(object sender, EventArgs e)
         {
             ChangeSection();
+        }
+
+        private void сохранитьНаСервереToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(var saveDialog = new ServerSaveDialog(connection, testForEdit))
+            {
+                saveDialog.ShowDialog();
+                if(saveDialog.TestName != null)
+                    Text = "OleXis Test: Редактор тестов - " + saveDialog.TestName;
+            }
+        }
+
+        private void загрузитьССервераToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var loadDialog = new ServerLoadDialog(connection, false))
+            {
+                if(loadDialog.ShowDialog() == DialogResult.OK)
+                    if(loadDialog.Test != null)
+                    {
+                        Text = "OleXis Test: Редактор тестов - " + loadDialog.TestName;
+                        testForEdit = loadDialog.Test;
+                        InitTestControls();
+                    }
+            }
         }
     }
 }
