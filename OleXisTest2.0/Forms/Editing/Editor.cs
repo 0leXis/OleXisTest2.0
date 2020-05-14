@@ -228,6 +228,7 @@ namespace OleXisTest
                 (previewAnswerControl as IVariantPassingControl).SetDefaultDockStyle();
                 previewAnswerControl.Location = new Point(3, 25);
                 groupBoxAnswers.Controls.Add(previewAnswerControl);
+                groupBoxAnswers.Text = "Ответы (" + currentQuestionPreview.QuestionAnswer.QuestionScore + " баллов за правильный ответ)";
             }
             else
             {
@@ -257,6 +258,7 @@ namespace OleXisTest
                 control.Dispose();
             }
             groupBoxAnswers.Controls.Clear();
+            groupBoxAnswers.Text = "Ответы";
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)

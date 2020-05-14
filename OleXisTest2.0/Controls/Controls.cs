@@ -62,6 +62,20 @@ namespace OleXisTest
             };
         }
 
+        static public Label GetLabelYSequence(string text, int left, int width, int height, Control parent, Control lastControlInSequence = null)
+        {
+            return new Label()
+            {
+                Parent = parent,
+                Top = (lastControlInSequence == null) ? 10 : lastControlInSequence.Top + lastControlInSequence.Height,
+                Left = left,
+                Width = width,
+                Height = height,
+                Text = text,
+                Font = defaultFont
+            };
+        }
+
         static public RadioButton GetRadioButton(string text, int width, int top, Control parent, Control lastControlInSequence = null)
         {
             return new RadioButton()
@@ -91,6 +105,11 @@ namespace OleXisTest
         static public int GetStringWidth(string str, Graphics componentGraphics)
         {
             return (int)componentGraphics.MeasureString(str, defaultFont).Width + 1;
+        }
+
+        static public int GetStringHeight(string str, Graphics componentGraphics)
+        {
+            return (int)componentGraphics.MeasureString(str, defaultFont).Height + 1;
         }
     }
 }

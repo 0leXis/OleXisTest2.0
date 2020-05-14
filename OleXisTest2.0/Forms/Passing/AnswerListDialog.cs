@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OleXisTest
@@ -16,10 +17,10 @@ namespace OleXisTest
             foreach (var answer in answers)
             {
                 var description = answer.IsRight ? answer.QuestionDescription + " (" + answer.Question_score + " баллов)" : answer.QuestionDescription + "(0 из " + answer.Question_score + " баллов)";
-                Ansvers.Add(OleXisTest.Controls.GetLabel(description, OleXisTest.Controls.GetStringWidth(description, graphics) + 50, Ansvers.Count * OleXisTest.Controls.INDENT_Y, panel));
+                Ansvers.Add(OleXisTest.Controls.GetLabelYSequence(description, OleXisTest.Controls.INDENT_X, OleXisTest.Controls.GetStringWidth(description, graphics) + 50, OleXisTest.Controls.GetStringHeight(description, graphics), panel, Ansvers.Count > 0 ? Ansvers.Last() : null));
                 foreach (var variant in answer.Variants)
                 {
-                    var label = OleXisTest.Controls.GetLabel("   " + variant.VariantText, OleXisTest.Controls.GetStringWidth("   " + variant.VariantText, graphics) + 50, Ansvers.Count * OleXisTest.Controls.INDENT_Y, panel);
+                    var label = OleXisTest.Controls.GetLabelYSequence("   " + variant.VariantText, OleXisTest.Controls.INDENT_X, OleXisTest.Controls.GetStringWidth("   " + variant.VariantText, graphics) + 50, OleXisTest.Controls.GetStringHeight("   " + variant.VariantText, graphics), panel, Ansvers.Count > 0 ? Ansvers.Last() : null);
                     switch (variant.Type)
                     {
                         case AnswerVariations.WrongAnswerNotChoosed:
@@ -38,6 +39,7 @@ namespace OleXisTest
                     }
                     Ansvers.Add(label);
                 }
+                Ansvers.Last().Height += 10;
             }
         }
     }
