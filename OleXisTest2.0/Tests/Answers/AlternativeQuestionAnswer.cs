@@ -9,6 +9,21 @@ namespace OleXisTest
     public class AlternativeQuestionAnswer : IQuestionAnswer, ICloneable
     {
         //Варианты ответа и ответы
+        public int QuestionScore
+        {
+            get
+            {
+                return _questionScore;
+            }
+            set
+            {
+                if (value < 1)
+                    _questionScore = 1;
+                else
+                    _questionScore = value;
+            }
+        }
+        int _questionScore = 1;
         public bool IsYesAnswer { get; set; }
 
         public AlternativeQuestionAnswer() : this(true) { }

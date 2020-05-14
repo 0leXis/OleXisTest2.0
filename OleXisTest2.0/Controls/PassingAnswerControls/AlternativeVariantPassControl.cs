@@ -40,7 +40,7 @@ namespace OleXisTest
             var answerListItem = new AnswerListItem();
             answerListItem.IsRight = true;
             //TODO: Система баллов
-            answerListItem.Question_score = 1;
+            answerListItem.Question_score = answer.QuestionScore;
             if (short_question_desc != null)
                 answerListItem.QuestionDescription = short_question_desc;
             if (answer.IsYesAnswer && radioButtonYes.Checked)

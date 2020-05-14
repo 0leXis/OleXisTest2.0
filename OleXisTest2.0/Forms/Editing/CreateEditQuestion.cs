@@ -94,6 +94,8 @@ namespace OleXisTest
                 comboBoxSection.SelectedIndex = 0;
             else
                 comboBoxSection.SelectedIndex = comboBoxSection.Items.IndexOf(questionToChange.Section);
+
+            numericUpDownScore.Value = questionToChange.QuestionAnswer.QuestionScore < 1 ? 1 : questionToChange.QuestionAnswer.QuestionScore;
         }
 
         private void buttonRedaktVariants_Click(object sender, EventArgs e)
@@ -152,6 +154,8 @@ namespace OleXisTest
 
             if (!_answer.ValidateAnswer())
                 return;
+
+            _answer.QuestionScore = Convert.ToInt32(numericUpDownScore.Value);
 
             _question = new Question(textBoxName.Text, infoEdit.GetInfo(), _answer);
             if (comboBoxSection.SelectedIndex != 0)

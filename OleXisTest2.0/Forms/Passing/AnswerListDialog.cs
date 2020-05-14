@@ -15,7 +15,8 @@ namespace OleXisTest
             var graphics = CreateGraphics();
             foreach (var answer in answers)
             {
-                Ansvers.Add(OleXisTest.Controls.GetLabel(answer.QuestionDescription, OleXisTest.Controls.GetStringWidth(answer.QuestionDescription, graphics), Ansvers.Count * OleXisTest.Controls.INDENT_Y, panel));
+                var description = answer.IsRight ? answer.QuestionDescription + " (" + answer.Question_score + " баллов)" : answer.QuestionDescription + "(0 из " + answer.Question_score + " баллов)";
+                Ansvers.Add(OleXisTest.Controls.GetLabel(description, OleXisTest.Controls.GetStringWidth(description, graphics) + 50, Ansvers.Count * OleXisTest.Controls.INDENT_Y, panel));
                 foreach (var variant in answer.Variants)
                 {
                     var label = OleXisTest.Controls.GetLabel("   " + variant.VariantText, OleXisTest.Controls.GetStringWidth("   " + variant.VariantText, graphics) + 50, Ansvers.Count * OleXisTest.Controls.INDENT_Y, panel);

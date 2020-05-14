@@ -38,7 +38,9 @@
             this.comboBoxSection = new System.Windows.Forms.ComboBox();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDownScore = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownScore)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -131,9 +133,9 @@
             // 
             // panelInfo
             // 
-            this.panelInfo.Location = new System.Drawing.Point(12, 165);
+            this.panelInfo.Location = new System.Drawing.Point(12, 159);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(508, 393);
+            this.panelInfo.Size = new System.Drawing.Size(508, 399);
             this.panelInfo.TabIndex = 37;
             // 
             // button1
@@ -147,23 +149,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonRedaktVariants_Click);
             // 
-            // button2
+            // label1
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(508, 31);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Переключиться на расширенное представление";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 23);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Количество баллов за правильный ответ:";
+            // 
+            // numericUpDownScore
+            // 
+            this.numericUpDownScore.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownScore.Location = new System.Drawing.Point(351, 124);
+            this.numericUpDownScore.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownScore.Name = "numericUpDownScore";
+            this.numericUpDownScore.Size = new System.Drawing.Size(169, 29);
+            this.numericUpDownScore.TabIndex = 40;
+            this.numericUpDownScore.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // CreateEditQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 644);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.numericUpDownScore);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.buttonCancel);
@@ -176,6 +196,7 @@
             this.Controls.Add(this.comboBoxSection);
             this.Name = "CreateEditQuestion";
             this.Text = "CreateEditQuestion";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +214,7 @@
         private System.Windows.Forms.ComboBox comboBoxSection;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDownScore;
     }
 }

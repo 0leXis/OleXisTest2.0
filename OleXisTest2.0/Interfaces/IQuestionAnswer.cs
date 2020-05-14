@@ -7,6 +7,7 @@ namespace OleXisTest
 {
     public interface IQuestionAnswer
     {
+        int QuestionScore { get; set; }
         bool ValidateAnswer();
     }
 }
