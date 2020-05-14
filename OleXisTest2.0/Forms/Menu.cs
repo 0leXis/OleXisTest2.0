@@ -126,7 +126,7 @@ namespace OleXisTest
 
         private void btnDB_Click(object sender, EventArgs e)
         {
-            using(var dbForm = new DatabaseForm(connection, loginInfo.Role))
+            using(var dbForm = new DatabaseForm(connection))
             {
                 Hide();
                 dbForm.ShowDialog();
@@ -148,6 +148,14 @@ namespace OleXisTest
                             Show();
                         }
                     }
+            }
+        }
+
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+            using (var passwordDialog = new ChangePasswordDialog(connection))
+            {
+                passwordDialog.ShowDialog();
             }
         }
     }

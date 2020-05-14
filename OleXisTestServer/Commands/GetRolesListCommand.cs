@@ -5,20 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace OleXisTestServer
+namespace OleXisTestServer.Commands
 {
-    class GetSubjectListCommand : ICommand
+    class GetRolesListCommand : ICommand
     {
         RequestInfo requestData;
-        public GetSubjectListCommand(RequestInfo requestData)
+        public GetRolesListCommand(RequestInfo requestData)
         {
             this.requestData = requestData;
         }
         public byte[] Execute(out CommandError error)
         {
             var client = ClientManager.GetClient(requestData.UserToken);
-            
-            var result = DBConnection.PrepareExecProcedureCommand("GetSubjectList").ExecuteReader();
+
+            var result = DBConnection.PrepareExecProcedureCommand("GetRolesList").ExecuteReader();
             var subjectList = new Dictionary<int, string>();
             while (result.Read())
             {

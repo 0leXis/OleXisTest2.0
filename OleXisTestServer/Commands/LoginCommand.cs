@@ -22,9 +22,9 @@ namespace OleXisTestServer
             var result = DBConnection.PrepareExecProcedureCommand("CheckLoginInfo", loginData.Login, passwordHash).ExecuteReader();
             if (result.Read())
             {
-                var info = new AccountInfo(result.GetString(1), result.GetString(2), (UserRoles)(result.GetInt32(4) - 1), result.IsDBNull(5) ? null : result.GetString(5));
                 client.UserId = result.GetInt32(0);
                 client.Role = (UserRoles)(result.GetInt32(4) - 1);
+                var info = new AccountInfo(client.UserId, result.GetString(1), result.GetString(2), client.Role.Value, result.IsDBNull(5) ? null : result.GetString(5));
 
                 client.UpdateExpiredTime();
 

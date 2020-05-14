@@ -51,6 +51,8 @@ namespace OleXisTest
                                 {
                                     var loginInfo = AccountInfo.FromJson(SequrityUtils.DecryptString(responseInfo.Data, _User.SecretKey));
                                     updator.Start();
+                                    User.UserId = loginInfo.UserId;
+                                    User.UserRole = loginInfo.Role;
                                     onLogin(null, loginInfo);
                                 }
                             },

@@ -105,12 +105,14 @@ namespace OleXisTestServer
 
     public class AccountInfo
     {
+        public int UserId { get; }
         public string Firstname { get; }
         public string Lastname { get; }
         public UserRoles Role { get; }
         public string Group { get; }
-        public AccountInfo(string Firstname, string Lastname, UserRoles Role, string Group)
+        public AccountInfo(int UserId, string Firstname, string Lastname, UserRoles Role, string Group)
         {
+            this.UserId = UserId;
             this.Firstname = Firstname;
             this.Lastname = Lastname;
             this.Role = Role;
@@ -144,6 +146,125 @@ namespace OleXisTestServer
         static public NetSerializedTestInfo FromJson(string Json)
         {
             return JsonConvert.DeserializeObject<NetSerializedTestInfo>(Json);
+        }
+    }
+
+    public class TestSheetGetParams
+    {
+        public bool isCreatorTests;
+        public string Name { get; }
+        public int? Subject { get; }
+        public TestSheetGetParams(bool isCreatorTests, string Name, int? Subject)
+        {
+            this.isCreatorTests = isCreatorTests;
+            this.Name = Name;
+            this.Subject = Subject;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public TestSheetGetParams FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<TestSheetGetParams>(Json);
+        }
+    }
+
+    public class UserSheetGetParams
+    {
+        public string Surname { get; }
+        public int? Role { get; }
+        public UserSheetGetParams(string Surname, int? Role)
+        {
+            this.Surname = Surname;
+            this.Role = Role;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public UserSheetGetParams FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<UserSheetGetParams>(Json);
+        }
+    }
+
+    public class UserSheetItem
+    {
+        public int id { get; }
+        public string Login { get; }
+        public string Name { get; }
+        public string Surname { get; }
+        public int Role { get; }
+        public string Group { get; }
+        public UserSheetItem(int id, string Login, string Name, string Surname, int Role, string Group)
+        {
+            this.id = id;
+            this.Login = Login;
+            this.Name = Name;
+            this.Surname = Surname;
+            this.Role = Role;
+            this.Group = Group;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public UserSheetGetParams FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<UserSheetGetParams>(Json);
+        }
+    }
+
+    public class TestSheetItem
+    {
+        public int id { get; }
+        public string Name { get; }
+        public string Creator { get; }
+        public DateTime EditDate { get; }
+        public int Subject { get; }
+        public bool PassAvailable { get; }
+        public TestSheetItem(int id, string Name, string Creator, DateTime EditDate, int Subject, bool PassAvailable)
+        {
+            this.id = id;
+            this.Name = Name;
+            this.Creator = Creator;
+            this.EditDate = EditDate;
+            this.Subject = Subject;
+            this.PassAvailable = PassAvailable;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public TestSheetItem FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<TestSheetItem>(Json);
+        }
+    }
+
+    public class EditUserData
+    {
+        public int id { get; }
+        public string Password { get; }
+        public string Firstname { get; }
+        public string Lastname { get; }
+        public string Group { get; }
+        public EditUserData(int id, string Password, string Firstname, string Lastname, string Group)
+        {
+            this.id = id;
+            this.Password = Password;
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.Group = Group;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public EditUserData FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<EditUserData>(Json);
         }
     }
 }

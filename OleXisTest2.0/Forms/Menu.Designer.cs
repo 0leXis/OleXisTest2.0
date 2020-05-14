@@ -86,6 +86,7 @@
             this.btnPassword.TabIndex = 0;
             this.btnPassword.Text = "Сменить пароль";
             this.btnPassword.UseVisualStyleBackColor = true;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // btnDB
             // 

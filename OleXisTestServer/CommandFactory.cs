@@ -32,6 +32,8 @@ namespace OleXisTestServer
                     return new AddSubjectCommand(requestData);
                 case "GetSubjectList":
                     return new GetSubjectListCommand(requestData);
+                case "GetRolesList":
+                    return new GetRolesListCommand(requestData);
                 case "GetMyTests":
                     return new GetMyTestsCommand(requestData);
                 case "GetAvailableTests":
@@ -40,6 +42,20 @@ namespace OleXisTestServer
                     return new LoadTestForPassCommand(requestData);
                 case "LoadTestForEdit":
                     return new LoadTestForEditCommand(requestData);
+                case "GetTestsSheet":
+                    return new GetTestsSheetCommand(requestData);
+                case "GetUsersSheet":
+                    return new GetUsersSheetCommand(requestData);
+                case "PassToggleTest":
+                    return new PassToggleTestCommand(requestData);
+                case "EditUser":
+                    return new EditUserCommand(requestData);
+                case "DeleteUser":
+                    return new DeleteUserCommand(requestData);
+                case "DeleteTest":
+                    return new DeleteTestCommand(requestData);
+                case "ChangePassword":
+                    return new ChangePasswordCommand(requestData);
                 default:
                     throw new ArgumentException("Получена неверная команда");
             }
