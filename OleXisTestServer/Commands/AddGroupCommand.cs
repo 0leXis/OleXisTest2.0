@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace OleXisTestServer
 {
-    class AddSubjectCommand : ICommand
+    class AddGroupCommand : ICommand
     {
         RequestInfo requestData;
-        public AddSubjectCommand(RequestInfo requestData)
+        public AddGroupCommand(RequestInfo requestData)
         {
             this.requestData = requestData;
         }
@@ -23,9 +23,9 @@ namespace OleXisTestServer
                 return null;
             }
 
-            var subjectName = SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey);
+            var groupName = SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey);
 
-            var result = DBConnection.PrepareExecProcedureCommand("CheckSubject", subjectName).ExecuteReader();
+            var result = DBConnection.PrepareExecProcedureCommand("CheckGroup", groupName).ExecuteReader();
             if (result.Read())
             {
                 error = CommandError.SubjectExists;
@@ -33,7 +33,7 @@ namespace OleXisTestServer
             }
             result.Close();
 
-            DBConnection.PrepareExecProcedureCommand("AddSubject", subjectName).ExecuteNonQuery();
+            DBConnection.PrepareExecProcedureCommand("AddGroup", groupName).ExecuteNonQuery();
 
             error = CommandError.None;
             return SequrityUtils.Encrypt("OK", client.SecretDFKey);

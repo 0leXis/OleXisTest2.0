@@ -17,6 +17,7 @@ namespace OleXisTest
         {
             InitializeComponent();
             this.connection = connection;
+            this.isStudent = isStudent;
             if (isStudent)
             {
                 labelGroup.Visible = true;

@@ -18,12 +18,6 @@ namespace OleXisTestServer.Commands
         {
             var client = ClientManager.GetClient(requestData.UserToken);
 
-            if (client.Role != UserRoles.Teacher)
-            {
-                error = CommandError.NoPermissions;
-                return null;
-            }
-
             var result = DBConnection.PrepareExecProcedureCommand("GetAvailableTests").ExecuteReader();
             var testsList = new List<string>();
             while (result.Read())

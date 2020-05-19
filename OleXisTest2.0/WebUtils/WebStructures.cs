@@ -267,4 +267,101 @@ namespace OleXisTest
             return JsonConvert.DeserializeObject<EditUserData>(Json);
         }
     }
+
+    public enum AnswerVariations
+    {
+        RightAnswerChoosed,
+        WrongAnswerChoosed,
+        RightAnswerNotChoosed,
+        WrongAnswerNotChoosed,
+        NoAnswer
+    }
+
+    public struct AnswerListVariant
+    {
+        public AnswerVariations Type { get; }
+        public string VariantText { get; }
+
+        public AnswerListVariant(AnswerVariations Type, string VariantText)
+        {
+            this.Type = Type;
+            this.VariantText = VariantText;
+        }
+    }
+
+    public class AnswerListItem
+    {
+        public string QuestionName { get; set; }
+        public string QuestionDescription { get; set; }
+        public List<AnswerListVariant> Variants { get; } = new List<AnswerListVariant>();
+        public int Question_score { get; set; }
+        public bool IsRight { get; set; }
+    }
+
+    public class TestResult
+    {
+        public int Mark { get; }
+        public DateTime PassingTime { get; }
+        public List<AnswerListItem> Answers { get; }
+        public TestResult(int Mark, DateTime PassingTime, List<AnswerListItem> Answers)
+        {
+            this.Mark = Mark;
+            this.PassingTime = PassingTime;
+            this.Answers = Answers;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public TestResult FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<TestResult>(Json);
+        }
+    }
+
+    public class ServerTestResultGetParams
+    {
+        public int TestId { get; }
+        public string StudentSurname { get; }
+        public DateTime? PassDate { get; }
+        public ServerTestResultGetParams(int TestId, string StudentSurname, DateTime? PassDate)
+        {
+            this.TestId = TestId;
+            this.StudentSurname = StudentSurname;
+            this.PassDate = PassDate;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public ServerTestResultGetParams FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<ServerTestResultGetParams>(Json);
+        }
+    }
+
+    public class ResultSheetItem
+    {
+        public int id { get; }
+        public string NameSurname { get; }
+        public int Mark { get; }
+        public DateTime PassingTime { get; }
+        public DateTime PassDate { get; }
+        public ResultSheetItem(int id, string NameSurname, int Mark, DateTime PassingTime, DateTime PassDate)
+        {
+            this.id = id;
+            this.NameSurname = NameSurname;
+            this.Mark = Mark;
+            this.PassingTime = PassingTime;
+            this.PassDate = PassDate;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public ResultSheetItem FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<ResultSheetItem>(Json);
+        }
+    }
 }

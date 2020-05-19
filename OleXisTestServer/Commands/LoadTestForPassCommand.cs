@@ -19,7 +19,7 @@ namespace OleXisTestServer.Commands
 
             var testName = SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey);
             var result = DBConnection.PrepareExecProcedureCommand("CheckTestAvailability", testName).ExecuteReader();
-            string testFilename = null;
+            int? testId = null;
             int testSubject;
             if (result.Read())
             {
@@ -28,7 +28,7 @@ namespace OleXisTestServer.Commands
                     error = CommandError.TestNotAvailable;
                     return null;
                 }
-                testFilename = result.GetInt32(0) + ".test";
+                testId = result.GetInt32(0);
                 testSubject = result.GetInt32(1);
             }
             else
@@ -38,7 +38,8 @@ namespace OleXisTestServer.Commands
             }
             result.Close();
 
-            var test = FileProcessor.LoadTestFile(testFilename);
+            var test = FileProcessor.LoadTestFile(testId + ".test");
+            client.CurrentPassTestId = testId;
 
             error = CommandError.None;
             return SequrityUtils.Encrypt(new NetSerializedTestInfo(test, testName, testSubject).ToJson(), client.SecretDFKey);

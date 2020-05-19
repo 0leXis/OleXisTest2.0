@@ -18,11 +18,13 @@ namespace OleXisTestServer
         public CngKey GeneratedDFKey { get; set; }
         public byte[] SecretDFKey { get; set; }
         public DateTime ExpiredTime { get; set; }
+        public int? CurrentPassTestId { get; set; }
         public Client(CngKey GeneratedDFKey)
         {
             this.GeneratedDFKey = GeneratedDFKey;
             UserToken = AccessTokens.GenerateUserToken();
             ExpiredTime = DateTime.Now.AddMinutes(START_EXPIRED_TIME);
+            CurrentPassTestId = null;
         }
         public void UpdateExpiredTime()
         {

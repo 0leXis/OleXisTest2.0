@@ -46,7 +46,7 @@ namespace OleXisTest
                     var test = FileProcessor.LoadTestFile(out fileName);
                     if(test != null)
                     {
-                        using (var passing = new TestPassing(studentData.FIO, studentData.Class, test))
+                        using (var passing = new TestPassing(studentData.FIO, studentData.Class, test, connection, false))
                         {
                             Hide();
                             passing.ShowDialog();
@@ -141,7 +141,7 @@ namespace OleXisTest
                 if(serverTestLoader.ShowDialog() == DialogResult.OK)
                     if(serverTestLoader.Test != null)
                     {
-                        using (var passing = new TestPassing(labelSurname.Text + " " + labelName.Text, labelGroup.Text, serverTestLoader.Test))
+                        using (var passing = new TestPassing(labelSurname.Text + " " + labelName.Text, labelGroup.Text, serverTestLoader.Test, connection, true))
                         {
                             Hide();
                             passing.ShowDialog();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OleXisTestServer
 {
-    public enum CommandError { None, Unauthorized, NoPermissions, NullToken, ClientNotFound, BadLoginOrPassword, BadStudentGroup, LoginExists, TestNameBusy, SubjectExists, TestNotAvailable, TestNotFound }
+    public enum CommandError { None, Unauthorized, NoPermissions, NullToken, ClientNotFound, BadLoginOrPassword, BadStudentGroup, LoginExists, TestNameBusy, SubjectExists, TestNotAvailable, TestNotFound, NoCurrentTest, TestResultNotFound }
     public static class CommandErrors
     {
         static private readonly Dictionary<CommandError, string> Errors = new Dictionary<CommandError, string>()
@@ -24,6 +24,8 @@ namespace OleXisTestServer
             { CommandError.SubjectExists,  "SUBJECT_EXISTS" },
             { CommandError.TestNotAvailable,  "TEST_NOT_AVAILABLE" },
             { CommandError.TestNotFound,  "TEST_NOT_FOUND" },
+            { CommandError.NoCurrentTest,  "NO_CURRENT_TEST" },
+            { CommandError.TestResultNotFound,  "TEST_RESULT_NOT_FOUND" },
         };
 
         static public string GetErrorCode(CommandError error)

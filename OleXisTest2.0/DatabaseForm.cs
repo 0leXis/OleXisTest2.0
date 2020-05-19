@@ -191,6 +191,8 @@ namespace OleXisTest
                     }
                     dataGridView.Rows.Add(row);
                 }
+                if (checkBoxDate.Checked)
+                    dataGridView.Sort(dataGridView.Columns[3], ListSortDirection.Ascending);
             }
         }
 
@@ -333,13 +335,19 @@ namespace OleXisTest
                 switch (comboBoxData.SelectedIndex)
                 {
                     case 0:
-                        MessageBox.Show("Ето результаты типо");
+                        using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), connection))
+                        {
+                            resultsDialog.ShowDialog();
+                        }
                         break;
                     case 1:
                         switch (e.ColumnIndex)
                         {
                             case 6:
-                                MessageBox.Show("Ето результаты типо");
+                                using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), connection))
+                                {
+                                    resultsDialog.ShowDialog();
+                                }
                                 break;
                             case 7:
                                 PassToggleTest(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value));
@@ -399,6 +407,27 @@ namespace OleXisTest
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            GetCurrentSheet();
+        }
+
+        private void btnAddSubject_Click(object sender, EventArgs e)
+        {
+            using(var addSubjectDialog = new AddSubject(connection))
+            {
+                addSubjectDialog.ShowDialog();
+            }
+        }
+
+        private void btnAddGroup_Click(object sender, EventArgs e)
+        {
+            using (var addGroupDialog = new AddGroup(connection))
+            {
+                addGroupDialog.ShowDialog();
+            }
+        }
+
+        private void checkBoxDate_CheckedChanged(object sender, EventArgs e)
         {
             GetCurrentSheet();
         }

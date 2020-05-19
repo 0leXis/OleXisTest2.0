@@ -33,8 +33,8 @@ namespace OleXisTestServer.Commands
                         error = CommandError.TestNameBusy;
                         return null;
                     }
-                if (!result.IsDBNull(0))
-                    testFileId = result.GetInt32(1) + 1;
+                if (!result.IsDBNull(1))
+                    testFileId = result.GetInt32(1);
             }
             result.Close();
             //TODO: Если тест с таким именем уже существует, отправить запрос на перезапись

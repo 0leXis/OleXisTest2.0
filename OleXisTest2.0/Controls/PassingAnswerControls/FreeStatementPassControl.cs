@@ -30,14 +30,13 @@ namespace OleXisTest
             return true;
         }
 
-        public IAnswerListItem GetAnswerListItem(string short_question_desc = null)
+        public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();
             answerListItem.IsRight = true;
-            //TODO: Система баллов
+            answerListItem.QuestionName = questionName;
             answerListItem.Question_score = answer.QuestionScore;
-            if (short_question_desc != null)
-                answerListItem.QuestionDescription = short_question_desc;
+            answerListItem.QuestionDescription = shortQuestionDesc;
             if (answer.Answer == textBoxAnswer.Text)
                 answerListItem.Variants.Add(new AnswerListVariant(AnswerVariations.RightAnswerChoosed, textBoxAnswer.Text));
             else

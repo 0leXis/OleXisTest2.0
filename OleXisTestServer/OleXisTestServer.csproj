@@ -57,15 +57,18 @@
     <Compile Include="AccessTokens.cs" />
     <Compile Include="ClientManager.cs" />
     <Compile Include="CommandErrors.cs" />
+    <Compile Include="Commands\AddGroupCommand.cs" />
     <Compile Include="Commands\AddSubjectCommand.cs" />
     <Compile Include="Commands\ChangePasswordCommand.cs" />
     <Compile Include="Commands\DeleteTestCommand.cs" />
     <Compile Include="Commands\DeleteUserCommand.cs" />
     <Compile Include="Commands\EditUserCommand.cs" />
     <Compile Include="Commands\GetAvailableTestsCommand.cs" />
+    <Compile Include="Commands\GetExtendedResultCommand.cs" />
     <Compile Include="Commands\GetMyTestsCommand.cs" />
     <Compile Include="Commands\GetRolesListCommand.cs" />
     <Compile Include="Commands\GetSubjectListCommand.cs" />
+    <Compile Include="Commands\GetTestResultsCommand.cs" />
     <Compile Include="Commands\GetTestsSheetCommand.cs" />
     <Compile Include="Commands\GetUsersSheetCommand.cs" />
     <Compile Include="Commands\LoadTestForEditCommand.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Commands\OpenConnectionCommand.cs" />
     <Compile Include="CommandFactory.cs" />
     <Compile Include="Commands\PassToggleTestCommand.cs" />
+    <Compile Include="Commands\SaveResultCommand.cs" />
     <Compile Include="Commands\SaveTestCommand.cs" />
     <Compile Include="Commands\SetDFCommand.cs" />
     <Compile Include="DBConnection.cs" />

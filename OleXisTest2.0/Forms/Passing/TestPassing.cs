@@ -11,25 +11,33 @@ namespace OleXisTest
 {
     public partial class TestPassing : Form
     {
+        private NetConnection connection;
+
         private UserControl answerControl;
         private UserControl infoControl;
 
         private ITest test;
         private List<IQuestion> questions;
-        private List<IAnswerListItem> answers;
+        private List<AnswerListItem> answers;
         private int minutes;
         private int seconds;
         private int seconds_passed;
         private int current_question;
         private string FIO;
         private string Class;
-        public TestPassing(string FIO, string Class, ITest test)
+
+        private bool isTimeLimited = false;
+        private bool isServerTest = false;
+        public TestPassing(string FIO, string Class, ITest test, NetConnection connection, bool isServerTest)
         {
             InitializeComponent();
+            this.connection = connection;
+            this.isServerTest = isServerTest;
+
             this.test = test;
             this.FIO = FIO;
             this.Class = Class;
-            answers = new List<IAnswerListItem>();
+            answers = new List<AnswerListItem>();
             //Определение вопросов теста
             var rnd = new Random();
             switch (test.Params.QuestionAllocation)
@@ -64,10 +72,11 @@ namespace OleXisTest
             //Запуск теста
             if(test.Params.TimeForTest != 0)
             {
+                isTimeLimited = true;
                 minutes = test.Params.TimeForTest;
-                seconds_passed = 0;
-                timerTestTime.Start();
             }
+            seconds_passed = 0;
+            timerTestTime.Start();
             current_question = -1;
             NextQuestion();
         }
@@ -107,13 +116,13 @@ namespace OleXisTest
 
         private void GetAnswer()
         {
-            answers.Add((answerControl as IVariantPassingControl).GetAnswerListItem(questions[current_question].QuestionInfo.GetShortDescription()));
+            answers.Add((answerControl as IVariantPassingControl).GetAnswerListItem(questions[current_question].Name, questions[current_question].QuestionInfo.GetShortDescription()));
         }
 
         private void StopTest()
         {
             timerTestTime.Stop();
-            using (var resultDialog = new TestResults(FIO, Class, seconds_passed % 60 + ":" + seconds_passed / 60, answers))
+            using (var resultDialog = new TestResults(FIO, Class, seconds_passed % 60, seconds_passed / 60, answers, isServerTest, connection))
             {
                 resultDialog.ShowDialog();
             }
@@ -126,29 +135,32 @@ namespace OleXisTest
             {
                 var answer = new AnswerListItem();
                 answer.IsRight = false;
-                //TODO: Система баллов
-                answer.Question_score = 1;
-                answer.Variants.Add(new AnswerListVariant(AnswerVariations.RightAnswerNotChoosed, "Нет ответа"));
+                answer.QuestionName = questions[current_question].Name;
+                answer.Question_score = questions[current_question].QuestionAnswer.QuestionScore;
+                answer.Variants.Add(new AnswerListVariant(AnswerVariations.NoAnswer, "Нет ответа"));
                 answers.Add(answer);
             }
         }
 
         private void timerTestTime_Tick(object sender, EventArgs e)
         {
-            if (seconds == 0)
-            {
-                minutes -= 1;
-                seconds = 60;
-            }
-            if (minutes == 0)
-            {
-                FailLastQuestions();
-                StopTest();
-                return;
-            }
-            seconds -= 1;
             seconds_passed++;
-            labelTime.Text = "Времени осталось: " + minutes + ":" + seconds;
+            if (isTimeLimited)
+            {
+                if (seconds == 0)
+                {
+                    minutes -= 1;
+                    seconds = 60;
+                }
+                if (minutes == 0)
+                {
+                    FailLastQuestions();
+                    StopTest();
+                    return;
+                }
+                seconds -= 1;
+                labelTime.Text = "Времени осталось: " + minutes + ":" + seconds;
+            }
         }
 
         private void buttonNextQuestion_Click(object sender, EventArgs e)

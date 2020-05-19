@@ -8,7 +8,7 @@ namespace OleXisTest
     interface IVariantPassingControl
     {
         bool CheckAnswer();
-        IAnswerListItem GetAnswerListItem(string short_question_desc = null);
+        AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc);
         void SetDefaultDockStyle();
     }
 }

@@ -59,14 +59,13 @@ namespace OleXisTest
             return true;
         }
 
-        public IAnswerListItem GetAnswerListItem(string short_question_desc = null)
+        public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();
             answerListItem.IsRight = true;
-            //TODO: Система баллов
+            answerListItem.QuestionName = questionName;
             answerListItem.Question_score = answer.QuestionScore;
-            if (short_question_desc != null)
-                answerListItem.QuestionDescription = short_question_desc;
+            answerListItem.QuestionDescription = shortQuestionDesc;
             for (var i = 0; i < answer.Accordances.Count; i++)
             {
                 if (listBoxAcc1.Items.IndexOf(answer.Accordances[i]) != listBoxAcc2.Items.IndexOf(answer.Variants[i]))

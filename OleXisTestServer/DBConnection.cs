@@ -37,6 +37,11 @@ namespace OleXisTestServer
             return command;
         }
 
+        static public MySqlCommand GetCommand()
+        {
+            return connection.CreateCommand();
+        }
+
         static public void Disconnect()
         {
             connection.Close();

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 
 namespace OleXisTestServer
@@ -30,6 +31,8 @@ namespace OleXisTestServer
                     return new SaveTestCommand(requestData);
                 case "AddSubject":
                     return new AddSubjectCommand(requestData);
+                case "AddGroup":
+                    return new AddGroupCommand(requestData);
                 case "GetSubjectList":
                     return new GetSubjectListCommand(requestData);
                 case "GetRolesList":
@@ -46,6 +49,8 @@ namespace OleXisTestServer
                     return new GetTestsSheetCommand(requestData);
                 case "GetUsersSheet":
                     return new GetUsersSheetCommand(requestData);
+                case "GetTestResults":
+                    return new GetTestResultsCommand(requestData);
                 case "PassToggleTest":
                     return new PassToggleTestCommand(requestData);
                 case "EditUser":
@@ -56,6 +61,10 @@ namespace OleXisTestServer
                     return new DeleteTestCommand(requestData);
                 case "ChangePassword":
                     return new ChangePasswordCommand(requestData);
+                case "SaveResult":
+                    return new SaveResultCommand(requestData);
+                case "GetExtendedResult":
+                    return new GetExtendedResultCommand(requestData);
                 default:
                     throw new ArgumentException("Получена неверная команда");
             }

@@ -79,6 +79,7 @@
             this.btnAddGroup.TabIndex = 3;
             this.btnAddGroup.Text = "Добавить группу/класс";
             this.btnAddGroup.UseVisualStyleBackColor = true;
+            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
             // 
             // btnAddSubject
             // 
@@ -90,6 +91,7 @@
             this.btnAddSubject.TabIndex = 4;
             this.btnAddSubject.Text = "Добавить предмет";
             this.btnAddSubject.UseVisualStyleBackColor = true;
+            this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 
             // label1
             // 
@@ -180,6 +182,7 @@
             this.checkBoxDate.TabIndex = 24;
             this.checkBoxDate.Text = "Сортировать по дате";
             this.checkBoxDate.UseVisualStyleBackColor = true;
+            this.checkBoxDate.CheckedChanged += new System.EventHandler(this.checkBoxDate_CheckedChanged);
             // 
             // buttonClearFilters
             // 

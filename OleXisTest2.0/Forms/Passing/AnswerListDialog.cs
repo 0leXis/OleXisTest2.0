@@ -10,7 +10,7 @@ namespace OleXisTest
     {
         //Элементы, отображающие информацию
         List<Label> Ansvers = new List<Label>();
-        public AnswerListDialog(List<IAnswerListItem> answers)
+        public AnswerListDialog(List<AnswerListItem> answers)
         {
             InitializeComponent();
             var graphics = CreateGraphics();
