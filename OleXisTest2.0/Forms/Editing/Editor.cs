@@ -125,7 +125,7 @@ namespace OleXisTest
 
         private void ChangeTestParams()
         {
-            using(var testParamsDialog = new TestParamsDialog(testForEdit.Params))
+            using(var testParamsDialog = new TestParamsDialog(testForEdit.Params, testForEdit.Questions.Count))
             {
                 if (testParamsDialog.ShowDialog() == DialogResult.OK)
                 {

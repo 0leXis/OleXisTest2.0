@@ -43,6 +43,11 @@ namespace OleXisTest
                 MessageBox.Show("Необходимо выбрать предмет/дисциплину теста. Если в списке нет вашего предмета/дисциплины воспользуйтесь кнопкой \"Добавить предмет\"", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (textBoxTestName.Text == "")
+            {
+                MessageBox.Show("Поле \"Название теста\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var saver = new ServerTestSaveProvider(connection);
             if (saver.Save(test, textBoxTestName.Text, subjects.FirstOrDefault(x => x.Value == (string)comboBoxSubject.SelectedItem).Key))
             {

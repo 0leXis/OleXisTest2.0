@@ -28,6 +28,11 @@ namespace OleXisTest
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Поле \"Пароль\" должно быть заполнено", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _password = textBoxPassword.Text;
         }
     }

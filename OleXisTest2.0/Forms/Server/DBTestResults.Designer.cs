@@ -51,6 +51,7 @@
             // 
             this.textBoxTestNameSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTestNameSurname.Location = new System.Drawing.Point(99, 6);
+            this.textBoxTestNameSurname.MaxLength = 50;
             this.textBoxTestNameSurname.Name = "textBoxTestNameSurname";
             this.textBoxTestNameSurname.Size = new System.Drawing.Size(241, 29);
             this.textBoxTestNameSurname.TabIndex = 25;

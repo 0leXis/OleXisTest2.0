@@ -31,7 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.labelClass = new System.Windows.Forms.Label();
             this.labelFIO = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelProcPrav = new System.Windows.Forms.Label();
             this.labelOcenka = new System.Windows.Forms.Label();
@@ -70,16 +70,16 @@
             this.labelFIO.TabIndex = 18;
             this.labelFIO.Text = "ФИО: ";
             // 
-            // button1
+            // buttonOK
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 30);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "ОК";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOK.Location = new System.Drawing.Point(12, 128);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(201, 30);
+            this.buttonOK.TabIndex = 17;
+            this.buttonOK.Text = "ОК";
+            this.buttonOK.UseVisualStyleBackColor = true;
             // 
             // labelTime
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelClass);
             this.Controls.Add(this.labelFIO);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelProcPrav);
             this.Controls.Add(this.labelOcenka);
@@ -138,7 +138,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label labelClass;
         private System.Windows.Forms.Label labelFIO;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Label labelProcPrav;
         private System.Windows.Forms.Label labelOcenka;

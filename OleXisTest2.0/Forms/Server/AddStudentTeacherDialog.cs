@@ -27,8 +27,38 @@ namespace OleXisTest
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (textBoxLogin.Text == "")
+            {
+                MessageBox.Show("Поле \"Логин\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Поле \"Пароль\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (textBoxPassConfirm.Text != textBoxPassword.Text)
+            {
+                MessageBox.Show("Пароли не совпадают!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (textBoxSurname.Text == "")
+            {
+                MessageBox.Show("Поле \"Фамилия\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (textBoxFirstname.Text == "")
+            {
+                MessageBox.Show("Поле \"Имя\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (isStudent)
             {
+                if (textBoxGroup.Text == "")
+                {
+                    MessageBox.Show("Поле \"Группа\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 connection.SendCommand(
                     new RequestInfo(
                         "RegisterStudent", 
@@ -86,6 +116,18 @@ namespace OleXisTest
                 else
                     MessageBox.Show("Непредвиденная ошибка регистрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBoxSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
+        }
+
+        private void textBoxGroup_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetterOrDigit(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
         }
     }
 }

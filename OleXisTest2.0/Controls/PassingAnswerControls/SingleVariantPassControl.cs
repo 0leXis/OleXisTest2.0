@@ -46,6 +46,15 @@ namespace OleXisTest
             return true;
         }
 
+        public bool ValidateAnswer()
+        {
+            for (var i = 0; i < VariantSingle.Count; i++)
+                if (VariantSingle[i].Checked)
+                    return true;
+            MessageBox.Show("Вы должны выбрать вариант ответа", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+
         public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();

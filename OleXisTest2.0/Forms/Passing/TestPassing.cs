@@ -165,6 +165,8 @@ namespace OleXisTest
 
         private void buttonNextQuestion_Click(object sender, EventArgs e)
         {
+            if (!(answerControl as IVariantPassingControl).ValidateAnswer())
+                return;
             GetAnswer();
             NextQuestion();
         }

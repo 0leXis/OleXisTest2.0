@@ -35,6 +35,16 @@ namespace OleXisTest
                 return false;
         }
 
+        public bool ValidateAnswer()
+        {
+            if (!radioButtonYes.Checked && !radioButtonNo.Checked)
+            {
+                MessageBox.Show("Вы не выбрали вариант ответа", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
         public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();

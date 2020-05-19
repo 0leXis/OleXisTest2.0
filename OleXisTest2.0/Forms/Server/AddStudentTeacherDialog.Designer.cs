@@ -47,6 +47,7 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(94, 12);
+            this.textBoxLogin.MaxLength = 50;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(298, 29);
             this.textBoxLogin.TabIndex = 16;
@@ -54,6 +55,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(94, 46);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 29);
@@ -103,14 +105,17 @@
             // textBoxGroup
             // 
             this.textBoxGroup.Location = new System.Drawing.Point(122, 186);
+            this.textBoxGroup.MaxLength = 10;
             this.textBoxGroup.Name = "textBoxGroup";
             this.textBoxGroup.Size = new System.Drawing.Size(270, 29);
             this.textBoxGroup.TabIndex = 33;
             this.textBoxGroup.Visible = false;
+            this.textBoxGroup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGroup_KeyPress);
             // 
             // textBoxPassConfirm
             // 
             this.textBoxPassConfirm.Location = new System.Drawing.Point(199, 81);
+            this.textBoxPassConfirm.MaxLength = 50;
             this.textBoxPassConfirm.Name = "textBoxPassConfirm";
             this.textBoxPassConfirm.PasswordChar = '*';
             this.textBoxPassConfirm.Size = new System.Drawing.Size(193, 29);
@@ -119,9 +124,11 @@
             // textBoxSurname
             // 
             this.textBoxSurname.Location = new System.Drawing.Point(94, 116);
+            this.textBoxSurname.MaxLength = 50;
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(298, 29);
             this.textBoxSurname.TabIndex = 27;
+            this.textBoxSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // label8
             // 
@@ -146,9 +153,11 @@
             // textBoxFirstname
             // 
             this.textBoxFirstname.Location = new System.Drawing.Point(94, 151);
+            this.textBoxFirstname.MaxLength = 50;
             this.textBoxFirstname.Name = "textBoxFirstname";
             this.textBoxFirstname.Size = new System.Drawing.Size(298, 29);
             this.textBoxFirstname.TabIndex = 29;
+            this.textBoxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // btnOK
             // 

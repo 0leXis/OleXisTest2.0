@@ -30,6 +30,16 @@ namespace OleXisTest
             return true;
         }
 
+        public bool ValidateAnswer()
+        {
+            if (textBoxAnswer.Text == "")
+            {
+                MessageBox.Show("Поле \"Ответ\" не заполнено", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
         public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();

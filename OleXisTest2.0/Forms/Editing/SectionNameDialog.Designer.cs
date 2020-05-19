@@ -69,6 +69,7 @@
             // 
             this.textBoxName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.Location = new System.Drawing.Point(16, 35);
+            this.textBoxName.MaxLength = 100;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(312, 29);
             this.textBoxName.TabIndex = 22;

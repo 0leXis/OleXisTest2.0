@@ -29,7 +29,7 @@ namespace OleXisTest
         }
 
         //Загрузить данные на форму
-        public TestParamsDialog(TestParams testParams)
+        public TestParamsDialog(TestParams testParams, int testQuestionCount)
         {
             InitializeComponent();
             if (testParams.TimeForTest == 0)
@@ -43,12 +43,25 @@ namespace OleXisTest
                 if (testParams.QuestionAllocation == QuestionAllocation.Section_Variant)
                 radioButtonEachSection.Checked = true;
             else
+            {
+                numericUpDownCount.Enabled = true;
                 radioButtonRandom.Checked = true;
+            }
 
-            if (testParams.QuestionAllocation == QuestionAllocation.Generate)
-                textBoxQuestions.Text = testParams.CountForGenerate.ToString();
+            if (testQuestionCount < 1)
+            {
+                radioButton1Variant.Checked = true;
+                radioButtonRandom.Enabled = false;
+                numericUpDownCount.Enabled = false;
+                testParams.CountForGenerate = 1;
+            }
             else
-                textBoxQuestions.Text = "1";
+                numericUpDownCount.Maximum = testQuestionCount;
+            if (testParams.QuestionAllocation == QuestionAllocation.Generate)
+                numericUpDownCount.Value = testParams.CountForGenerate;
+            else
+                numericUpDownCount.Value = 1;
+
             textBoxPassword.Text = testParams.Password;
         }
 
@@ -69,7 +82,7 @@ namespace OleXisTest
             else
                 _TestParams.QuestionAllocation = QuestionAllocation.Generate;
 
-            _TestParams.CountForGenerate = Convert.ToInt32(textBoxQuestions.Text);
+            _TestParams.CountForGenerate = Convert.ToInt32(numericUpDownCount.Value);
 
             _TestParams.Password = textBoxPassword.Text;
         }
@@ -87,9 +100,9 @@ namespace OleXisTest
         private void radioButtonRandom_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonRandom.Checked)
-                textBoxQuestions.Enabled = true;
+                numericUpDownCount.Enabled = true;
             else
-                textBoxQuestions.Enabled = false;
+                numericUpDownCount.Enabled = false;
         }
     }
 }

@@ -38,9 +38,11 @@
             // 
             this.textBoxGroupName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxGroupName.Location = new System.Drawing.Point(207, 12);
+            this.textBoxGroupName.MaxLength = 10;
             this.textBoxGroupName.Name = "textBoxGroupName";
             this.textBoxGroupName.Size = new System.Drawing.Size(298, 29);
             this.textBoxGroupName.TabIndex = 36;
+            this.textBoxGroupName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGroupName_KeyPress);
             // 
             // label1
             // 

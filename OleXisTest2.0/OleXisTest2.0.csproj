@@ -53,65 +53,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddGroup.cs">
+    <Compile Include="Config.cs" />
+    <Compile Include="Forms\Server\AddGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGroup.Designer.cs">
+    <Compile Include="Forms\Server\AddGroup.Designer.cs">
       <DependentUpon>AddGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentTeacherDialog.cs">
+    <Compile Include="Forms\Server\AddStudentTeacherDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentTeacherDialog.Designer.cs">
+    <Compile Include="Forms\Server\AddStudentTeacherDialog.Designer.cs">
       <DependentUpon>AddStudentTeacherDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddSubject.cs">
+    <Compile Include="Forms\Server\AddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddSubject.Designer.cs">
+    <Compile Include="Forms\Server\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePasswordDialog.cs">
+    <Compile Include="Forms\Server\ChangePasswordDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePasswordDialog.Designer.cs">
+    <Compile Include="Forms\Server\ChangePasswordDialog.Designer.cs">
       <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DataGridViewComponents.cs" />
-    <Compile Include="DatabaseForm.cs">
+    <Compile Include="Forms\Server\DatabaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseForm.Designer.cs">
+    <Compile Include="Forms\Server\DatabaseForm.Designer.cs">
       <DependentUpon>DatabaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBTestResults.cs">
+    <Compile Include="Forms\Server\DBTestResults.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBTestResults.Designer.cs">
+    <Compile Include="Forms\Server\DBTestResults.Designer.cs">
       <DependentUpon>DBTestResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditUserInfoForm.cs">
+    <Compile Include="Forms\Server\EditUserInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUserInfoForm.Designer.cs">
+    <Compile Include="Forms\Server\EditUserInfoForm.Designer.cs">
       <DependentUpon>EditUserInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ConnectToServer.cs">
+    <Compile Include="Forms\Server\ConnectToServer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ConnectToServer.Designer.cs">
+    <Compile Include="Forms\Server\ConnectToServer.Designer.cs">
       <DependentUpon>ConnectToServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServerLoadDialog.cs">
+    <Compile Include="Forms\Server\ServerLoadDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServerLoadDialog.Designer.cs">
+    <Compile Include="Forms\Server\ServerLoadDialog.Designer.cs">
       <DependentUpon>ServerLoadDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServerSaveDialog.cs">
+    <Compile Include="Forms\Server\ServerSaveDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServerSaveDialog.Designer.cs">
+    <Compile Include="Forms\Server\ServerSaveDialog.Designer.cs">
       <DependentUpon>ServerSaveDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\SaveProviders\ServerTestSaveProvider.cs" />
@@ -298,28 +299,28 @@
     <Compile Include="User.cs" />
     <Compile Include="WebUtils\TokenUpdator.cs" />
     <Compile Include="WebUtils\WebStructures.cs" />
-    <EmbeddedResource Include="AddGroup.resx">
+    <EmbeddedResource Include="Forms\Server\AddGroup.resx">
       <DependentUpon>AddGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudentTeacherDialog.resx">
+    <EmbeddedResource Include="Forms\Server\AddStudentTeacherDialog.resx">
       <DependentUpon>AddStudentTeacherDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddSubject.resx">
+    <EmbeddedResource Include="Forms\Server\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePasswordDialog.resx">
+    <EmbeddedResource Include="Forms\Server\ChangePasswordDialog.resx">
       <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatabaseForm.resx">
+    <EmbeddedResource Include="Forms\Server\DatabaseForm.resx">
       <DependentUpon>DatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DBTestResults.resx">
+    <EmbeddedResource Include="Forms\Server\DBTestResults.resx">
       <DependentUpon>DBTestResults.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditUserInfoForm.resx">
+    <EmbeddedResource Include="Forms\Server\EditUserInfoForm.resx">
       <DependentUpon>EditUserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ConnectToServer.resx">
+    <EmbeddedResource Include="Forms\Server\ConnectToServer.resx">
       <DependentUpon>ConnectToServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Passing\AnswerListDialog.resx">
@@ -407,10 +408,10 @@
     <EmbeddedResource Include="Forms\Passing\TestResults.resx">
       <DependentUpon>TestResults.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ServerLoadDialog.resx">
+    <EmbeddedResource Include="Forms\Server\ServerLoadDialog.resx">
       <DependentUpon>ServerLoadDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ServerSaveDialog.resx">
+    <EmbeddedResource Include="Forms\Server\ServerSaveDialog.resx">
       <DependentUpon>ServerSaveDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

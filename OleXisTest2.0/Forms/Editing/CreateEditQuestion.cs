@@ -23,6 +23,7 @@ namespace OleXisTest
         Editor parent;
         IQuestion _question = null;
         bool _isChangeQuestionState = false;
+        int? lastTypeSelectedIndex = null;
         public CreateEditQuestion(Editor parent, List<string> sections)
         {
             InitializeComponent();
@@ -109,7 +110,18 @@ namespace OleXisTest
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TODO: предупреждение
+            //DONE: предупреждение
+            if (comboBoxType.SelectedIndex == lastTypeSelectedIndex)
+                return;
+            if(lastTypeSelectedIndex != null)
+            {
+                if (MessageBox.Show("При смене типа вопроса текущие варианты ответа будут потеряны. Продолжить?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                {
+                    comboBoxType.SelectedIndex = lastTypeSelectedIndex.Value;
+                    return;
+                }
+            }
+            lastTypeSelectedIndex = comboBoxSection.SelectedIndex;
             switch (comboBoxType.SelectedIndex)
             {
                 case 0:

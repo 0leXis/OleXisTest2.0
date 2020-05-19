@@ -93,16 +93,19 @@
             // 
             this.textBoxGroup.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxGroup.Location = new System.Drawing.Point(123, 207);
+            this.textBoxGroup.MaxLength = 10;
             this.textBoxGroup.Name = "textBoxGroup";
             this.textBoxGroup.Size = new System.Drawing.Size(270, 29);
             this.textBoxGroup.TabIndex = 47;
             this.textBoxGroup.Visible = false;
+            this.textBoxGroup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGroup_KeyPress);
             // 
             // textBoxPassConfirm
             // 
             this.textBoxPassConfirm.Enabled = false;
             this.textBoxPassConfirm.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassConfirm.Location = new System.Drawing.Point(200, 102);
+            this.textBoxPassConfirm.MaxLength = 50;
             this.textBoxPassConfirm.Name = "textBoxPassConfirm";
             this.textBoxPassConfirm.PasswordChar = '*';
             this.textBoxPassConfirm.Size = new System.Drawing.Size(193, 29);
@@ -112,9 +115,11 @@
             // 
             this.textBoxSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSurname.Location = new System.Drawing.Point(95, 137);
+            this.textBoxSurname.MaxLength = 50;
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(298, 29);
             this.textBoxSurname.TabIndex = 41;
+            this.textBoxSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // label8
             // 
@@ -142,15 +147,18 @@
             // 
             this.textBoxFirstname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstname.Location = new System.Drawing.Point(95, 172);
+            this.textBoxFirstname.MaxLength = 50;
             this.textBoxFirstname.Name = "textBoxFirstname";
             this.textBoxFirstname.Size = new System.Drawing.Size(298, 29);
             this.textBoxFirstname.TabIndex = 43;
+            this.textBoxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Enabled = false;
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(95, 67);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 29);

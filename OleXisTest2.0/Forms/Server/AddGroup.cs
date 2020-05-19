@@ -20,6 +20,11 @@ namespace OleXisTest
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (textBoxGroupName.Text == "")
+            {
+                MessageBox.Show("Поле \"Название класса\\группы\" должно быть заполнено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             connection.SendCommand(new RequestInfo("AddGroup", SequrityUtils.Encrypt(textBoxGroupName.Text, connection.User.SecretKey), connection.User.UserToken), onRecive);
         }
 
@@ -37,6 +42,12 @@ namespace OleXisTest
                 else
                     DialogResult = DialogResult.OK;
             }
+        }
+
+        private void textBoxGroupName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetterOrDigit(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
         }
     }
 }

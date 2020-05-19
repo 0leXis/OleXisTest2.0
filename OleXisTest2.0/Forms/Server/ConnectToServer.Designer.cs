@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSaveData = new System.Windows.Forms.CheckBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPort = new System.Windows.Forms.NumericUpDown();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.labelGroup = new System.Windows.Forms.Label();
             this.textBoxGroup = new System.Windows.Forms.TextBox();
             this.panelRegistration = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPort)).BeginInit();
             this.panelRegistration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,35 +73,36 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Порт:";
             // 
-            // checkBox1
+            // checkBoxSaveData
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(242, 43);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(168, 27);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Запомнить  сервер";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSaveData.AutoSize = true;
+            this.checkBoxSaveData.Location = new System.Drawing.Point(242, 43);
+            this.checkBoxSaveData.Name = "checkBoxSaveData";
+            this.checkBoxSaveData.Size = new System.Drawing.Size(168, 27);
+            this.checkBoxSaveData.TabIndex = 2;
+            this.checkBoxSaveData.Text = "Запомнить  сервер";
+            this.checkBoxSaveData.UseVisualStyleBackColor = true;
             // 
             // textBoxIP
             // 
             this.textBoxIP.Location = new System.Drawing.Point(102, 6);
+            this.textBoxIP.MaxLength = 400;
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(298, 29);
             this.textBoxIP.TabIndex = 3;
             // 
-            // numericUpDown1
+            // numericUpDownPort
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(102, 41);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownPort.Location = new System.Drawing.Point(102, 41);
+            this.numericUpDownPort.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(134, 29);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownPort.Name = "numericUpDownPort";
+            this.numericUpDownPort.Size = new System.Drawing.Size(134, 29);
+            this.numericUpDownPort.TabIndex = 4;
+            this.numericUpDownPort.Value = new decimal(new int[] {
             27020,
             0,
             0,
@@ -150,6 +151,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(102, 110);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 29);
@@ -158,6 +160,7 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(102, 76);
+            this.textBoxLogin.MaxLength = 50;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(298, 29);
             this.textBoxLogin.TabIndex = 12;
@@ -175,6 +178,7 @@
             // textBoxPassConfirm
             // 
             this.textBoxPassConfirm.Location = new System.Drawing.Point(189, 0);
+            this.textBoxPassConfirm.MaxLength = 50;
             this.textBoxPassConfirm.Name = "textBoxPassConfirm";
             this.textBoxPassConfirm.PasswordChar = '*';
             this.textBoxPassConfirm.Size = new System.Drawing.Size(193, 29);
@@ -183,9 +187,11 @@
             // textBoxSurname
             // 
             this.textBoxSurname.Location = new System.Drawing.Point(84, 35);
+            this.textBoxSurname.MaxLength = 50;
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(298, 29);
             this.textBoxSurname.TabIndex = 16;
+            this.textBoxSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // label5
             // 
@@ -200,9 +206,11 @@
             // textBoxFirstname
             // 
             this.textBoxFirstname.Location = new System.Drawing.Point(84, 70);
+            this.textBoxFirstname.MaxLength = 50;
             this.textBoxFirstname.Name = "textBoxFirstname";
             this.textBoxFirstname.Size = new System.Drawing.Size(298, 29);
             this.textBoxFirstname.TabIndex = 19;
+            this.textBoxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSurname_KeyPress);
             // 
             // label7
             // 
@@ -237,9 +245,11 @@
             // textBoxGroup
             // 
             this.textBoxGroup.Location = new System.Drawing.Point(112, 105);
+            this.textBoxGroup.MaxLength = 10;
             this.textBoxGroup.Name = "textBoxGroup";
             this.textBoxGroup.Size = new System.Drawing.Size(270, 29);
             this.textBoxGroup.TabIndex = 25;
+            this.textBoxGroup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGroup_KeyPress);
             // 
             // panelRegistration
             // 
@@ -270,16 +280,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownPort);
             this.Controls.Add(this.textBoxIP);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSaveData);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ConnectToServer";
             this.Text = "ConnectToServer";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPort)).EndInit();
             this.panelRegistration.ResumeLayout(false);
             this.panelRegistration.PerformLayout();
             this.ResumeLayout(false);
@@ -291,9 +301,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxSaveData;
         private System.Windows.Forms.TextBox textBoxIP;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownPort;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;

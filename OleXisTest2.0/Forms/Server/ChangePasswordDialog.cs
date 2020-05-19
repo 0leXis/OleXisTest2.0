@@ -20,6 +20,16 @@ namespace OleXisTest
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Поля \"Пароль\" и \"Подтверждение пароля\" должны быть заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(textBoxPassword.Text != textBoxPassConfirm.Text)
+            {
+                MessageBox.Show("Пароли не совпадают!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             connection.SendCommand(
                 new RequestInfo(
                     "ChangePassword",

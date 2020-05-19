@@ -16,9 +16,11 @@ namespace OleXisTest
     {
         private NetConnection connection;
         private AccountInfo loginInfo;
+        private Config config;
         public Menu() 
         {
             InitializeComponent();
+            config = Config.ConfigFromJSONFile(Config.DEFAULT_CONFIG_FILE);
         }
 
         private void btnEditor_Click(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace OleXisTest
             }
             else
             {
-                using (var connectionForm = new ConnectToServer())
+                using (var connectionForm = new ConnectToServer(config))
                 {
                     if (connectionForm.ShowDialog() == DialogResult.OK)
                     {
@@ -122,6 +124,7 @@ namespace OleXisTest
         {
             if (connection != null)
                 connection.Disconnect();
+            config.Save(Config.DEFAULT_CONFIG_FILE);
         }
 
         private void btnDB_Click(object sender, EventArgs e)

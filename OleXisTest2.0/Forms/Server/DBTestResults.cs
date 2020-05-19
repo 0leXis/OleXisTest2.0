@@ -94,6 +94,9 @@ namespace OleXisTest
         {
             if (e.KeyChar == 13)
                 buttonClearFilters.Focus();
+            else
+            if (!(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
         }
 
         private void textBoxTestNameSurname_Leave(object sender, EventArgs e)

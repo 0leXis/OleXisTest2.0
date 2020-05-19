@@ -38,9 +38,11 @@
             // 
             this.textBoxSubjectName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSubjectName.Location = new System.Drawing.Point(178, 6);
+            this.textBoxSubjectName.MaxLength = 100;
             this.textBoxSubjectName.Name = "textBoxSubjectName";
             this.textBoxSubjectName.Size = new System.Drawing.Size(298, 29);
             this.textBoxSubjectName.TabIndex = 32;
+            this.textBoxSubjectName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSubjectName_KeyPress);
             // 
             // label1
             // 

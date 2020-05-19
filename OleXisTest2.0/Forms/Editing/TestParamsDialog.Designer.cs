@@ -35,13 +35,14 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxQuestions = new System.Windows.Forms.TextBox();
             this.radioButtonRandom = new System.Windows.Forms.RadioButton();
             this.radioButtonEachSection = new System.Windows.Forms.RadioButton();
             this.radioButton1Variant = new System.Windows.Forms.RadioButton();
             this.comboBoxTime = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonGeneratePass
@@ -69,6 +70,7 @@
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(93, 245);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(222, 29);
             this.textBoxPassword.TabIndex = 22;
@@ -77,7 +79,7 @@
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(178, 353);
+            this.buttonCancel.Location = new System.Drawing.Point(179, 317);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(160, 31);
             this.buttonCancel.TabIndex = 27;
@@ -88,7 +90,7 @@
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOk.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(13, 353);
+            this.buttonOk.Location = new System.Drawing.Point(16, 317);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(159, 31);
             this.buttonOk.TabIndex = 26;
@@ -98,8 +100,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDownCount);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBoxQuestions);
             this.groupBox1.Controls.Add(this.radioButtonRandom);
             this.groupBox1.Controls.Add(this.radioButtonEachSection);
             this.groupBox1.Controls.Add(this.radioButton1Variant);
@@ -119,14 +121,6 @@
             this.label2.Size = new System.Drawing.Size(131, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Всего вопросов:";
-            // 
-            // textBoxQuestions
-            // 
-            this.textBoxQuestions.Enabled = false;
-            this.textBoxQuestions.Location = new System.Drawing.Point(165, 121);
-            this.textBoxQuestions.Name = "textBoxQuestions";
-            this.textBoxQuestions.Size = new System.Drawing.Size(134, 29);
-            this.textBoxQuestions.TabIndex = 3;
             // 
             // radioButtonRandom
             // 
@@ -189,11 +183,28 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Время на прохождение (минут)";
             // 
+            // numericUpDownCount
+            // 
+            this.numericUpDownCount.Location = new System.Drawing.Point(163, 122);
+            this.numericUpDownCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownCount.Name = "numericUpDownCount";
+            this.numericUpDownCount.Size = new System.Drawing.Size(154, 29);
+            this.numericUpDownCount.TabIndex = 5;
+            this.numericUpDownCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // TestParamsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 397);
+            this.ClientSize = new System.Drawing.Size(352, 357);
             this.Controls.Add(this.buttonGeneratePass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
@@ -206,6 +217,7 @@
             this.Text = "TestParams";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,11 +232,11 @@
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxQuestions;
         private System.Windows.Forms.RadioButton radioButtonRandom;
         private System.Windows.Forms.RadioButton radioButtonEachSection;
         private System.Windows.Forms.RadioButton radioButton1Variant;
         private System.Windows.Forms.ComboBox comboBoxTime;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDownCount;
     }
 }

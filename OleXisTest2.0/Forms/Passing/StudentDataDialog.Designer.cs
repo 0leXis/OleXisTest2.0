@@ -40,17 +40,21 @@
             // 
             this.textBoxClass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxClass.Location = new System.Drawing.Point(132, 38);
+            this.textBoxClass.MaxLength = 10;
             this.textBoxClass.Name = "textBoxClass";
             this.textBoxClass.Size = new System.Drawing.Size(255, 29);
             this.textBoxClass.TabIndex = 20;
+            this.textBoxClass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxClass_KeyPress);
             // 
             // textBoxFIO
             // 
             this.textBoxFIO.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFIO.Location = new System.Drawing.Point(132, 6);
+            this.textBoxFIO.MaxLength = 70;
             this.textBoxFIO.Name = "textBoxFIO";
             this.textBoxFIO.Size = new System.Drawing.Size(255, 29);
             this.textBoxFIO.TabIndex = 19;
+            this.textBoxFIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFIO_KeyPress);
             // 
             // labelClass
             // 
@@ -70,9 +74,9 @@
             this.labelFIO.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelFIO.Location = new System.Drawing.Point(12, 9);
             this.labelFIO.Name = "labelFIO";
-            this.labelFIO.Size = new System.Drawing.Size(49, 23);
+            this.labelFIO.Size = new System.Drawing.Size(115, 23);
             this.labelFIO.TabIndex = 17;
-            this.labelFIO.Text = "ФИО:";
+            this.labelFIO.Text = "Фамилия/Имя:";
             // 
             // buttonCancel
             // 

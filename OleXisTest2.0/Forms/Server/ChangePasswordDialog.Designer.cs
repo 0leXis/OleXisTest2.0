@@ -51,6 +51,7 @@
             // 
             this.textBoxPassConfirm.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassConfirm.Location = new System.Drawing.Point(203, 47);
+            this.textBoxPassConfirm.MaxLength = 50;
             this.textBoxPassConfirm.Name = "textBoxPassConfirm";
             this.textBoxPassConfirm.PasswordChar = '*';
             this.textBoxPassConfirm.Size = new System.Drawing.Size(193, 29);
@@ -60,6 +61,7 @@
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(98, 12);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 29);

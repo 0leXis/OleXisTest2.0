@@ -45,6 +45,11 @@ namespace OleXisTest
             return true;
         }
 
+        public bool ValidateAnswer()
+        {
+            return true;
+        }
+
         public AnswerListItem GetAnswerListItem(string questionName, string shortQuestionDesc)
         {
             var answerListItem = new AnswerListItem();

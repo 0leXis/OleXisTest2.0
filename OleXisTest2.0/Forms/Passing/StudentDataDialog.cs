@@ -52,5 +52,17 @@ namespace OleXisTest
         {
             _isOk = true;
         }
+
+        private void textBoxFIO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
+        }
+
+        private void textBoxClass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetterOrDigit(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == 8 || e.KeyChar == 127))
+                e.Handled = true;
+        }
     }
 }

@@ -27,10 +27,18 @@ namespace OleXisTest
         TokenUpdator updator;
         private User _User = null;
         private bool _IsConnected = false;
-        public NetConnection(string IP, string Port)
+        public NetConnection(string IP, int Port)
         {
             updator = new TokenUpdator(this);
             Address = "http://" + IP + ":" + Port;
+        }
+        public NetConnection(string Host)
+        {
+            updator = new TokenUpdator(this);
+            if(Host.Contains("http://"))
+                Address = Host;
+            else
+                Address = "http://" + Host;
         }
         public void Login(LoginData loginData, Action<string, AccountInfo> onLogin)
         {

@@ -242,9 +242,14 @@ namespace OleXisTest
             }
         }
 
-        private void DeleteUser(int id)
+        private void DeleteUser(int id, bool isStudent)
         {
-            if(MessageBox.Show("Вы уверены?", "Удаление пользователя", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            string message;
+            if (isStudent)
+                message = "Вы уверены? При удалении учащегося результаты его тестов будут удалены";
+            else
+                message = "Вы уверены? При удалении преподавателя его тесты будут удалены";
+            if (MessageBox.Show(message, "Удаление пользователя", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 connection.SendCommand(
                     new RequestInfo(
@@ -377,7 +382,11 @@ namespace OleXisTest
                                 }
                                 break;
                             case 7:
-                                DeleteUser(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value));
+                                DeleteUser(
+                                    Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), 
+                                    subjectsRoles.FirstOrDefault(
+                                        x => x.Value == (string)senderGrid.Rows[e.RowIndex].Cells[4].Value)
+                                    .Key == (int)UserRoles.Student);
                                 break;
                         }
                         break;

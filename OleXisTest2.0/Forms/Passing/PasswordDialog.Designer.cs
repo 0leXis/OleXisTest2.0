@@ -61,6 +61,7 @@
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic);
             this.textBoxPassword.Location = new System.Drawing.Point(87, 6);
+            this.textBoxPassword.MaxLength = 50;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(258, 29);
             this.textBoxPassword.TabIndex = 5;
