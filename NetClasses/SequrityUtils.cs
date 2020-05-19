@@ -5,9 +5,9 @@ using System.Text;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace OleXisTest
+namespace NetClasses
 {
-    static class SequrityUtils
+    static public class SequrityUtils
     {
         static public string DiffieHellmanGetPublicKey(out CngKey generatedKey)
         {

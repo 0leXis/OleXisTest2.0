@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetClasses;
 
 namespace OleXisTestServer
 {
@@ -16,6 +17,13 @@ namespace OleXisTestServer
         public byte[] Execute(out CommandError error)
         {
             var client = ClientManager.GetClient(requestData.UserToken);
+
+            var config = ConfigContainer.GetConfig();
+            if (client.Role == UserRoles.Teacher && !config.AllowGroupsAdding)
+            {
+                error = CommandError.GroupAddNotAllowed;
+                return null;
+            }
 
             if (client.Role != UserRoles.Teacher && client.Role != UserRoles.Admin)
             {

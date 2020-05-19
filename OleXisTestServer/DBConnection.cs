@@ -11,12 +11,32 @@ namespace OleXisTestServer
     {
         static MySqlConnection connection;
 
-        static public void Connect(string connectionString)
+        static public void Connect(string connectionString, string database)
         {
             if (connection != null)
                 Disconnect();
             connection = new MySqlConnection(connectionString);
             connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '" + database + "'";
+            var result = command.ExecuteReader();
+            if (result.Read())
+            {
+                result.Close();
+                command = connection.CreateCommand();
+                command.CommandText = "use " + database;
+                command.ExecuteNonQuery();
+            }
+            else
+            {
+                result.Close();
+                command = connection.CreateCommand();
+                command.CommandText = "CREATE DATABASE " + database;
+                command.ExecuteNonQuery();
+                command = connection.CreateCommand();
+                command.CommandText = "use " + database;
+                command.ExecuteNonQuery();
+            }
         }
 
         static public MySqlCommand PrepareExecProcedureCommand(string procname, params string[] _params)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetClasses;
 
 namespace OleXisTestServer
 {
@@ -17,7 +18,14 @@ namespace OleXisTestServer
         {
             var client = ClientManager.GetClient(requestData.UserToken);
 
-            if(client.Role == null || client.Role == UserRoles.Student)
+            var config = ConfigContainer.GetConfig();
+            if (client.Role == UserRoles.Teacher && !config.AllowTeacherRegistration)
+            {
+                error = CommandError.TeacherRegistrationNotAllowed;
+                return null;
+            }
+
+            if (client.Role == null || client.Role == UserRoles.Student)
             {
                 error = CommandError.NoPermissions;
                 return null;

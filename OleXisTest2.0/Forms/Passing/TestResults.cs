@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NetClasses;
 
 namespace OleXisTest
 {
     public partial class TestResults : Form
     {
         List<AnswerListItem> answers;
+        NetConnection connection;
         public TestResults(string FIO, string Class, int passMinutes, int passSeconds, List<AnswerListItem> answers, bool isServerTest, NetConnection connection)
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace OleXisTest
             labelProcPrav.Text += string.Format("{0:0.00}", ((double)this.answers.Sum((x) => { return x.IsRight ? 1 : 0; }) / this.answers.Count * 100));
             labelTime.Text += passMinutes + ":" + passSeconds;
 
+            this.connection = connection;
             if (isServerTest && connection != null && connection.IsConnected)
                 connection.SendCommand(
                     new RequestInfo(
@@ -44,7 +47,17 @@ namespace OleXisTest
 
         private void onRecive(string data)
         {
-
+            var response = ResponseInfo.FromJson(data);
+            if (response.Error != null)
+            {
+                if(response.Error != "USER_NOT_STUDENT")
+                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (SequrityUtils.DecryptString(response.Data, connection.User.SecretKey) != "OK")
+                    MessageBox.Show("Неизвестная ошибка", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

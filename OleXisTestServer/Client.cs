@@ -5,6 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Threading;
 using System.Security.Cryptography;
+using NetClasses;
 
 namespace OleXisTestServer
 {

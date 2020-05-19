@@ -118,7 +118,6 @@
     <Compile Include="Tests\SaveProviders\ServerTestSaveProvider.cs" />
     <Compile Include="WebUtils\NetConnection.cs" />
     <Compile Include="WebUtils\NetDataSender.cs" />
-    <Compile Include="WebUtils\SequrityUtils.cs" />
     <Compile Include="Tests\Answers\AccordanceQuestionAnswer.cs" />
     <Compile Include="Tests\Answers\AlternativeQuestionAnswer.cs" />
     <Compile Include="Forms\Passing\AnswerListDialog.cs">
@@ -298,7 +297,6 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="WebUtils\TokenUpdator.cs" />
-    <Compile Include="WebUtils\WebStructures.cs" />
     <EmbeddedResource Include="Forms\Server\AddGroup.resx">
       <DependentUpon>AddGroup.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +423,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\NetClasses\NetClasses.csproj">
+      <Project>{2dde968c-746e-4d66-87f7-a982ab938eed}</Project>
+      <Name>NetClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

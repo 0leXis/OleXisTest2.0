@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetClasses;
 
 namespace OleXisTestServer
 {
@@ -16,6 +17,18 @@ namespace OleXisTestServer
         public byte[] Execute(out CommandError error)
         {
             var client = ClientManager.GetClient(requestData.UserToken);
+
+            var config = ConfigContainer.GetConfig();
+            if (client.Role == null && !config.AllowRegistrationRequests)
+            {
+                error = CommandError.SelfRegistrationNotAllowed;
+                return null;
+            }
+            if (client.Role == UserRoles.Teacher && !config.AllowStudentsRegistration)
+            {
+                error = CommandError.StudentRegistrationNotAllowed;
+                return null;
+            }
 
             var registerData = RegisterData.FromJson(SequrityUtils.DecryptString(requestData.Data, client.SecretDFKey));
             var passwordHash = SequrityUtils.GetHash(registerData.Password);

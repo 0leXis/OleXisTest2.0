@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="AccessTokens.cs" />
     <Compile Include="ClientManager.cs" />
-    <Compile Include="CommandErrors.cs" />
     <Compile Include="Commands\AddGroupCommand.cs" />
     <Compile Include="Commands\AddSubjectCommand.cs" />
     <Compile Include="Commands\ChangePasswordCommand.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="Commands\SaveResultCommand.cs" />
     <Compile Include="Commands\SaveTestCommand.cs" />
     <Compile Include="Commands\SetDFCommand.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Commands\DisconnectCommand.cs" />
     <Compile Include="FileProcessor.cs" />
@@ -87,7 +87,6 @@
     <Compile Include="Listener.cs" />
     <Compile Include="Commands\RegisterStudentCommand.cs" />
     <Compile Include="Commands\RegisterTeacherCommand.cs" />
-    <Compile Include="SequrityUtils.cs" />
     <Compile Include="ServerFindBroadcaster.cs" />
     <Compile Include="TextBoxLog.cs" />
     <Compile Include="Interfaces\ILog.cs" />
@@ -101,7 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Commands\UpdateTokenCommand.cs" />
-    <Compile Include="WebStructures.cs" />
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +124,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetClasses\NetClasses.csproj">
+      <Project>{2dde968c-746e-4d66-87f7-a982ab938eed}</Project>
+      <Name>NetClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

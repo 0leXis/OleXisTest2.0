@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
 using Newtonsoft.Json;
 
-namespace OleXisTestServer
+namespace NetClasses
 {
     public enum UserRoles { Admin, Student, Teacher }
     public class RequestInfo

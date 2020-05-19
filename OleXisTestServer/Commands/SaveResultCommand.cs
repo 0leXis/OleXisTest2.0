@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
+using NetClasses;
 
 namespace OleXisTestServer
 {
@@ -21,8 +22,8 @@ namespace OleXisTestServer
 
             if (client.Role != UserRoles.Student)
             {
-                error = CommandError.None;
-                return SequrityUtils.Encrypt("USER_NOT_STUDENT", client.SecretDFKey);
+                error = CommandError.UserNotStudent;
+                return null;
             }
             
             if(client.CurrentPassTestId == null)
