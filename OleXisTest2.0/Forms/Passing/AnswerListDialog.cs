@@ -30,7 +30,7 @@ namespace OleXisTest
                             label.ForeColor = Color.Green;
                             break;
                         case AnswerVariations.RightAnswerNotChoosed:
-                            label.ForeColor = Color.Red;
+                            label.ForeColor = Color.DarkGoldenrod;
                             break;
                         case AnswerVariations.WrongAnswerChoosed:
                             label.ForeColor = Color.DarkRed;

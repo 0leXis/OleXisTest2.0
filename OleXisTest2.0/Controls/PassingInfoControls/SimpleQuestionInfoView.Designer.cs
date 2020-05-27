@@ -39,12 +39,16 @@
             // 
             // buttonPlaySound
             // 
-            this.buttonPlaySound.Location = new System.Drawing.Point(3, 119);
+            this.buttonPlaySound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonPlaySound.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonPlaySound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlaySound.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPlaySound.Location = new System.Drawing.Point(3, 106);
             this.buttonPlaySound.Name = "buttonPlaySound";
-            this.buttonPlaySound.Size = new System.Drawing.Size(287, 30);
+            this.buttonPlaySound.Size = new System.Drawing.Size(287, 28);
             this.buttonPlaySound.TabIndex = 5;
             this.buttonPlaySound.Text = "Проиграть вложенный аудио-файл";
-            this.buttonPlaySound.UseVisualStyleBackColor = true;
+            this.buttonPlaySound.UseVisualStyleBackColor = false;
             this.buttonPlaySound.Visible = false;
             this.buttonPlaySound.Click += new System.EventHandler(this.buttonPlaySound_Click);
             // 
@@ -52,7 +56,7 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.labelVoprText);
-            this.panel2.Location = new System.Drawing.Point(3, 16);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(468, 97);
             this.panel2.TabIndex = 6;
@@ -60,16 +64,17 @@
             // labelVoprText
             // 
             this.labelVoprText.AutoSize = true;
+            this.labelVoprText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelVoprText.Location = new System.Drawing.Point(3, 3);
             this.labelVoprText.Name = "labelVoprText";
-            this.labelVoprText.Size = new System.Drawing.Size(122, 23);
+            this.labelVoprText.Size = new System.Drawing.Size(103, 19);
             this.labelVoprText.TabIndex = 0;
             this.labelVoprText.Text = "Текст вопроса";
             // 
             // pictureBox1
             // 
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(479, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(477, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +91,7 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SimpleQuestionInfoView";
-            this.Size = new System.Drawing.Size(623, 150);
+            this.Size = new System.Drawing.Size(623, 144);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

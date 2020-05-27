@@ -35,19 +35,20 @@
             // labelAnswer
             // 
             this.labelAnswer.AutoSize = true;
-            this.labelAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAnswer.Location = new System.Drawing.Point(1, 6);
+            this.labelAnswer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAnswer.Location = new System.Drawing.Point(3, 3);
             this.labelAnswer.Name = "labelAnswer";
-            this.labelAnswer.Size = new System.Drawing.Size(61, 20);
+            this.labelAnswer.Size = new System.Drawing.Size(52, 19);
             this.labelAnswer.TabIndex = 5;
             this.labelAnswer.Text = "Ответ:";
             // 
             // textBoxAnswer
             // 
-            this.textBoxAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAnswer.Location = new System.Drawing.Point(68, 3);
+            this.textBoxAnswer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(211)))), ((int)(((byte)(252)))));
+            this.textBoxAnswer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAnswer.Location = new System.Drawing.Point(61, 0);
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(456, 26);
+            this.textBoxAnswer.Size = new System.Drawing.Size(352, 27);
             this.textBoxAnswer.TabIndex = 4;
             // 
             // FreeStatementPassControl
@@ -57,7 +58,7 @@
             this.Controls.Add(this.labelAnswer);
             this.Controls.Add(this.textBoxAnswer);
             this.Name = "FreeStatementPassControl";
-            this.Size = new System.Drawing.Size(544, 150);
+            this.Size = new System.Drawing.Size(461, 109);
             this.ResumeLayout(false);
             this.PerformLayout();
 

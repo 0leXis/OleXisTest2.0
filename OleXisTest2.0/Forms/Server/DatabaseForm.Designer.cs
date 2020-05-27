@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddTeacher = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddGroup = new System.Windows.Forms.Button();
@@ -47,128 +48,153 @@
             // 
             // btnAddTeacher
             // 
+            this.btnAddTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnAddTeacher.Enabled = false;
-            this.btnAddTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddTeacher.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnAddTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTeacher.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddTeacher.Location = new System.Drawing.Point(12, 12);
             this.btnAddTeacher.Name = "btnAddTeacher";
-            this.btnAddTeacher.Size = new System.Drawing.Size(222, 29);
+            this.btnAddTeacher.Size = new System.Drawing.Size(200, 28);
             this.btnAddTeacher.TabIndex = 1;
             this.btnAddTeacher.Text = "Добавить преподавателя";
-            this.btnAddTeacher.UseVisualStyleBackColor = true;
+            this.btnAddTeacher.UseVisualStyleBackColor = false;
             this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
             // 
             // btnAddStudent
             // 
+            this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnAddStudent.Enabled = false;
-            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddStudent.Location = new System.Drawing.Point(240, 12);
+            this.btnAddStudent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudent.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddStudent.Location = new System.Drawing.Point(228, 12);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(222, 29);
+            this.btnAddStudent.Size = new System.Drawing.Size(200, 28);
             this.btnAddStudent.TabIndex = 2;
             this.btnAddStudent.Text = "Добавить учащегося";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnAddGroup
             // 
+            this.btnAddGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnAddGroup.Enabled = false;
-            this.btnAddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddGroup.Location = new System.Drawing.Point(468, 12);
+            this.btnAddGroup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddGroup.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddGroup.Location = new System.Drawing.Point(447, 12);
             this.btnAddGroup.Name = "btnAddGroup";
-            this.btnAddGroup.Size = new System.Drawing.Size(222, 29);
+            this.btnAddGroup.Size = new System.Drawing.Size(200, 28);
             this.btnAddGroup.TabIndex = 3;
             this.btnAddGroup.Text = "Добавить группу/класс";
-            this.btnAddGroup.UseVisualStyleBackColor = true;
+            this.btnAddGroup.UseVisualStyleBackColor = false;
             this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
             // 
             // btnAddSubject
             // 
+            this.btnAddSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnAddSubject.Enabled = false;
-            this.btnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddSubject.Location = new System.Drawing.Point(696, 12);
+            this.btnAddSubject.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnAddSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSubject.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddSubject.Location = new System.Drawing.Point(668, 12);
             this.btnAddSubject.Name = "btnAddSubject";
-            this.btnAddSubject.Size = new System.Drawing.Size(222, 29);
+            this.btnAddSubject.Size = new System.Drawing.Size(200, 28);
             this.btnAddSubject.TabIndex = 4;
             this.btnAddSubject.Text = "Добавить предмет";
-            this.btnAddSubject.UseVisualStyleBackColor = true;
+            this.btnAddSubject.UseVisualStyleBackColor = false;
             this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(8, 47);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(648, 23);
+            this.label1.Size = new System.Drawing.Size(608, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Текущие данные (редактирование учетных записей доступно только администратору):";
             // 
             // comboBoxData
             // 
+            this.comboBoxData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.comboBoxData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxData.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxData.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxData.FormattingEnabled = true;
             this.comboBoxData.Items.AddRange(new object[] {
             "Все тесты",
             "Мои тесты",
             "Учетные записи"});
-            this.comboBoxData.Location = new System.Drawing.Point(662, 44);
+            this.comboBoxData.Location = new System.Drawing.Point(626, 46);
             this.comboBoxData.Name = "comboBoxData";
-            this.comboBoxData.Size = new System.Drawing.Size(256, 31);
+            this.comboBoxData.Size = new System.Drawing.Size(242, 27);
             this.comboBoxData.TabIndex = 6;
             this.comboBoxData.SelectedIndexChanged += new System.EventHandler(this.comboBoxData_SelectedIndexChanged);
             // 
             // dataGridView
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(12, 151);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(903, 389);
+            this.dataGridView.Size = new System.Drawing.Size(856, 389);
             this.dataGridView.TabIndex = 7;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // comboBoxSubjectRole
             // 
+            this.comboBoxSubjectRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.comboBoxSubjectRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSubjectRole.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxSubjectRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSubjectRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxSubjectRole.FormattingEnabled = true;
             this.comboBoxSubjectRole.Items.AddRange(new object[] {
             "Мои тесты",
             "Все тесты",
             "Учетные записи"});
-            this.comboBoxSubjectRole.Location = new System.Drawing.Point(608, 81);
+            this.comboBoxSubjectRole.Location = new System.Drawing.Point(595, 76);
             this.comboBoxSubjectRole.Name = "comboBoxSubjectRole";
-            this.comboBoxSubjectRole.Size = new System.Drawing.Size(310, 31);
+            this.comboBoxSubjectRole.Size = new System.Drawing.Size(273, 27);
             this.comboBoxSubjectRole.TabIndex = 8;
             this.comboBoxSubjectRole.SelectedIndexChanged += new System.EventHandler(this.comboBoxSubjectRole_SelectedIndexChanged);
             // 
             // labelSubjectRole
             // 
             this.labelSubjectRole.AutoSize = true;
-            this.labelSubjectRole.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSubjectRole.Location = new System.Drawing.Point(429, 84);
+            this.labelSubjectRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSubjectRole.Location = new System.Drawing.Point(424, 79);
             this.labelSubjectRole.Name = "labelSubjectRole";
-            this.labelSubjectRole.Size = new System.Drawing.Size(173, 23);
+            this.labelSubjectRole.Size = new System.Drawing.Size(165, 19);
             this.labelSubjectRole.TabIndex = 9;
             this.labelSubjectRole.Text = "Дисциплина/Предмет:";
             // 
             // labelTestNameSurname
             // 
             this.labelTestNameSurname.AutoSize = true;
-            this.labelTestNameSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTestNameSurname.Location = new System.Drawing.Point(12, 84);
+            this.labelTestNameSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTestNameSurname.Location = new System.Drawing.Point(12, 79);
             this.labelTestNameSurname.Name = "labelTestNameSurname";
-            this.labelTestNameSurname.Size = new System.Drawing.Size(85, 23);
+            this.labelTestNameSurname.Size = new System.Drawing.Size(80, 19);
             this.labelTestNameSurname.TabIndex = 10;
             this.labelTestNameSurname.Text = "Название:";
             // 
             // textBoxTestNameSurname
             // 
-            this.textBoxTestNameSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTestNameSurname.Location = new System.Drawing.Point(103, 81);
+            this.textBoxTestNameSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(211)))), ((int)(((byte)(252)))));
+            this.textBoxTestNameSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxTestNameSurname.Location = new System.Drawing.Point(98, 76);
             this.textBoxTestNameSurname.MaxLength = 100;
             this.textBoxTestNameSurname.Name = "textBoxTestNameSurname";
-            this.textBoxTestNameSurname.Size = new System.Drawing.Size(320, 29);
+            this.textBoxTestNameSurname.Size = new System.Drawing.Size(320, 27);
             this.textBoxTestNameSurname.TabIndex = 23;
             this.textBoxTestNameSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTestNameSurname_KeyPress);
             this.textBoxTestNameSurname.Leave += new System.EventHandler(this.textBoxTestNameSurname_Leave);
@@ -176,10 +202,10 @@
             // checkBoxDate
             // 
             this.checkBoxDate.AutoSize = true;
-            this.checkBoxDate.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxDate.Location = new System.Drawing.Point(473, 116);
+            this.checkBoxDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxDate.Location = new System.Drawing.Point(424, 113);
             this.checkBoxDate.Name = "checkBoxDate";
-            this.checkBoxDate.Size = new System.Drawing.Size(183, 27);
+            this.checkBoxDate.Size = new System.Drawing.Size(169, 23);
             this.checkBoxDate.TabIndex = 24;
             this.checkBoxDate.Text = "Сортировать по дате";
             this.checkBoxDate.UseVisualStyleBackColor = true;
@@ -187,31 +213,38 @@
             // 
             // buttonClearFilters
             // 
-            this.buttonClearFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClearFilters.Location = new System.Drawing.Point(12, 116);
+            this.buttonClearFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonClearFilters.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClearFilters.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClearFilters.Location = new System.Drawing.Point(12, 109);
             this.buttonClearFilters.Name = "buttonClearFilters";
-            this.buttonClearFilters.Size = new System.Drawing.Size(222, 29);
+            this.buttonClearFilters.Size = new System.Drawing.Size(200, 28);
             this.buttonClearFilters.TabIndex = 25;
             this.buttonClearFilters.Text = "Сбросить фильтры";
-            this.buttonClearFilters.UseVisualStyleBackColor = true;
+            this.buttonClearFilters.UseVisualStyleBackColor = false;
             this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUpdate.Location = new System.Drawing.Point(240, 116);
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdate.Location = new System.Drawing.Point(218, 109);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(222, 29);
+            this.buttonUpdate.Size = new System.Drawing.Size(200, 28);
             this.buttonUpdate.TabIndex = 26;
             this.buttonUpdate.Text = "Обновить данные";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // DatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 552);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(878, 552);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClearFilters);
             this.Controls.Add(this.checkBoxDate);
@@ -227,7 +260,7 @@
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnAddTeacher);
             this.Name = "DatabaseForm";
-            this.Text = "DatabaseForm";
+            this.Text = "OleXis Test: Управление информацией БД";
             this.Shown += new System.EventHandler(this.DatabaseForm_Shown);
             this.Click += new System.EventHandler(this.DatabaseForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

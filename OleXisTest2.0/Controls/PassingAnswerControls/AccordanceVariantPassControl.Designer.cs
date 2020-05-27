@@ -36,33 +36,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 40);
+            this.label1.Size = new System.Drawing.Size(283, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Расположите элементы в левом списке \r\nнапротив соответствующих в правом";
             // 
             // listBoxAcc1
             // 
-            this.listBoxAcc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxAcc1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxAcc1.FormattingEnabled = true;
             this.listBoxAcc1.HorizontalScrollbar = true;
-            this.listBoxAcc1.ItemHeight = 20;
+            this.listBoxAcc1.ItemHeight = 19;
             this.listBoxAcc1.Location = new System.Drawing.Point(7, 43);
             this.listBoxAcc1.Name = "listBoxAcc1";
-            this.listBoxAcc1.Size = new System.Drawing.Size(272, 124);
+            this.listBoxAcc1.Size = new System.Drawing.Size(272, 80);
             this.listBoxAcc1.TabIndex = 2;
             // 
             // listBoxAcc2
             // 
-            this.listBoxAcc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxAcc2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxAcc2.FormattingEnabled = true;
             this.listBoxAcc2.HorizontalScrollbar = true;
-            this.listBoxAcc2.ItemHeight = 20;
+            this.listBoxAcc2.ItemHeight = 19;
             this.listBoxAcc2.Location = new System.Drawing.Point(285, 43);
             this.listBoxAcc2.Name = "listBoxAcc2";
-            this.listBoxAcc2.Size = new System.Drawing.Size(270, 124);
+            this.listBoxAcc2.Size = new System.Drawing.Size(270, 80);
             this.listBoxAcc2.TabIndex = 2;
             // 
             // AccordanceVariantPassControl
@@ -72,7 +72,7 @@
             this.Controls.Add(this.listBoxAcc2);
             this.Controls.Add(this.listBoxAcc1);
             this.Name = "AccordanceVariantPassControl";
-            this.Size = new System.Drawing.Size(558, 181);
+            this.Size = new System.Drawing.Size(560, 128);
             this.ResumeLayout(false);
             this.PerformLayout();
 

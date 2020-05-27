@@ -48,31 +48,34 @@
             // 
             // buttonAddVariant
             // 
-            this.buttonAddVariant.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddVariant.Location = new System.Drawing.Point(3, 26);
+            this.buttonAddVariant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonAddVariant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonAddVariant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddVariant.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddVariant.Location = new System.Drawing.Point(3, 22);
             this.buttonAddVariant.Name = "buttonAddVariant";
-            this.buttonAddVariant.Size = new System.Drawing.Size(191, 31);
+            this.buttonAddVariant.Size = new System.Drawing.Size(191, 28);
             this.buttonAddVariant.TabIndex = 25;
             this.buttonAddVariant.Text = "Добавить вариант";
-            this.buttonAddVariant.UseVisualStyleBackColor = true;
+            this.buttonAddVariant.UseVisualStyleBackColor = false;
             this.buttonAddVariant.Click += new System.EventHandler(this.buttonAddVariant_Click);
             // 
             // panelVariants
             // 
             this.panelVariants.AutoScroll = true;
             this.panelVariants.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelVariants.Location = new System.Drawing.Point(0, 63);
+            this.panelVariants.Location = new System.Drawing.Point(0, 56);
             this.panelVariants.Name = "panelVariants";
-            this.panelVariants.Size = new System.Drawing.Size(707, 104);
+            this.panelVariants.Size = new System.Drawing.Size(707, 111);
             this.panelVariants.TabIndex = 31;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 20);
+            this.label1.Size = new System.Drawing.Size(278, 19);
             this.label1.TabIndex = 30;
             this.label1.Text = "Введите варианты ответа в поля ввода";
             // 

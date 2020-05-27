@@ -11,13 +11,13 @@ using System.Threading;
 
 namespace OleXisTestServer
 {
-    public partial class Menu : Form
+    public partial class Server : Form
     {
         ILog textlog;
         Listener listener;
         ServerFindBroadcaster broadcaster;
         ConfigContainer.Config config;
-        public Menu()
+        public Server()
         {
             InitializeComponent();
             config = ConfigContainer.GetConfig();

@@ -391,5 +391,10 @@ namespace OleXisTest
                     }
             }
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

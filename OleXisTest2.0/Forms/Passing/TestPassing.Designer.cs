@@ -44,38 +44,44 @@
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(200, 351);
+            this.labelTime.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTime.Location = new System.Drawing.Point(200, 352);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(169, 23);
+            this.labelTime.Size = new System.Drawing.Size(142, 19);
             this.labelTime.TabIndex = 24;
             this.labelTime.Text = "Времени осталось:";
             // 
             // buttonNextQuestion
             // 
-            this.buttonNextQuestion.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNextQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonNextQuestion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonNextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNextQuestion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNextQuestion.Location = new System.Drawing.Point(461, 347);
             this.buttonNextQuestion.Name = "buttonNextQuestion";
-            this.buttonNextQuestion.Size = new System.Drawing.Size(182, 30);
+            this.buttonNextQuestion.Size = new System.Drawing.Size(182, 28);
             this.buttonNextQuestion.TabIndex = 23;
             this.buttonNextQuestion.Text = "Следующий вопрос";
-            this.buttonNextQuestion.UseVisualStyleBackColor = true;
+            this.buttonNextQuestion.UseVisualStyleBackColor = false;
             this.buttonNextQuestion.Click += new System.EventHandler(this.buttonNextQuestion_Click);
             // 
             // buttonStopTest
             // 
-            this.buttonStopTest.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStopTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonStopTest.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonStopTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStopTest.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonStopTest.Location = new System.Drawing.Point(12, 347);
             this.buttonStopTest.Name = "buttonStopTest";
-            this.buttonStopTest.Size = new System.Drawing.Size(182, 30);
+            this.buttonStopTest.Size = new System.Drawing.Size(182, 28);
             this.buttonStopTest.TabIndex = 22;
             this.buttonStopTest.Text = "Закончить тест";
-            this.buttonStopTest.UseVisualStyleBackColor = true;
+            this.buttonStopTest.UseVisualStyleBackColor = false;
             this.buttonStopTest.Click += new System.EventHandler(this.buttonStopTest_Click);
             // 
             // groupBoxAnswer
             // 
-            this.groupBoxAnswer.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAnswer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxAnswer.Location = new System.Drawing.Point(12, 172);
             this.groupBoxAnswer.Name = "groupBoxAnswer";
             this.groupBoxAnswer.Size = new System.Drawing.Size(631, 169);
@@ -85,8 +91,8 @@
             // 
             // groupBoxInfo
             // 
-            this.groupBoxInfo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxInfo.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxInfo.BackColor = System.Drawing.Color.White;
+            this.groupBoxInfo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxInfo.Location = new System.Drawing.Point(12, 12);
             this.groupBoxInfo.Name = "groupBoxInfo";
             this.groupBoxInfo.Size = new System.Drawing.Size(631, 160);
@@ -103,14 +109,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 389);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(654, 386);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.buttonNextQuestion);
             this.Controls.Add(this.buttonStopTest);
             this.Controls.Add(this.groupBoxAnswer);
             this.Controls.Add(this.groupBoxInfo);
             this.Name = "TestPassing";
-            this.Text = "TestPassing";
+            this.Text = "OleXis Test: Выполнение теста";
             this.ResumeLayout(false);
             this.PerformLayout();
 

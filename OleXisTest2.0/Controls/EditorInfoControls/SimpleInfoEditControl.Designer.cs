@@ -49,8 +49,8 @@
             this.groupBox2.Controls.Add(this.buttonRemoveSound);
             this.groupBox2.Controls.Add(this.buttonPlaySound);
             this.groupBox2.Controls.Add(this.buttonAddSound);
-            this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(256, 133);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(256, 124);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(247, 257);
             this.groupBox2.TabIndex = 35;
@@ -59,35 +59,44 @@
             // 
             // buttonRemoveSound
             // 
-            this.buttonRemoveSound.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveSound.Location = new System.Drawing.Point(6, 65);
+            this.buttonRemoveSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonRemoveSound.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonRemoveSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveSound.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemoveSound.Location = new System.Drawing.Point(6, 60);
             this.buttonRemoveSound.Name = "buttonRemoveSound";
-            this.buttonRemoveSound.Size = new System.Drawing.Size(235, 31);
+            this.buttonRemoveSound.Size = new System.Drawing.Size(235, 28);
             this.buttonRemoveSound.TabIndex = 7;
             this.buttonRemoveSound.Text = "Удалить звуковой файл";
-            this.buttonRemoveSound.UseVisualStyleBackColor = true;
+            this.buttonRemoveSound.UseVisualStyleBackColor = false;
             this.buttonRemoveSound.Click += new System.EventHandler(this.buttonRemoveSound_Click);
             // 
             // buttonPlaySound
             // 
-            this.buttonPlaySound.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPlaySound.Location = new System.Drawing.Point(6, 153);
+            this.buttonPlaySound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonPlaySound.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonPlaySound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlaySound.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPlaySound.Location = new System.Drawing.Point(6, 147);
             this.buttonPlaySound.Name = "buttonPlaySound";
-            this.buttonPlaySound.Size = new System.Drawing.Size(235, 54);
+            this.buttonPlaySound.Size = new System.Drawing.Size(235, 56);
             this.buttonPlaySound.TabIndex = 6;
             this.buttonPlaySound.Text = "Прослушать звуковой файл";
-            this.buttonPlaySound.UseVisualStyleBackColor = true;
+            this.buttonPlaySound.UseVisualStyleBackColor = false;
             this.buttonPlaySound.Click += new System.EventHandler(this.buttonPlaySound_Click);
             // 
             // buttonAddSound
             // 
-            this.buttonAddSound.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddSound.Location = new System.Drawing.Point(6, 28);
+            this.buttonAddSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonAddSound.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonAddSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddSound.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddSound.Location = new System.Drawing.Point(6, 26);
             this.buttonAddSound.Name = "buttonAddSound";
-            this.buttonAddSound.Size = new System.Drawing.Size(235, 31);
+            this.buttonAddSound.Size = new System.Drawing.Size(235, 28);
             this.buttonAddSound.TabIndex = 5;
             this.buttonAddSound.Text = "Добавить звуковой файл";
-            this.buttonAddSound.UseVisualStyleBackColor = true;
+            this.buttonAddSound.UseVisualStyleBackColor = false;
             this.buttonAddSound.Click += new System.EventHandler(this.buttonAddSound_Click);
             // 
             // groupBox1
@@ -96,8 +105,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.buttonAddImage);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 133);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 124);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(247, 257);
             this.groupBox1.TabIndex = 34;
@@ -106,28 +115,31 @@
             // 
             // buttonRemoveImage
             // 
-            this.buttonRemoveImage.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveImage.Location = new System.Drawing.Point(6, 65);
+            this.buttonRemoveImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonRemoveImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonRemoveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveImage.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemoveImage.Location = new System.Drawing.Point(6, 60);
             this.buttonRemoveImage.Name = "buttonRemoveImage";
-            this.buttonRemoveImage.Size = new System.Drawing.Size(235, 31);
+            this.buttonRemoveImage.Size = new System.Drawing.Size(235, 28);
             this.buttonRemoveImage.TabIndex = 8;
             this.buttonRemoveImage.Text = "Удалить изображение";
-            this.buttonRemoveImage.UseVisualStyleBackColor = true;
+            this.buttonRemoveImage.UseVisualStyleBackColor = false;
             this.buttonRemoveImage.Click += new System.EventHandler(this.buttonRemoveImage_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 99);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(6, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 23);
+            this.label3.Size = new System.Drawing.Size(112, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Предпросмотр:";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(55, 128);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 113);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,19 +148,23 @@
             // 
             // buttonAddImage
             // 
-            this.buttonAddImage.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddImage.Location = new System.Drawing.Point(6, 28);
+            this.buttonAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonAddImage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddImage.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddImage.Location = new System.Drawing.Point(6, 26);
             this.buttonAddImage.Name = "buttonAddImage";
-            this.buttonAddImage.Size = new System.Drawing.Size(235, 31);
+            this.buttonAddImage.Size = new System.Drawing.Size(235, 28);
             this.buttonAddImage.TabIndex = 4;
             this.buttonAddImage.Text = "Добавить изображение";
-            this.buttonAddImage.UseVisualStyleBackColor = true;
+            this.buttonAddImage.UseVisualStyleBackColor = false;
             this.buttonAddImage.Click += new System.EventHandler(this.buttonAddImage_Click);
             // 
             // textBoxText
             // 
-            this.textBoxText.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxText.Location = new System.Drawing.Point(3, 31);
+            this.textBoxText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(211)))), ((int)(((byte)(252)))));
+            this.textBoxText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxText.Location = new System.Drawing.Point(3, 22);
             this.textBoxText.Multiline = true;
             this.textBoxText.Name = "textBoxText";
             this.textBoxText.Size = new System.Drawing.Size(500, 96);
@@ -157,10 +173,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-1, 5);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(-1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 23);
+            this.label1.Size = new System.Drawing.Size(107, 19);
             this.label1.TabIndex = 32;
             this.label1.Text = "Текст вопроса:";
             // 
@@ -173,7 +189,7 @@
             this.Controls.Add(this.textBoxText);
             this.Controls.Add(this.label1);
             this.Name = "SimpleInfoEditControl";
-            this.Size = new System.Drawing.Size(507, 397);
+            this.Size = new System.Drawing.Size(507, 388);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

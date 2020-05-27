@@ -429,5 +429,9 @@
       <Name>NetClasses</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Help\index.html" />
+    <Content Include="Help\Style.css" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

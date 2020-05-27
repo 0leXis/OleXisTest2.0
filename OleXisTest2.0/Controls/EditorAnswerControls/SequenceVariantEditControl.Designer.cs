@@ -51,22 +51,25 @@
             // 
             // buttonAddVariant
             // 
-            this.buttonAddVariant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddVariant.Location = new System.Drawing.Point(3, 31);
+            this.buttonAddVariant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonAddVariant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonAddVariant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddVariant.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddVariant.Location = new System.Drawing.Point(7, 22);
             this.buttonAddVariant.Name = "buttonAddVariant";
-            this.buttonAddVariant.Size = new System.Drawing.Size(336, 31);
+            this.buttonAddVariant.Size = new System.Drawing.Size(336, 28);
             this.buttonAddVariant.TabIndex = 27;
             this.buttonAddVariant.Text = "Добавить элемент последовательности";
-            this.buttonAddVariant.UseVisualStyleBackColor = true;
+            this.buttonAddVariant.UseVisualStyleBackColor = false;
             this.buttonAddVariant.Click += new System.EventHandler(this.buttonAddVariant_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 20);
+            this.label1.Size = new System.Drawing.Size(376, 19);
             this.label1.TabIndex = 28;
             this.label1.Text = "Введите элементы последовательности в поля ввода";
             // 
@@ -74,9 +77,9 @@
             // 
             this.panelVariants.AutoScroll = true;
             this.panelVariants.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelVariants.Location = new System.Drawing.Point(0, 68);
+            this.panelVariants.Location = new System.Drawing.Point(0, 56);
             this.panelVariants.Name = "panelVariants";
-            this.panelVariants.Size = new System.Drawing.Size(598, 128);
+            this.panelVariants.Size = new System.Drawing.Size(598, 140);
             this.panelVariants.TabIndex = 29;
             // 
             // SequenceVariantEditControl

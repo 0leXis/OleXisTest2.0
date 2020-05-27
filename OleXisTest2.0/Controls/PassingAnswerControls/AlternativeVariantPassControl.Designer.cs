@@ -35,10 +35,10 @@
             // radioButtonYes
             // 
             this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonYes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonYes.Location = new System.Drawing.Point(3, 3);
             this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(48, 24);
+            this.radioButtonYes.Size = new System.Drawing.Size(45, 23);
             this.radioButtonYes.TabIndex = 0;
             this.radioButtonYes.TabStop = true;
             this.radioButtonYes.Text = "Да";
@@ -47,10 +47,10 @@
             // radioButtonNo
             // 
             this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonNo.Location = new System.Drawing.Point(3, 33);
+            this.radioButtonNo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonNo.Location = new System.Drawing.Point(3, 32);
             this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(57, 24);
+            this.radioButtonNo.Size = new System.Drawing.Size(51, 23);
             this.radioButtonNo.TabIndex = 0;
             this.radioButtonNo.TabStop = true;
             this.radioButtonNo.Text = "Нет";

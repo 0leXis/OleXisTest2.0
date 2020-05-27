@@ -34,22 +34,22 @@
             // 
             // listBoxSequence
             // 
-            this.listBoxSequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxSequence.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxSequence.FormattingEnabled = true;
             this.listBoxSequence.HorizontalScrollbar = true;
-            this.listBoxSequence.ItemHeight = 20;
-            this.listBoxSequence.Location = new System.Drawing.Point(3, 23);
+            this.listBoxSequence.ItemHeight = 19;
+            this.listBoxSequence.Location = new System.Drawing.Point(7, 22);
             this.listBoxSequence.Name = "listBoxSequence";
-            this.listBoxSequence.Size = new System.Drawing.Size(534, 144);
+            this.listBoxSequence.Size = new System.Drawing.Size(534, 99);
             this.listBoxSequence.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 20);
+            this.label1.Size = new System.Drawing.Size(336, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Перетаскивайте элементы последовательности";
             // 
@@ -59,7 +59,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxSequence);
             this.Name = "SequenceVariantPassControl";
-            this.Size = new System.Drawing.Size(540, 174);
+            this.Size = new System.Drawing.Size(560, 129);
             this.ResumeLayout(false);
             this.PerformLayout();
 

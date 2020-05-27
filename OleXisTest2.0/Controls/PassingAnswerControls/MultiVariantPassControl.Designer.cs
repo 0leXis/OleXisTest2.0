@@ -39,7 +39,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Name = "MultiVariantPassControl";
-            this.Size = new System.Drawing.Size(493, 150);
+            this.Size = new System.Drawing.Size(560, 117);
             this.ResumeLayout(false);
 
         }

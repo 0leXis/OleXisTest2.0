@@ -45,90 +45,108 @@
             // 
             // btnRunFile
             // 
-            this.btnRunFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRunFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.btnRunFile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnRunFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRunFile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRunFile.Location = new System.Drawing.Point(12, 12);
             this.btnRunFile.Name = "btnRunFile";
-            this.btnRunFile.Size = new System.Drawing.Size(269, 29);
+            this.btnRunFile.Size = new System.Drawing.Size(270, 28);
             this.btnRunFile.TabIndex = 0;
             this.btnRunFile.Text = "Выполнить тест (из файла)";
-            this.btnRunFile.UseVisualStyleBackColor = true;
+            this.btnRunFile.UseVisualStyleBackColor = false;
             this.btnRunFile.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnEditor
             // 
-            this.btnEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEditor.Location = new System.Drawing.Point(12, 79);
+            this.btnEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.btnEditor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnEditor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEditor.Location = new System.Drawing.Point(12, 80);
             this.btnEditor.Name = "btnEditor";
-            this.btnEditor.Size = new System.Drawing.Size(269, 29);
+            this.btnEditor.Size = new System.Drawing.Size(270, 28);
             this.btnEditor.TabIndex = 0;
             this.btnEditor.Text = "Создать/Редактировать тест";
-            this.btnEditor.UseVisualStyleBackColor = true;
+            this.btnEditor.UseVisualStyleBackColor = false;
             this.btnEditor.Click += new System.EventHandler(this.btnEditor_Click);
             // 
             // btnConnect
             // 
-            this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.btnConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnect.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnConnect.Location = new System.Drawing.Point(12, 114);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(269, 29);
+            this.btnConnect.Size = new System.Drawing.Size(270, 28);
             this.btnConnect.TabIndex = 0;
             this.btnConnect.Text = "Подключиться к серверу";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnPassword
             // 
+            this.btnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnPassword.Enabled = false;
-            this.btnPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPassword.Location = new System.Drawing.Point(291, 152);
+            this.btnPassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPassword.Location = new System.Drawing.Point(287, 148);
             this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Size = new System.Drawing.Size(222, 61);
+            this.btnPassword.Size = new System.Drawing.Size(222, 28);
             this.btnPassword.TabIndex = 0;
             this.btnPassword.Text = "Сменить пароль";
-            this.btnPassword.UseVisualStyleBackColor = true;
+            this.btnPassword.UseVisualStyleBackColor = false;
             this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // btnDB
             // 
+            this.btnDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.btnDB.Enabled = false;
-            this.btnDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDB.Location = new System.Drawing.Point(12, 149);
+            this.btnDB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDB.Location = new System.Drawing.Point(12, 148);
             this.btnDB.Name = "btnDB";
-            this.btnDB.Size = new System.Drawing.Size(269, 29);
+            this.btnDB.Size = new System.Drawing.Size(270, 28);
             this.btnDB.TabIndex = 0;
             this.btnDB.Text = "Управление информацией БД";
-            this.btnDB.UseVisualStyleBackColor = true;
+            this.btnDB.UseVisualStyleBackColor = false;
             this.btnDB.Click += new System.EventHandler(this.btnDB_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(12, 184);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(12, 182);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(269, 29);
+            this.btnExit.Size = new System.Drawing.Size(497, 28);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Выход";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // labelLoginStatus
             // 
             this.labelLoginStatus.AutoSize = true;
-            this.labelLoginStatus.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLoginStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLoginStatus.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelLoginStatus.Location = new System.Drawing.Point(287, 13);
+            this.labelLoginStatus.Location = new System.Drawing.Point(288, 12);
             this.labelLoginStatus.Name = "labelLoginStatus";
-            this.labelLoginStatus.Size = new System.Drawing.Size(221, 23);
+            this.labelLoginStatus.Size = new System.Drawing.Size(206, 19);
             this.labelLoginStatus.TabIndex = 1;
             this.labelLoginStatus.Text = "Соединение не установлено";
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(287, 57);
+            this.labelName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.Location = new System.Drawing.Point(288, 50);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(40, 23);
+            this.labelName.Size = new System.Drawing.Size(38, 19);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Имя";
             this.labelName.Visible = false;
@@ -136,10 +154,10 @@
             // labelSurname
             // 
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSurname.Location = new System.Drawing.Point(287, 80);
+            this.labelSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSurname.Location = new System.Drawing.Point(288, 69);
             this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(77, 23);
+            this.labelSurname.Size = new System.Drawing.Size(73, 19);
             this.labelSurname.TabIndex = 3;
             this.labelSurname.Text = "Фамилия";
             this.labelSurname.Visible = false;
@@ -147,10 +165,10 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.Location = new System.Drawing.Point(287, 103);
+            this.labelLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.Location = new System.Drawing.Point(288, 88);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(53, 23);
+            this.labelLogin.Size = new System.Drawing.Size(51, 19);
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "Логин";
             this.labelLogin.Visible = false;
@@ -158,10 +176,10 @@
             // labelGroup
             // 
             this.labelGroup.AutoSize = true;
-            this.labelGroup.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGroup.Location = new System.Drawing.Point(287, 126);
+            this.labelGroup.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGroup.Location = new System.Drawing.Point(288, 107);
             this.labelGroup.Name = "labelGroup";
-            this.labelGroup.Size = new System.Drawing.Size(59, 23);
+            this.labelGroup.Size = new System.Drawing.Size(54, 19);
             this.labelGroup.TabIndex = 5;
             this.labelGroup.Text = "Группа";
             this.labelGroup.Visible = false;
@@ -169,31 +187,35 @@
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRole.Location = new System.Drawing.Point(287, 36);
+            this.labelRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRole.Location = new System.Drawing.Point(288, 31);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(46, 23);
+            this.labelRole.Size = new System.Drawing.Size(41, 19);
             this.labelRole.TabIndex = 6;
             this.labelRole.Text = "Роль";
             this.labelRole.Visible = false;
             // 
             // buttonRunServer
             // 
+            this.buttonRunServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.buttonRunServer.Enabled = false;
-            this.buttonRunServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRunServer.Location = new System.Drawing.Point(12, 45);
+            this.buttonRunServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonRunServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRunServer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRunServer.Location = new System.Drawing.Point(12, 46);
             this.buttonRunServer.Name = "buttonRunServer";
-            this.buttonRunServer.Size = new System.Drawing.Size(269, 29);
+            this.buttonRunServer.Size = new System.Drawing.Size(270, 28);
             this.buttonRunServer.TabIndex = 7;
             this.buttonRunServer.Text = "Выполнить тест (с сервера)";
-            this.buttonRunServer.UseVisualStyleBackColor = true;
+            this.buttonRunServer.UseVisualStyleBackColor = false;
             this.buttonRunServer.Click += new System.EventHandler(this.buttonRunServer_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 217);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(521, 217);
             this.ControlBox = false;
             this.Controls.Add(this.buttonRunServer);
             this.Controls.Add(this.labelRole);
@@ -210,7 +232,7 @@
             this.Controls.Add(this.btnRunFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Menu";
-            this.Text = "Menu";
+            this.Text = "OleXis Test: Меню";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

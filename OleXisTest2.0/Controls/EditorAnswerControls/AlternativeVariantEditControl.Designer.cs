@@ -36,10 +36,10 @@
             // radioButtonYes
             // 
             this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonYes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonYes.Location = new System.Drawing.Point(7, 23);
             this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(48, 24);
+            this.radioButtonYes.Size = new System.Drawing.Size(45, 23);
             this.radioButtonYes.TabIndex = 0;
             this.radioButtonYes.TabStop = true;
             this.radioButtonYes.Text = "Да";
@@ -48,10 +48,10 @@
             // radioButtonNo
             // 
             this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonNo.Location = new System.Drawing.Point(7, 53);
+            this.radioButtonNo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonNo.Location = new System.Drawing.Point(7, 52);
             this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(57, 24);
+            this.radioButtonNo.Size = new System.Drawing.Size(51, 23);
             this.radioButtonNo.TabIndex = 0;
             this.radioButtonNo.TabStop = true;
             this.radioButtonNo.Text = "Нет";
@@ -60,10 +60,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(3, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 20);
+            this.label1.Size = new System.Drawing.Size(185, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Выберите вариант ответа";
             // 

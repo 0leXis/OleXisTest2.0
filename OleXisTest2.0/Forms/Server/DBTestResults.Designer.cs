@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.textBoxTestNameSurname = new System.Windows.Forms.TextBox();
             this.labelTestNameSurname = new System.Windows.Forms.Label();
@@ -40,20 +41,29 @@
             // 
             // dataGridView
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(16, 76);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(783, 354);
+            this.dataGridView.Size = new System.Drawing.Size(739, 354);
             this.dataGridView.TabIndex = 8;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // textBoxTestNameSurname
             // 
-            this.textBoxTestNameSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTestNameSurname.Location = new System.Drawing.Point(99, 6);
+            this.textBoxTestNameSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(211)))), ((int)(((byte)(252)))));
+            this.textBoxTestNameSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxTestNameSurname.Location = new System.Drawing.Point(95, 43);
             this.textBoxTestNameSurname.MaxLength = 50;
             this.textBoxTestNameSurname.Name = "textBoxTestNameSurname";
-            this.textBoxTestNameSurname.Size = new System.Drawing.Size(241, 29);
+            this.textBoxTestNameSurname.Size = new System.Drawing.Size(220, 27);
             this.textBoxTestNameSurname.TabIndex = 25;
             this.textBoxTestNameSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTestNameSurname_KeyPress);
             this.textBoxTestNameSurname.Leave += new System.EventHandler(this.textBoxTestNameSurname_Leave);
@@ -61,20 +71,20 @@
             // labelTestNameSurname
             // 
             this.labelTestNameSurname.AutoSize = true;
-            this.labelTestNameSurname.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTestNameSurname.Location = new System.Drawing.Point(12, 9);
+            this.labelTestNameSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTestNameSurname.Location = new System.Drawing.Point(12, 46);
             this.labelTestNameSurname.Name = "labelTestNameSurname";
-            this.labelTestNameSurname.Size = new System.Drawing.Size(81, 23);
+            this.labelTestNameSurname.Size = new System.Drawing.Size(77, 19);
             this.labelTestNameSurname.TabIndex = 24;
             this.labelTestNameSurname.Text = "Фамилия:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(599, 6);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(552, 43);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(199, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(203, 27);
             this.dateTimePicker1.TabIndex = 26;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 18, 0, 0, 0, 0);
             this.dateTimePicker1.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp);
@@ -82,10 +92,10 @@
             // checkBoxUseData
             // 
             this.checkBoxUseData.AutoSize = true;
-            this.checkBoxUseData.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxUseData.Location = new System.Drawing.Point(346, 8);
+            this.checkBoxUseData.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxUseData.Location = new System.Drawing.Point(321, 48);
             this.checkBoxUseData.Name = "checkBoxUseData";
-            this.checkBoxUseData.Size = new System.Drawing.Size(248, 27);
+            this.checkBoxUseData.Size = new System.Drawing.Size(229, 23);
             this.checkBoxUseData.TabIndex = 27;
             this.checkBoxUseData.Text = "Использовать фильтр по дате";
             this.checkBoxUseData.UseVisualStyleBackColor = true;
@@ -93,30 +103,37 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUpdate.Location = new System.Drawing.Point(244, 41);
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdate.Location = new System.Drawing.Point(222, 9);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(222, 29);
+            this.buttonUpdate.Size = new System.Drawing.Size(200, 28);
             this.buttonUpdate.TabIndex = 29;
             this.buttonUpdate.Text = "Обновить данные";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // buttonClearFilters
             // 
-            this.buttonClearFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClearFilters.Location = new System.Drawing.Point(16, 41);
+            this.buttonClearFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonClearFilters.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClearFilters.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClearFilters.Location = new System.Drawing.Point(16, 9);
             this.buttonClearFilters.Name = "buttonClearFilters";
-            this.buttonClearFilters.Size = new System.Drawing.Size(222, 29);
+            this.buttonClearFilters.Size = new System.Drawing.Size(200, 28);
             this.buttonClearFilters.TabIndex = 28;
             this.buttonClearFilters.Text = "Сбросить фильтры";
-            this.buttonClearFilters.UseVisualStyleBackColor = true;
+            this.buttonClearFilters.UseVisualStyleBackColor = false;
             this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
             // 
             // DBTestResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 442);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(763, 442);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClearFilters);
             this.Controls.Add(this.checkBoxUseData);
@@ -125,7 +142,7 @@
             this.Controls.Add(this.labelTestNameSurname);
             this.Controls.Add(this.dataGridView);
             this.Name = "DBTestResults";
-            this.Text = "DBTestResults";
+            this.Text = "OleXis Test: Результаты тестирования";
             this.Shown += new System.EventHandler(this.DBTestResults_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);

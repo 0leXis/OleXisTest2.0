@@ -39,7 +39,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Name = "SingleVariantPassControl";
-            this.Size = new System.Drawing.Size(359, 150);
+            this.Size = new System.Drawing.Size(560, 128);
             this.ResumeLayout(false);
 
         }

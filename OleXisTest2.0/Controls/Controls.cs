@@ -21,7 +21,7 @@ namespace OleXisTest
         public const int PANEL_YLOCATION = 68;
 
         //Style
-        static private readonly Font defaultFont = new Font("Microsoft Sans Serif", 12);
+        static private readonly Font defaultFont = new Font("Calibri", 12);
 
         static public TextBox GetTextBox(int width, int top, Control parent, Control lastControlInSequence = null)
         {

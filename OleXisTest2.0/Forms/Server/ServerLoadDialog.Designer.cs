@@ -36,45 +36,51 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(224, 252);
+            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCancel.Location = new System.Drawing.Point(180, 231);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(156, 31);
+            this.buttonCancel.Size = new System.Drawing.Size(156, 28);
             this.buttonCancel.TabIndex = 28;
             this.buttonCancel.Text = "Отмена";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // buttonLoad
             // 
+            this.buttonLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
             this.buttonLoad.Enabled = false;
-            this.buttonLoad.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoad.Location = new System.Drawing.Point(16, 252);
+            this.buttonLoad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(16, 231);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(156, 31);
+            this.buttonLoad.Size = new System.Drawing.Size(156, 28);
             this.buttonLoad.TabIndex = 27;
             this.buttonLoad.Text = "Загрузить тест";
-            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.UseVisualStyleBackColor = false;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // listBoxTests
             // 
-            this.listBoxTests.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxTests.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxTests.FormattingEnabled = true;
-            this.listBoxTests.ItemHeight = 23;
-            this.listBoxTests.Location = new System.Drawing.Point(16, 35);
+            this.listBoxTests.ItemHeight = 19;
+            this.listBoxTests.Location = new System.Drawing.Point(16, 31);
             this.listBoxTests.Name = "listBoxTests";
-            this.listBoxTests.Size = new System.Drawing.Size(364, 211);
+            this.listBoxTests.Size = new System.Drawing.Size(320, 194);
             this.listBoxTests.TabIndex = 29;
             this.listBoxTests.SelectedIndexChanged += new System.EventHandler(this.listBoxTests_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 23);
+            this.label2.Size = new System.Drawing.Size(184, 19);
             this.label2.TabIndex = 31;
             this.label2.Text = "Список доступных тестов:";
             // 
@@ -82,13 +88,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 294);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(351, 267);
+            this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBoxTests);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLoad);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ServerLoadDialog";
-            this.Text = "ServerLoadDialog";
+            this.Text = "OleXis Test: Загрузка теста";
             this.Shown += new System.EventHandler(this.ServerLoadDialog_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
