@@ -119,7 +119,7 @@ namespace OleXisTest
         {
             if (error != null)
             {
-                MessageBox.Show(error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -132,7 +132,7 @@ namespace OleXisTest
         {
             if (error != null)
             {
-                MessageBox.Show(error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

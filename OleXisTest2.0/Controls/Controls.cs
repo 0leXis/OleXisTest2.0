@@ -19,7 +19,9 @@ namespace OleXisTest
         static public readonly Point ARROW_BUTTON_SIZE = new Point(40, 28);
         static public readonly Point DELETE_BUTTON_SIZE = new Point(90, 28);
         public const int PANEL_YLOCATION = 68;
-
+        static public readonly Color mainColor = Color.FromArgb(255, 219, 101);
+        static public readonly Color additionalColor = Color.FromArgb(178, 211, 252);
+        static public readonly Color analogColor = Color.FromArgb(188, 144, 0);
         //Style
         static private readonly Font defaultFont = new Font("Calibri", 12);
 
@@ -31,13 +33,14 @@ namespace OleXisTest
                 Top = top,
                 Left = (lastControlInSequence == null) ? INDENT_X : lastControlInSequence.Left + lastControlInSequence.Width + INDENT_X,
                 Width = width,
-                Font = defaultFont
+                Font = defaultFont,
+                BackColor = additionalColor
             };
         }
 
         static public Button GetButton(string text, Point size, int top, Control parent, Control lastControlInSequence = null)
         {
-            return new Button()
+            var btn = new Button()
             {
                 Parent = parent,
                 Top = top,
@@ -45,8 +48,12 @@ namespace OleXisTest
                 Text = text,
                 Width = size.X,
                 Height = size.Y,
-                Font = defaultFont
+                Font = defaultFont,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = mainColor,
             };
+            btn.FlatAppearance.BorderColor = analogColor;
+            return btn;
         }
 
         static public Label GetLabel(string text, int width, int top, Control parent, Control lastControlInSequence = null)

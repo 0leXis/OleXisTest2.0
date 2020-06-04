@@ -50,6 +50,7 @@ namespace OleXisTest
         {
             return new SingleQuestionAnswer(this);
         }
+
         public bool ValidateAnswer()
         {
             if (Variants.Count < 2)
@@ -63,6 +64,16 @@ namespace OleXisTest
                 return false;
             }
             return true;
+        }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Выберите один вариант ответа";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddColumn(Variants.GetRandomizedList());
         }
     }
 }

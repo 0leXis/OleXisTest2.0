@@ -7,7 +7,6 @@ namespace OleXisTestServer
 {
     public interface ILog
     {
-        //TODO: FileLog
         void LogMessage(string message);
         void LogError(string message);
         void LogWarning(string message);

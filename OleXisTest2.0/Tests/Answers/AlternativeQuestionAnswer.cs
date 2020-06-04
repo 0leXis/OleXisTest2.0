@@ -46,5 +46,15 @@ namespace OleXisTest
         {
             return true;
         }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Выберите один вариант ответа";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddColumn(new List<string> { "Да", "Нет" });
+        }
     }
 }

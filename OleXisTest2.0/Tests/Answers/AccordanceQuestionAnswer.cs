@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace OleXisTest
 {
@@ -67,6 +70,17 @@ namespace OleXisTest
                 return false;
             }
             return true;
+        }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Установите соответствие";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddColumn(Variants.GetRandomizedList());
+            printer.AddColumn(Accordances.GetRandomizedList());
         }
     }
 }

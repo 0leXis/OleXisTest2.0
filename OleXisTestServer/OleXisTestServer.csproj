@@ -88,7 +88,7 @@
     <Compile Include="Commands\RegisterStudentCommand.cs" />
     <Compile Include="Commands\RegisterTeacherCommand.cs" />
     <Compile Include="ServerFindBroadcaster.cs" />
-    <Compile Include="TextBoxLog.cs" />
+    <Compile Include="Log\TextBoxLog.cs" />
     <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Server.cs">
       <SubType>Form</SubType>
@@ -130,6 +130,17 @@
       <Project>{2dde968c-746e-4d66-87f7-a982ab938eed}</Project>
       <Name>NetClasses</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\create_database.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\first_user.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\sql.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,7 +61,7 @@ namespace OleXisTest
         {
             using (var op = new OpenFileDialog())
             {
-                op.Filter = "Bitmap Image (.bmp)|*.bmp|Gif Image (.gif)|*.gif|JPEG Image (.jpeg)|*.jpeg|Png Image (.png)|*.png";
+                op.Filter = "Изображения (.bmp, .gif, .jpeg, .jpg, .png)|*.bmp;*.gif;*.jpeg;*.jpg;*.png|Bmp изображение (.bmp)|*.bmp|Gif изображение (.gif)|*.gif|JPEG изображение (.jpeg, .jpg)|*.jpeg;*.jpg|Png изображение (.png)|*.png";
                 if (op.ShowDialog() == DialogResult.OK)
                 {
                     return new Bitmap(op.FileName);
@@ -74,7 +74,7 @@ namespace OleXisTest
         {
             using (var op = new OpenFileDialog())
             {
-                op.Filter = "MP3 (.mp3)|*.mp3|Wave (.wav)|*.wav";
+                op.Filter = "Wave звук (.wav)|*.wav";//MP3(.mp3) | *.mp3 |
                 if (op.ShowDialog() == DialogResult.OK)
                 {
                     using (var FileStr = File.OpenRead(op.FileName))

@@ -85,7 +85,16 @@ namespace NetClasses
 
         static public string GetErrorMessage(string error)
         {
-            return ErrorMessages[error];
+            string errorMsg;
+            try
+            {
+                errorMsg = ErrorMessages[error];
+            }
+            catch
+            {
+                return "Неизвестная ошибка";
+            }
+            return errorMsg;
         }
     }
 }

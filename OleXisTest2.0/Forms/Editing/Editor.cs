@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NetClasses;
 
 namespace OleXisTest
 {
@@ -37,8 +38,6 @@ namespace OleXisTest
             testForEdit = new Test();
             InitTestControls();
             Text = "OleXis Test: Редактор тестов - Безимянный.test";
-            //TODO: перенести
-            //Program.testParams.GetInfoFromTest(TestForEdit);
         }
 
         private void CreateQuestion()
@@ -168,6 +167,7 @@ namespace OleXisTest
         {
             тестToolStripMenuItem.Enabled = false;
             сохранитьТестToolStripMenuItem.Enabled = false;
+            вывестиВWordToolStripMenuItem.Enabled = false;
             buttonCreateSection.Enabled = false;
             buttonCreateVopr.Enabled = false;
             сохранитьНаСервереToolStripMenuItem.Enabled = false;
@@ -177,6 +177,7 @@ namespace OleXisTest
         {
             тестToolStripMenuItem.Enabled = true;
             сохранитьТестToolStripMenuItem.Enabled = true;
+            вывестиВWordToolStripMenuItem.Enabled = true;
             buttonCreateSection.Enabled = true;
             buttonCreateVopr.Enabled = true;
             if (connection != null && connection.IsConnected)
@@ -395,6 +396,21 @@ namespace OleXisTest
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void вывестиВWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var saver = new TestWordSaver();
+            using(var saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Microsoft Word (.docx)|*.docx";
+                if(saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var error = saver.Save(testForEdit, saveDialog.FileName);
+                    if (error != null)
+                        MessageBox.Show(CommandErrors.GetErrorMessage(error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

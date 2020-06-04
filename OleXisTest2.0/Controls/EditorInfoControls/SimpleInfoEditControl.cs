@@ -55,10 +55,6 @@ namespace OleXisTest
                 _info.Image = image;
                 buttonRemoveImage.Enabled = true;
             }
-            else
-            {
-                //TODO: error
-            }
         }
 
         private void buttonRemoveImage_Click(object sender, EventArgs e)
@@ -82,10 +78,6 @@ namespace OleXisTest
                 _info.Sound = sound;
                 buttonPlaySound.Enabled = true;
                 buttonRemoveSound.Enabled = true;
-            }
-            else
-            {
-                //TODO: error
             }
         }
 

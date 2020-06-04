@@ -24,10 +24,11 @@ namespace OleXisTest
             if (testPath == null)
                 using (var saveDialog = new SaveFileDialog())
                 {
+                    saveDialog.Filter = "Файлы тестов (.test)| *.test";
                     if (saveDialog.ShowDialog() == DialogResult.OK)
                         _fileName = saveDialog.FileName;
                     else
-                        return false;
+                        return true;
                 }
             else
                 _fileName = testPath;
@@ -71,6 +72,7 @@ namespace OleXisTest
         {
             using (var openDialog = new OpenFileDialog())
             {
+                openDialog.Filter = "Файлы тестов (.test)| *.test";
                 if (openDialog.ShowDialog() == DialogResult.OK)
                 {
                     return LoadForEdit(openDialog.FileName, password);

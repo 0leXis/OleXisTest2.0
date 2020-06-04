@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -30,12 +31,7 @@ namespace OleXisTestServer
             else
             {
                 result.Close();
-                command = connection.CreateCommand();
-                command.CommandText = "CREATE DATABASE " + database;
-                command.ExecuteNonQuery();
-                command = connection.CreateCommand();
-                command.CommandText = "use " + database;
-                command.ExecuteNonQuery();
+                PrepareDBFirstUse(database);
             }
         }
 
@@ -65,6 +61,27 @@ namespace OleXisTestServer
         static public void Disconnect()
         {
             connection.Close();
+        }
+
+        static private void PrepareDBFirstUse(string database)
+        {
+            var command = connection.CreateCommand();
+            command = connection.CreateCommand();
+            command.CommandText = "CREATE SCHEMA IF NOT EXISTS `" + database + "` DEFAULT CHARACTER SET utf8";
+            command.ExecuteNonQuery();
+            command = connection.CreateCommand();
+            command.CommandText = "use " + database;
+            command.ExecuteNonQuery();
+
+            var script = new MySqlScript(connection, File.ReadAllText("SQL/create_database.sql", Encoding.UTF8));
+            script.Execute();
+
+            script = new MySqlScript(connection, File.ReadAllText("SQL/sql.sql", Encoding.UTF8));
+            script.Delimiter = "$";
+            script.Execute();
+
+            script = new MySqlScript(connection, File.ReadAllText("SQL/first_user.sql", Encoding.UTF8));
+            script.Execute();
         }
     }
 }

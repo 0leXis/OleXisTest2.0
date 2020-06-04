@@ -52,6 +52,7 @@
             this.buttonDeleteSection = new System.Windows.Forms.Button();
             this.buttonChangeVopr = new System.Windows.Forms.Button();
             this.buttonChangeSection = new System.Windows.Forms.Button();
+            this.вывестиВWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -130,6 +131,7 @@
             this.сохранитьТестToolStripMenuItem,
             this.загрузитьССервераToolStripMenuItem,
             this.сохранитьНаСервереToolStripMenuItem,
+            this.вывестиВWordToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(53, 22);
@@ -329,6 +331,15 @@
             this.buttonChangeSection.UseVisualStyleBackColor = false;
             this.buttonChangeSection.Click += new System.EventHandler(this.buttonChangeSection_Click);
             // 
+            // вывестиВWordToolStripMenuItem
+            // 
+            this.вывестиВWordToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.вывестиВWordToolStripMenuItem.Enabled = false;
+            this.вывестиВWordToolStripMenuItem.Name = "вывестиВWordToolStripMenuItem";
+            this.вывестиВWordToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.вывестиВWordToolStripMenuItem.Text = "Вывести в Word";
+            this.вывестиВWordToolStripMenuItem.Click += new System.EventHandler(this.вывестиВWordToolStripMenuItem_Click);
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +395,6 @@
         private System.Windows.Forms.GroupBox groupBoxAnswers;
         private System.Windows.Forms.GroupBox groupBoxInfo;
         private System.Windows.Forms.Button buttonChangeSection;
+        private System.Windows.Forms.ToolStripMenuItem вывестиВWordToolStripMenuItem;
     }
 }

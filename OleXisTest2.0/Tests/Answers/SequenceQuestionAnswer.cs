@@ -57,5 +57,15 @@ namespace OleXisTest
             }
             return true;
         }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Установите правильную последовательность";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddColumn(Variants.GetRandomizedList());
+        }
     }
 }

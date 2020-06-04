@@ -51,7 +51,7 @@ namespace OleXisTest
             if (response.Error != null)
             {
                 if(response.Error != "USER_NOT_STUDENT")
-                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

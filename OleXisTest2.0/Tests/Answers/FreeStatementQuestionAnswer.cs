@@ -67,5 +67,15 @@ namespace OleXisTest
             }
             return true;
         }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Напишите ответ";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddString("Ответ:____________________________________");
+        }
     }
 }

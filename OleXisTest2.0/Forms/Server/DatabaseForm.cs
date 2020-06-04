@@ -134,7 +134,7 @@ namespace OleXisTest
             var response = ResponseInfo.FromJson(data);
             if (response.Error != null)
             {
-                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -153,7 +153,7 @@ namespace OleXisTest
             var response = ResponseInfo.FromJson(data);
             if (response.Error != null)
             {
-                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -202,7 +202,7 @@ namespace OleXisTest
             var response = ResponseInfo.FromJson(data);
             if (response.Error != null)
             {
-                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -295,7 +295,7 @@ namespace OleXisTest
             var response = ResponseInfo.FromJson(data);
             if (response.Error != null)
             {
-                MessageBox.Show(response.Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

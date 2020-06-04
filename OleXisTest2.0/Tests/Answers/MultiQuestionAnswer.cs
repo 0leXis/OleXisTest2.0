@@ -69,5 +69,15 @@ namespace OleXisTest
                 }
             return true;
         }
+
+        public string GetQuestionTaskInfo()
+        {
+            return "Выберите несколько вариантов ответа";
+        }
+
+        public void ToWord(IWordAnswerPrinter printer)
+        {
+            printer.AddColumn(Variants.GetRandomizedList());
+        }
     }
 }

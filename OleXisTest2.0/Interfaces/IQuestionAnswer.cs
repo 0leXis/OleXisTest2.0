@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace OleXisTest
 {
@@ -9,5 +12,7 @@ namespace OleXisTest
     {
         int QuestionScore { get; set; }
         bool ValidateAnswer();
+        string GetQuestionTaskInfo();
+        void ToWord(IWordAnswerPrinter printer);
     }
 }
