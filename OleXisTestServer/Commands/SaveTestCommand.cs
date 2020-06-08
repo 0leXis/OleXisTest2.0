@@ -38,7 +38,6 @@ namespace OleXisTestServer.Commands
                     testFileId = result.GetInt32(1);
             }
             result.Close();
-            //TODO: Если тест с таким именем уже существует, отправить запрос на перезапись
             FileProcessor.SaveTestFile(testFileId + ".test", testData.Test);
             DBConnection.PrepareExecProcedureCommand("SaveTest", testData.Name, client.UserId.ToString(), testData.Subject.ToString()).ExecuteNonQuery();
 

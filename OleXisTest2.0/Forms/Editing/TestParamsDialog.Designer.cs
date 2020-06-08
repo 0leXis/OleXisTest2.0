@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestParamsDialog));
             this.buttonGeneratePass = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -219,7 +220,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(347, 319);
-            this.ControlBox = false;
             this.Controls.Add(this.buttonGeneratePass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
@@ -229,6 +229,9 @@
             this.Controls.Add(this.comboBoxTime);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TestParamsDialog";
             this.Text = "OleXis Test: Параметры теста";
             this.groupBox1.ResumeLayout(false);

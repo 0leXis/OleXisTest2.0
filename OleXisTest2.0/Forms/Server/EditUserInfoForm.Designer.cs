@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUserInfoForm));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -215,7 +216,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(383, 255);
-            this.ControlBox = false;
             this.Controls.Add(this.checkBoxChangePassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
@@ -231,6 +231,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditUserInfoForm";
             this.Text = "OleXis Test: Редактирование пользователя";
             this.ResumeLayout(false);

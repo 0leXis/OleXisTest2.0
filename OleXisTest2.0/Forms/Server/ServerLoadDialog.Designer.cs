@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerLoadDialog));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.listBoxTests = new System.Windows.Forms.ListBox();
@@ -90,12 +91,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(351, 267);
-            this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBoxTests);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLoad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ServerLoadDialog";
             this.Text = "OleXis Test: Загрузка теста";
             this.Shown += new System.EventHandler(this.ServerLoadDialog_Shown);

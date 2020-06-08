@@ -90,7 +90,6 @@
     <Compile Include="Commands\RegisterStudentCommand.cs" />
     <Compile Include="Commands\RegisterTeacherCommand.cs" />
     <Compile Include="Log\MultiLogger.cs" />
-    <Compile Include="ServerFindBroadcaster.cs" />
     <Compile Include="Log\TextBoxLog.cs" />
     <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Server.cs">

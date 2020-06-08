@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editor));
             this.tvQuestions = new System.Windows.Forms.TreeView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBoxAnswers = new System.Windows.Forms.GroupBox();
@@ -47,13 +48,13 @@
             this.создатьРазделToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьРазделToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.параметрыТестаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonCreateSection = new System.Windows.Forms.Button();
             this.buttonDeleteVopr = new System.Windows.Forms.Button();
             this.buttonCreateVopr = new System.Windows.Forms.Button();
             this.buttonDeleteSection = new System.Windows.Forms.Button();
             this.buttonChangeVopr = new System.Windows.Forms.Button();
             this.buttonChangeSection = new System.Windows.Forms.Button();
-            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -252,6 +253,13 @@
             this.параметрыТестаToolStripMenuItem.Text = "Параметры теста";
             this.параметрыТестаToolStripMenuItem.Click += new System.EventHandler(this.параметрыТестаToolStripMenuItem_Click);
             // 
+            // помощьToolStripMenuItem
+            // 
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(73, 22);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
+            // 
             // buttonCreateSection
             // 
             this.buttonCreateSection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
@@ -342,13 +350,6 @@
             this.buttonChangeSection.UseVisualStyleBackColor = false;
             this.buttonChangeSection.Click += new System.EventHandler(this.buttonChangeSection_Click);
             // 
-            // помощьToolStripMenuItem
-            // 
-            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
-            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(73, 22);
-            this.помощьToolStripMenuItem.Text = "Помощь";
-            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
-            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +365,10 @@
             this.Controls.Add(this.buttonChangeSection);
             this.Controls.Add(this.buttonChangeVopr);
             this.Controls.Add(this.buttonDeleteSection);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Editor";
             this.Text = "OleXis Test: Редактор тестов";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Editor_FormClosing);

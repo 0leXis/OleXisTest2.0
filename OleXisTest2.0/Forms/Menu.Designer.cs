@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnRunFile = new System.Windows.Forms.Button();
             this.btnEditor = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -231,7 +232,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(521, 250);
-            this.ControlBox = false;
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonRunServer);
             this.Controls.Add(this.labelRole);
@@ -247,6 +247,9 @@
             this.Controls.Add(this.btnEditor);
             this.Controls.Add(this.btnRunFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Menu";
             this.Text = "OleXis Test: Меню";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);

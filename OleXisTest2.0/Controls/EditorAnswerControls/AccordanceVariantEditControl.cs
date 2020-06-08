@@ -46,7 +46,7 @@ namespace OleXisTest
         private void AddVariant()
         {
             panelVariants.VerticalScroll.Value = 0;
-            var controlsTop = Accordance1Text.Count * OleXisTest.Controls.INDENT_Y;
+            var controlsTop = Accordance1Text.Count * OleXisTest.Controls.INDENT_Y + 1;
             var currentVariantNumber = Accordance1Text.Count + 1;
 
             var tmpLabel = OleXisTest.Controls.GetLabel(currentVariantNumber + ". ", OleXisTest.Controls.VARIANTNUMBER_LABEL_WIDTH, controlsTop, panelVariants, null);

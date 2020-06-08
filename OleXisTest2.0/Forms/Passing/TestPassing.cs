@@ -123,7 +123,7 @@ namespace OleXisTest
         private void StopTest()
         {
             timerTestTime.Stop();
-            using (var resultDialog = new TestResults(FIO, Class, seconds_passed % 60, seconds_passed / 60, answers, isServerTest, connection))
+            using (var resultDialog = new TestResults(FIO, Class, seconds_passed / 60, seconds_passed % 60, answers, isServerTest, connection))
             {
                 resultDialog.ShowDialog();
             }

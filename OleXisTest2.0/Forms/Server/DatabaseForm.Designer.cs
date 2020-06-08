@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseForm));
             this.btnAddTeacher = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddGroup = new System.Windows.Forms.Button();
@@ -275,6 +276,10 @@
             this.Controls.Add(this.btnAddGroup);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnAddTeacher);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DatabaseForm";
             this.Text = "OleXis Test: Управление информацией БД";
             this.Shown += new System.EventHandler(this.DatabaseForm_Shown);

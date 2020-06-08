@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDataDialog));
             this.textBoxClass = new System.Windows.Forms.TextBox();
             this.textBoxFIO = new System.Windows.Forms.TextBox();
             this.labelClass = new System.Windows.Forms.Label();
@@ -115,7 +116,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 113);
-            this.ControlBox = false;
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.textBoxClass);
@@ -123,6 +123,9 @@
             this.Controls.Add(this.labelClass);
             this.Controls.Add(this.labelFIO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StudentDataDialog";
             this.Text = "OleXis Test: Информация об учащемся";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentDataDialog_FormClosing);

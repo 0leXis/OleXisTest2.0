@@ -38,7 +38,7 @@ namespace OleXisTest
                         SequrityUtils.Encrypt(
                             new TestResult(
                                 Convert.ToInt32(mark),
-                                new DateTime(1, 1, 1, passMinutes % 60 > 23 ? 23 : passMinutes % 60, passMinutes / 60, passSeconds),
+                                new DateTime(1, 1, 1, passMinutes / 60 > 23 ? 23 : passMinutes / 60, passMinutes % 60, passSeconds),
                                 answers).ToJson(),
                             connection.User.SecretKey),
                         connection.User.UserToken),

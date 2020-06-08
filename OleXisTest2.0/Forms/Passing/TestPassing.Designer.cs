@@ -33,6 +33,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestPassing));
             this.labelTime = new System.Windows.Forms.Label();
             this.buttonNextQuestion = new System.Windows.Forms.Button();
             this.buttonStopTest = new System.Windows.Forms.Button();
@@ -116,6 +117,10 @@
             this.Controls.Add(this.buttonStopTest);
             this.Controls.Add(this.groupBoxAnswer);
             this.Controls.Add(this.groupBoxInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TestPassing";
             this.Text = "OleXis Test: Выполнение теста";
             this.ResumeLayout(false);

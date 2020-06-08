@@ -15,7 +15,6 @@ namespace OleXisTestServer
     {
         ILog multilog;
         Listener listener;
-        ServerFindBroadcaster broadcaster;
         ConfigContainer.Config config;
         public Server()
         {
@@ -46,14 +45,10 @@ namespace OleXisTestServer
             {
                 multilog.LogMessage("Запуск сервера");
                 listener = new Listener(multilog);
-                //broadcaster = new ServerFindBroadcaster(27020, 27021);
-                //TODO: ввод с ввода
                 DBConnection.Connect("server=" + config.DBIP + ";uid=" + config.DBUser + ";pwd=" + config.DBPassword, "TestsServer");//;database=TestsServer
                 multilog.LogMessage("Выполнено подключение к БД");
                 listener.ListenStart("http://*:27020/");
                 multilog.LogMessage("Сервер запущен");
-                //broadcaster.StartBroadcast();
-                //textlog.LogMessage("Система поиска серверов запущена");
                 buttonStop.Enabled = true;
                 buttonStart.Enabled = false;
                 buttonOptions.Enabled = false;
@@ -73,8 +68,6 @@ namespace OleXisTestServer
         {
             try
             {
-                //broadcaster.StopBroadcast();
-                multilog.LogMessage("Система поиска серверов остановлена");
                 listener.ListenStop();
                 multilog.LogMessage("Сервер остановлен");
                 DBConnection.Disconnect();

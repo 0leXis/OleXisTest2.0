@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectToServer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBoxSaveData = new System.Windows.Forms.CheckBox();
@@ -310,7 +311,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(412, 378);
-            this.ControlBox = false;
             this.Controls.Add(this.panelRegistration);
             this.Controls.Add(this.buttonToRegistration);
             this.Controls.Add(this.textBoxLogin);
@@ -326,7 +326,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConnectToServer";
             this.Text = "OleXis Test: Подключение к серверу";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPort)).EndInit();
