@@ -14,12 +14,15 @@ namespace OleXisTest
     public partial class DBTestResults : Form
     {
         public int TestId { get; }
+        public string TestName { get; }
 
         NetConnection connection;
-        public DBTestResults(int TestId, NetConnection connection)
+        private string excelPath = null;
+        public DBTestResults(int TestId, string TestName, NetConnection connection)
         {
             InitializeComponent();
             this.TestId = TestId;
+            this.TestName = TestName;
             this.connection = connection;
         }
 
@@ -128,6 +131,18 @@ namespace OleXisTest
                 onExtendedResultsRecive);
         }
 
+        private void GetExtendedResultsExcelInfo()
+        {
+            connection.SendCommand(
+                new RequestInfo(
+                    "GetExtendedResultSheet",
+                    SequrityUtils.Encrypt(
+                        TestId.ToString(),
+                        connection.User.SecretKey),
+                    connection.User.UserToken),
+                onExtendedResultsExcelInfoRecive);
+        }
+
         private void onExtendedResultsRecive(string data)
         {
             var response = ResponseInfo.FromJson(data);
@@ -145,6 +160,21 @@ namespace OleXisTest
             }
         }
 
+        private void onExtendedResultsExcelInfoRecive(string data)
+        {
+            var response = ResponseInfo.FromJson(data);
+            if (response.Error != null)
+            {
+                MessageBox.Show(CommandErrors.GetErrorMessage(response.Error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var results = JsonConvert.DeserializeObject<List<ExtendedResultSheetItem>>(SequrityUtils.DecryptString(response.Data, connection.User.SecretKey));
+                var saver = new ExcelTestResultsSaver();
+                saver.Save(excelPath, TestName, results);
+            }
+        }
+
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -152,6 +182,19 @@ namespace OleXisTest
             if (senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
             {
                 GetExtendedResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value));
+            }
+        }
+
+        private void buttonToExcel_Click(object sender, EventArgs e)
+        {
+            using(var saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Excel файл(.xlsx)|*.xlsx";
+                if(saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    excelPath = saveDialog.FileName;
+                    GetExtendedResultsExcelInfo();
+                }
             }
         }
     }

@@ -13,7 +13,7 @@ namespace OleXisTestServer
 {
     public partial class Server : Form
     {
-        ILog textlog;
+        ILog multilog;
         Listener listener;
         ServerFindBroadcaster broadcaster;
         ConfigContainer.Config config;
@@ -30,7 +30,9 @@ namespace OleXisTestServer
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            textlog = new TextBoxLog(textBoxLog);
+            var textlog = new TextBoxLog(textBoxLog);
+            var filelog = new FileLog();
+            multilog = new MultiLogger(textlog, filelog);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -42,23 +44,25 @@ namespace OleXisTestServer
         {
             try
             {
-                textlog.LogMessage("Запуск сервера");
-                listener = new Listener(textlog);
+                multilog.LogMessage("Запуск сервера");
+                listener = new Listener(multilog);
                 //broadcaster = new ServerFindBroadcaster(27020, 27021);
                 //TODO: ввод с ввода
                 DBConnection.Connect("server=" + config.DBIP + ";uid=" + config.DBUser + ";pwd=" + config.DBPassword, "TestsServer");//;database=TestsServer
-                textlog.LogMessage("Выполнено подключение к БД");
+                multilog.LogMessage("Выполнено подключение к БД");
                 listener.ListenStart("http://*:27020/");
-                textlog.LogMessage("Сервер запущен");
+                multilog.LogMessage("Сервер запущен");
                 //broadcaster.StartBroadcast();
                 //textlog.LogMessage("Система поиска серверов запущена");
                 buttonStop.Enabled = true;
                 buttonStart.Enabled = false;
+                buttonOptions.Enabled = false;
             }
             catch(Exception exception)
             {
-                textlog.LogError(exception.ToString());
+                multilog.LogError(exception.ToString());
                 buttonStart.Enabled = true;
+                buttonOptions.Enabled = true;
                 listener.ListenStop();
                 DBConnection.Disconnect();
                 //broadcaster.StopBroadcast();
@@ -70,18 +74,19 @@ namespace OleXisTestServer
             try
             {
                 //broadcaster.StopBroadcast();
-                textlog.LogMessage("Система поиска серверов остановлена");
+                multilog.LogMessage("Система поиска серверов остановлена");
                 listener.ListenStop();
-                textlog.LogMessage("Сервер остановлен");
+                multilog.LogMessage("Сервер остановлен");
                 DBConnection.Disconnect();
-                textlog.LogMessage("Соединение с БД закрыто");
+                multilog.LogMessage("Соединение с БД закрыто");
             }
             catch (Exception exception)
             {
-                textlog.LogError(exception.ToString());
+                multilog.LogError(exception.ToString());
             }
             buttonStop.Enabled = false;
             buttonStart.Enabled = true;
+            buttonOptions.Enabled = true;
         }
 
         private void Menu_FormClosed(object sender, FormClosedEventArgs e)
@@ -112,6 +117,14 @@ namespace OleXisTestServer
         private void checkBoxAllowGroupAdd_CheckedChanged(object sender, EventArgs e)
         {
             config.AllowGroupsAdding = checkBoxAllowGroupAdd.Checked;
+        }
+
+        private void buttonOptions_Click(object sender, EventArgs e)
+        {
+            using(var settingsDialog = new ServerSettings(config))
+            {
+                settingsDialog.ShowDialog();
+            }
         }
     }
 }

@@ -360,4 +360,31 @@ namespace NetClasses
             return JsonConvert.DeserializeObject<ResultSheetItem>(Json);
         }
     }
+
+    public class ExtendedResultSheetItem
+    {
+        public int id { get; }
+        public string NameSurname { get; }
+        public int Mark { get; }
+        public DateTime PassingTime { get; }
+        public DateTime PassDate { get; }
+        public List<AnswerListItem> ExtendedResult { get; }
+        public ExtendedResultSheetItem(int id, string NameSurname, int Mark, DateTime PassingTime, DateTime PassDate, List<AnswerListItem> ExtendedResult)
+        {
+            this.id = id;
+            this.NameSurname = NameSurname;
+            this.Mark = Mark;
+            this.PassingTime = PassingTime;
+            this.PassDate = PassDate;
+            this.ExtendedResult = ExtendedResult;
+        }
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        static public ExtendedResultSheetItem FromJson(string Json)
+        {
+            return JsonConvert.DeserializeObject<ExtendedResultSheetItem>(Json);
+        }
+    }
 }

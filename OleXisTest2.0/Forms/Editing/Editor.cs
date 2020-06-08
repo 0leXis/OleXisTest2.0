@@ -409,8 +409,15 @@ namespace OleXisTest
                     var error = saver.Save(testForEdit, saveDialog.FileName);
                     if (error != null)
                         MessageBox.Show(CommandErrors.GetErrorMessage(error), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        MessageBox.Show("Успешно сохранено", "Вывод в Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void помощьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "/Help/index.html");
         }
     }
 }

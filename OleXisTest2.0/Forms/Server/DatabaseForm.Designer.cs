@@ -43,6 +43,7 @@
             this.checkBoxDate = new System.Windows.Forms.CheckBox();
             this.buttonClearFilters = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,9 +162,9 @@
             "Мои тесты",
             "Все тесты",
             "Учетные записи"});
-            this.comboBoxSubjectRole.Location = new System.Drawing.Point(595, 76);
+            this.comboBoxSubjectRole.Location = new System.Drawing.Point(599, 76);
             this.comboBoxSubjectRole.Name = "comboBoxSubjectRole";
-            this.comboBoxSubjectRole.Size = new System.Drawing.Size(273, 27);
+            this.comboBoxSubjectRole.Size = new System.Drawing.Size(269, 27);
             this.comboBoxSubjectRole.TabIndex = 8;
             this.comboBoxSubjectRole.SelectedIndexChanged += new System.EventHandler(this.comboBoxSubjectRole_SelectedIndexChanged);
             // 
@@ -239,12 +240,27 @@
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
+            // buttonHelp
+            // 
+            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonHelp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHelp.Location = new System.Drawing.Point(599, 109);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(269, 28);
+            this.buttonHelp.TabIndex = 27;
+            this.buttonHelp.Text = "Помощь";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // DatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(878, 552);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClearFilters);
             this.Controls.Add(this.checkBoxDate);
@@ -285,5 +301,6 @@
         private System.Windows.Forms.CheckBox checkBoxDate;
         private System.Windows.Forms.Button buttonClearFilters;
         private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonHelp;
     }
 }

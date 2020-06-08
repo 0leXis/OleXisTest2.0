@@ -66,6 +66,8 @@ namespace OleXisTestServer
                     return new SaveResultCommand(requestData);
                 case "GetExtendedResult":
                     return new GetExtendedResultCommand(requestData);
+                case "GetExtendedResultSheet":
+                    return new GetExtendedResultSheetCommand(requestData);
                 default:
                     throw new ArgumentException("Получена неверная команда");
             }

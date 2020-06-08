@@ -41,6 +41,7 @@
             this.labelGroup = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.buttonRunServer = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRunFile
@@ -77,7 +78,7 @@
             this.btnConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnConnect.Location = new System.Drawing.Point(12, 114);
+            this.btnConnect.Location = new System.Drawing.Point(11, 114);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(270, 28);
             this.btnConnect.TabIndex = 0;
@@ -92,7 +93,7 @@
             this.btnPassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
             this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPassword.Location = new System.Drawing.Point(287, 148);
+            this.btnPassword.Location = new System.Drawing.Point(287, 182);
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(222, 28);
             this.btnPassword.TabIndex = 0;
@@ -107,7 +108,7 @@
             this.btnDB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
             this.btnDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDB.Location = new System.Drawing.Point(12, 148);
+            this.btnDB.Location = new System.Drawing.Point(11, 148);
             this.btnDB.Name = "btnDB";
             this.btnDB.Size = new System.Drawing.Size(270, 28);
             this.btnDB.TabIndex = 0;
@@ -121,7 +122,7 @@
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnExit.Location = new System.Drawing.Point(12, 182);
+            this.btnExit.Location = new System.Drawing.Point(12, 216);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(497, 28);
             this.btnExit.TabIndex = 0;
@@ -134,7 +135,7 @@
             this.labelLoginStatus.AutoSize = true;
             this.labelLoginStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLoginStatus.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelLoginStatus.Location = new System.Drawing.Point(288, 12);
+            this.labelLoginStatus.Location = new System.Drawing.Point(288, 9);
             this.labelLoginStatus.Name = "labelLoginStatus";
             this.labelLoginStatus.Size = new System.Drawing.Size(206, 19);
             this.labelLoginStatus.TabIndex = 1;
@@ -144,7 +145,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(288, 50);
+            this.labelName.Location = new System.Drawing.Point(288, 46);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(38, 19);
             this.labelName.TabIndex = 2;
@@ -155,7 +156,7 @@
             // 
             this.labelSurname.AutoSize = true;
             this.labelSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSurname.Location = new System.Drawing.Point(288, 69);
+            this.labelSurname.Location = new System.Drawing.Point(288, 65);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(73, 19);
             this.labelSurname.TabIndex = 3;
@@ -166,7 +167,7 @@
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.Location = new System.Drawing.Point(288, 88);
+            this.labelLogin.Location = new System.Drawing.Point(288, 84);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(51, 19);
             this.labelLogin.TabIndex = 4;
@@ -177,7 +178,7 @@
             // 
             this.labelGroup.AutoSize = true;
             this.labelGroup.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGroup.Location = new System.Drawing.Point(288, 107);
+            this.labelGroup.Location = new System.Drawing.Point(288, 103);
             this.labelGroup.Name = "labelGroup";
             this.labelGroup.Size = new System.Drawing.Size(54, 19);
             this.labelGroup.TabIndex = 5;
@@ -188,7 +189,7 @@
             // 
             this.labelRole.AutoSize = true;
             this.labelRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRole.Location = new System.Drawing.Point(288, 31);
+            this.labelRole.Location = new System.Drawing.Point(288, 28);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(41, 19);
             this.labelRole.TabIndex = 6;
@@ -210,13 +211,28 @@
             this.buttonRunServer.UseVisualStyleBackColor = false;
             this.buttonRunServer.Click += new System.EventHandler(this.buttonRunServer_Click);
             // 
+            // buttonHelp
+            // 
+            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonHelp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHelp.Location = new System.Drawing.Point(12, 182);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(270, 28);
+            this.buttonHelp.TabIndex = 8;
+            this.buttonHelp.Text = "Помощь";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(521, 217);
+            this.ClientSize = new System.Drawing.Size(521, 250);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonRunServer);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelGroup);
@@ -254,6 +270,7 @@
         private System.Windows.Forms.Label labelGroup;
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Button buttonRunServer;
+        private System.Windows.Forms.Button buttonHelp;
     }
 }
 

@@ -39,6 +39,7 @@
             this.сохранитьТестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьССервераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьНаСервереToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вывестиВWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьВопросToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,7 @@
             this.buttonDeleteSection = new System.Windows.Forms.Button();
             this.buttonChangeVopr = new System.Windows.Forms.Button();
             this.buttonChangeSection = new System.Windows.Forms.Button();
-            this.вывестиВWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -116,7 +117,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.тестToolStripMenuItem});
+            this.тестToolStripMenuItem,
+            this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(814, 26);
@@ -179,6 +181,15 @@
             this.сохранитьНаСервереToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.сохранитьНаСервереToolStripMenuItem.Text = "Сохранить на сервере";
             this.сохранитьНаСервереToolStripMenuItem.Click += new System.EventHandler(this.сохранитьНаСервереToolStripMenuItem_Click);
+            // 
+            // вывестиВWordToolStripMenuItem
+            // 
+            this.вывестиВWordToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.вывестиВWordToolStripMenuItem.Enabled = false;
+            this.вывестиВWordToolStripMenuItem.Name = "вывестиВWordToolStripMenuItem";
+            this.вывестиВWordToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.вывестиВWordToolStripMenuItem.Text = "Вывести в Word";
+            this.вывестиВWordToolStripMenuItem.Click += new System.EventHandler(this.вывестиВWordToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -331,14 +342,12 @@
             this.buttonChangeSection.UseVisualStyleBackColor = false;
             this.buttonChangeSection.Click += new System.EventHandler(this.buttonChangeSection_Click);
             // 
-            // вывестиВWordToolStripMenuItem
+            // помощьToolStripMenuItem
             // 
-            this.вывестиВWordToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
-            this.вывестиВWordToolStripMenuItem.Enabled = false;
-            this.вывестиВWordToolStripMenuItem.Name = "вывестиВWordToolStripMenuItem";
-            this.вывестиВWordToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.вывестиВWordToolStripMenuItem.Text = "Вывести в Word";
-            this.вывестиВWordToolStripMenuItem.Click += new System.EventHandler(this.вывестиВWordToolStripMenuItem_Click);
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(73, 22);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
             // 
             // Editor
             // 
@@ -396,5 +405,6 @@
         private System.Windows.Forms.GroupBox groupBoxInfo;
         private System.Windows.Forms.Button buttonChangeSection;
         private System.Windows.Forms.ToolStripMenuItem вывестиВWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
     }
 }

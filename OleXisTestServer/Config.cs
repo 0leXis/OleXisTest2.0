@@ -34,6 +34,7 @@ namespace OleXisTestServer
             public string DBIP { get; set; } = "127.0.0.1";
             public string DBUser { get; set; } = "root";
             public string DBPassword { get; set; } = "12345";
+            public int ServerPort { get; set; } = 27020;
             public Config() { }
 
             static public Config ConfigFromJSONFile(string fileName)

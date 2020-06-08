@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>OleXis Test</title>
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Справка</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li onclick="document.location = 'index.html'">Главное меню</li>
+                <li onclick="document.location = 'editing.html'">Редактирование теста</li>
+                <li onclick="document.location = 'testparams.html'">Параметры теста</li>
+                <li onclick="document.location = 'question.html'">Создание вопроса</li>
+                <li onclick="document.location = 'editvariants.html'">Редактирование вариантов ответа</li>
+                <li onclick="document.location = 'passing.html'">Выполнение теста</li>
+                <li onclick="document.location = 'serverinstall.html'">Установка и настройка сервера</li>
+                <li onclick="document.location = 'connecttoserver.html'">Подключение к серверу</li>
+                <li onclick="document.location = 'dbinfo.html'">Управление информацией БД</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Установка и настройка сервера</h2>
+            <p>
+                <h3>Установка MySql</h3>
+                Если MySql уже установлен, перейдите к разделу "Установка сервера".
+                <ol>
+                    <li>Запустите файл <b>MySqlSetup.exe</b> и следуйте инструкциям установщика. <b>Внимание! Путь к папке с MySql не должен включать символы кириллицы!</b></li>
+                    <li>Чтобы запустить сервер, откройте файл <b>MySqlServer.bat</b> в папке установки, либо его ярлык на рабочем столе</li>
+                </ol>
+                <h3>Установка сервера</h3>
+                <ol>
+                    <li>Запустите файл <b>ServerSetup.exe</b> и следуйте инструкциям установщика</li>
+                    <li>Чтобы запустить сервер, откройте файл <b>OleXisTestServer.exe</b> в папке установки, либо его ярлык на рабочем столе</li>
+                    <li>Нажмите кнопку <b>"Настройки сервера"</b></li>
+                    <li>Если вы установили MySql по инструкции выше, то все значения уже будут настроены. Если вы используете свою версию MySql, измените настройки в соответствии с вашей версией.</li>
+                    <li>Для запуска сервера нажмите кнопку <b>"Запустить сервер"</b>. До нажатия на кнопку убедитесь, что MySql запущена и все настройки введены правильно.</li>
+                </ol>
+            </p>
+        </article>
+    </section>
+</body>
+</html>

@@ -79,7 +79,7 @@ namespace OleXisTest
                         loginInfo = connectionForm.LoginInfo;
 
                         labelLoginStatus.Text = "Соединение установлено";
-                        labelLoginStatus.ForeColor = Color.LightGreen;
+                        labelLoginStatus.ForeColor = Color.Green;
                         labelName.Text = connectionForm.LoginInfo.Firstname;
                         labelName.Visible = true;
                         labelSurname.Text = connectionForm.LoginInfo.Lastname;
@@ -153,6 +153,11 @@ namespace OleXisTest
             {
                 passwordDialog.ShowDialog();
             }
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "/Help/index.html");
         }
     }
 }

@@ -294,3 +294,10 @@ Create procedure GetExtendedResult(ResultId int)
 begin
     Select Result from testresults where ResultId = id;
 end$
+
+drop procedure if exists GetExtendedResultSheet$
+
+Create procedure GetExtendedResultSheet(TestId int)
+begin
+    Select tr.id, concat(u.Surname, ' ', u.Name) as StudentData, tr.Mark, tr.PassingTime, tr.Date, tr.Result from testresults as tr left join users as u on tr.Student = u.id where TestId = Test;
+end$

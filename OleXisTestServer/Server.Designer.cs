@@ -33,7 +33,7 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.groupBoxParams = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonOptions = new System.Windows.Forms.Button();
             this.checkBoxAllowTeachRegister = new System.Windows.Forms.CheckBox();
             this.checkBoxAllowGroupAdd = new System.Windows.Forms.CheckBox();
             this.checkBoxAllowSubjectAdd = new System.Windows.Forms.CheckBox();
@@ -98,7 +98,7 @@
             // 
             // groupBoxParams
             // 
-            this.groupBoxParams.Controls.Add(this.button1);
+            this.groupBoxParams.Controls.Add(this.buttonOptions);
             this.groupBoxParams.Controls.Add(this.checkBoxAllowTeachRegister);
             this.groupBoxParams.Controls.Add(this.checkBoxAllowGroupAdd);
             this.groupBoxParams.Controls.Add(this.checkBoxAllowSubjectAdd);
@@ -112,20 +112,20 @@
             this.groupBoxParams.TabStop = false;
             this.groupBoxParams.Text = "Параметры";
             // 
-            // button1
+            // buttonOptions
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(7, 306);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Настройки БД";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonOptions.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOptions.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOptions.Location = new System.Drawing.Point(7, 306);
+            this.buttonOptions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonOptions.Name = "buttonOptions";
+            this.buttonOptions.Size = new System.Drawing.Size(247, 28);
+            this.buttonOptions.TabIndex = 7;
+            this.buttonOptions.Text = "Настройки сервера";
+            this.buttonOptions.UseVisualStyleBackColor = false;
+            this.buttonOptions.Click += new System.EventHandler(this.buttonOptions_Click);
             // 
             // checkBoxAllowTeachRegister
             // 
@@ -218,7 +218,7 @@
         private System.Windows.Forms.CheckBox checkBoxAllowStudRegister;
         private System.Windows.Forms.CheckBox checkBoxAllowRegister;
         private System.Windows.Forms.CheckBox checkBoxAllowTeachRegister;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOptions;
     }
 }
 

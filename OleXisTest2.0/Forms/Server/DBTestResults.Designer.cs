@@ -36,6 +36,7 @@
             this.checkBoxUseData = new System.Windows.Forms.CheckBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonClearFilters = new System.Windows.Forms.Button();
+            this.buttonToExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,12 +129,27 @@
             this.buttonClearFilters.UseVisualStyleBackColor = false;
             this.buttonClearFilters.Click += new System.EventHandler(this.buttonClearFilters_Click);
             // 
+            // buttonToExcel
+            // 
+            this.buttonToExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(101)))));
+            this.buttonToExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+            this.buttonToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonToExcel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonToExcel.Location = new System.Drawing.Point(428, 9);
+            this.buttonToExcel.Name = "buttonToExcel";
+            this.buttonToExcel.Size = new System.Drawing.Size(327, 28);
+            this.buttonToExcel.TabIndex = 30;
+            this.buttonToExcel.Text = "Вывести результаты теста в Excel";
+            this.buttonToExcel.UseVisualStyleBackColor = false;
+            this.buttonToExcel.Click += new System.EventHandler(this.buttonToExcel_Click);
+            // 
             // DBTestResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(763, 442);
+            this.Controls.Add(this.buttonToExcel);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonClearFilters);
             this.Controls.Add(this.checkBoxUseData);
@@ -159,5 +175,6 @@
         private System.Windows.Forms.CheckBox checkBoxUseData;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonClearFilters;
+        private System.Windows.Forms.Button buttonToExcel;
     }
 }

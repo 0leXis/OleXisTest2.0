@@ -30,6 +30,10 @@ article {
     max-width: 600px;
 }
 
+article > ul, article > ol {
+    margin-left: 17px;
+}
+
 nav {
     max-width: 200px;
     background-color: #95c4fc;

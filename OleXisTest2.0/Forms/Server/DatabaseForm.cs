@@ -341,7 +341,7 @@ namespace OleXisTest
                 switch (comboBoxData.SelectedIndex)
                 {
                     case 0:
-                        using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), connection))
+                        using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), senderGrid.Rows[e.RowIndex].Cells[1].Value.ToString(), connection))
                         {
                             resultsDialog.ShowDialog();
                         }
@@ -350,7 +350,7 @@ namespace OleXisTest
                         switch (e.ColumnIndex)
                         {
                             case 6:
-                                using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), connection))
+                                using (var resultsDialog = new DBTestResults(Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value), senderGrid.Rows[e.RowIndex].Cells[1].Value.ToString(), connection))
                                 {
                                     resultsDialog.ShowDialog();
                                 }
@@ -440,6 +440,11 @@ namespace OleXisTest
         private void checkBoxDate_CheckedChanged(object sender, EventArgs e)
         {
             GetCurrentSheet();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.StartupPath + "/Help/index.html");
         }
     }
 }
